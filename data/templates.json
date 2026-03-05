@@ -1,0 +1,582 @@
+{
+  "templates": [
+    {
+      "id": "tmpl-eu-plp",
+      "name": "EU Processleitplan",
+      "description": "Sheet-per-operation format with mixed section types",
+      "createdAt": "2026-03-05T23:26:14.689Z",
+      "updatedAt": "2026-03-05T23:26:14.691Z"
+    },
+    {
+      "id": "tmpl-sop",
+      "name": "Simple SOP Blocks",
+      "description": "Setup / Execution / Cleanup workflow",
+      "createdAt": "2026-03-05T23:26:14.691Z",
+      "updatedAt": "2026-03-05T23:26:14.691Z"
+    },
+    {
+      "id": "tmpl-batch",
+      "name": "Batch Ticket",
+      "description": "Table-first batch manufacturing record",
+      "createdAt": "2026-03-05T23:26:14.691Z",
+      "updatedAt": "2026-03-05T23:26:14.691Z"
+    },
+    {
+      "id": "a3412574-d30e-4e4f-acb4-520bd3db9b66",
+      "name": "Test",
+      "description": "",
+      "createdAt": "2026-03-05T23:33:56.410Z",
+      "updatedAt": "2026-03-05T23:33:56.410Z"
+    }
+  ],
+  "versions": [
+    {
+      "id": "tmplv-eu-plp-1",
+      "templateId": "tmpl-eu-plp",
+      "versionNumber": 1,
+      "status": "ACTIVE",
+      "schemaJson": {
+        "headerFields": [
+          {
+            "id": "h-docno",
+            "label": "Document No.",
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "h-product",
+            "label": "Product Name",
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "h-version",
+            "label": "Version",
+            "type": "text",
+            "required": true,
+            "defaultValue": "1.0"
+          },
+          {
+            "id": "h-date",
+            "label": "Effective Date",
+            "type": "date",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "h-site",
+            "label": "Site",
+            "type": "text",
+            "required": false,
+            "defaultValue": ""
+          },
+          {
+            "id": "h-dept",
+            "label": "Department",
+            "type": "text",
+            "required": false,
+            "defaultValue": "Manufacturing"
+          }
+        ],
+        "sheets": [
+          {
+            "id": "sheet-op1",
+            "name": "Operation 1 – Dispensing",
+            "sections": [
+              {
+                "id": "s-op1-rte",
+                "type": "richText",
+                "title": "Purpose & Scope",
+                "config": {
+                  "placeholder": "Describe purpose..."
+                },
+                "required": false
+              },
+              {
+                "id": "s-op1-fg",
+                "type": "fieldGrid",
+                "title": "Operation Details",
+                "config": {
+                  "fields": [
+                    {
+                      "id": "fg-op1-eq",
+                      "label": "Equipment ID",
+                      "type": "text",
+                      "required": true,
+                      "defaultValue": ""
+                    },
+                    {
+                      "id": "fg-op1-mat",
+                      "label": "Material Code",
+                      "type": "text",
+                      "required": true,
+                      "defaultValue": ""
+                    },
+                    {
+                      "id": "fg-op1-op",
+                      "label": "Operator Sign",
+                      "type": "text",
+                      "required": false,
+                      "defaultValue": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "s-op1-pt",
+                "type": "parameterTable",
+                "title": "Process Parameters",
+                "config": {}
+              },
+              {
+                "id": "s-op1-tbl",
+                "type": "table",
+                "title": "Ingredients",
+                "config": {
+                  "columns": [
+                    {
+                      "id": "tc-name",
+                      "label": "Ingredient",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-qty",
+                      "label": "Quantity (kg)",
+                      "type": "number"
+                    },
+                    {
+                      "id": "tc-lot",
+                      "label": "Lot No.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "sheet-op2",
+            "name": "Operation 2 – Mixing",
+            "sections": [
+              {
+                "id": "s-op2-fg",
+                "type": "fieldGrid",
+                "title": "Mixing Details",
+                "config": {
+                  "fields": [
+                    {
+                      "id": "fg-op2-spd",
+                      "label": "Mixer Speed (rpm)",
+                      "type": "number",
+                      "required": true,
+                      "defaultValue": ""
+                    },
+                    {
+                      "id": "fg-op2-dur",
+                      "label": "Mix Duration (min)",
+                      "type": "number",
+                      "required": true,
+                      "defaultValue": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "s-op2-pt",
+                "type": "parameterTable",
+                "title": "Process Parameters",
+                "config": {}
+              },
+              {
+                "id": "s-op2-fd",
+                "type": "flowDiagram",
+                "title": "Flow Diagram",
+                "config": {}
+              }
+            ]
+          },
+          {
+            "id": "sheet-op3",
+            "name": "Operation 3 – QC & Release",
+            "sections": [
+              {
+                "id": "s-op3-tbl",
+                "type": "table",
+                "title": "QC Checks",
+                "config": {
+                  "columns": [
+                    {
+                      "id": "tc-qctest",
+                      "label": "Test",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-qcspec",
+                      "label": "Specification",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-qcresult",
+                      "label": "Result",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-qcpass",
+                      "label": "Pass/Fail",
+                      "type": "select",
+                      "options": [
+                        "Pass",
+                        "Fail",
+                        "N/A"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "s-op3-media",
+                "type": "media",
+                "title": "Supporting Documents",
+                "config": {}
+              },
+              {
+                "id": "s-op3-ch",
+                "type": "changeHistory",
+                "title": "Change History",
+                "config": {}
+              }
+            ]
+          }
+        ]
+      },
+      "createdAt": "2026-03-05T23:26:14.691Z",
+      "updatedAt": "2026-03-05T23:26:14.691Z",
+      "versionStamp": "1772753174691",
+      "publishedBy": "u-rde1"
+    },
+    {
+      "id": "tmplv-sop-1",
+      "templateId": "tmpl-sop",
+      "versionNumber": 1,
+      "status": "ACTIVE",
+      "schemaJson": {
+        "headerFields": [
+          {
+            "id": "h2-title",
+            "label": "SOP Title",
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "h2-code",
+            "label": "SOP Code",
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "h2-rev",
+            "label": "Revision",
+            "type": "text",
+            "required": true,
+            "defaultValue": "A"
+          },
+          {
+            "id": "h2-date",
+            "label": "Issue Date",
+            "type": "date",
+            "required": true,
+            "defaultValue": ""
+          }
+        ],
+        "sheets": [
+          {
+            "id": "sheet-setup",
+            "name": "Setup",
+            "sections": [
+              {
+                "id": "s-setup-rte",
+                "type": "richText",
+                "title": "Setup Instructions",
+                "config": {}
+              },
+              {
+                "id": "s-setup-fg",
+                "type": "fieldGrid",
+                "title": "Pre-checks",
+                "config": {
+                  "fields": [
+                    {
+                      "id": "fg-setup-env",
+                      "label": "Environment Temp (°C)",
+                      "type": "number",
+                      "required": true,
+                      "defaultValue": ""
+                    },
+                    {
+                      "id": "fg-setup-rh",
+                      "label": "Relative Humidity (%)",
+                      "type": "number",
+                      "required": false,
+                      "defaultValue": ""
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "sheet-exec",
+            "name": "Execution",
+            "sections": [
+              {
+                "id": "s-exec-rte",
+                "type": "richText",
+                "title": "Execution Steps",
+                "config": {}
+              },
+              {
+                "id": "s-exec-pt",
+                "type": "parameterTable",
+                "title": "Key Parameters",
+                "config": {}
+              },
+              {
+                "id": "s-exec-tbl",
+                "type": "table",
+                "title": "Material Checklist",
+                "config": {
+                  "columns": [
+                    {
+                      "id": "tc-item",
+                      "label": "Item",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-status",
+                      "label": "Status",
+                      "type": "select",
+                      "options": [
+                        "Pending",
+                        "Done",
+                        "N/A"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "sheet-cleanup",
+            "name": "Cleanup",
+            "sections": [
+              {
+                "id": "s-clean-rte",
+                "type": "richText",
+                "title": "Cleanup Instructions",
+                "config": {}
+              },
+              {
+                "id": "s-clean-ch",
+                "type": "changeHistory",
+                "title": "Change History",
+                "config": {}
+              }
+            ]
+          }
+        ]
+      },
+      "createdAt": "2026-03-05T23:26:14.691Z",
+      "updatedAt": "2026-03-05T23:26:14.691Z",
+      "versionStamp": "1772753174691",
+      "publishedBy": "u-rde1"
+    },
+    {
+      "id": "tmplv-batch-1",
+      "templateId": "tmpl-batch",
+      "versionNumber": 1,
+      "status": "ACTIVE",
+      "schemaJson": {
+        "headerFields": [
+          {
+            "id": "h3-batchno",
+            "label": "Batch No.",
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "h3-product",
+            "label": "Product",
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "h3-qty",
+            "label": "Batch Size",
+            "type": "number",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "h3-mfgdate",
+            "label": "Mfg. Date",
+            "type": "date",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "h3-expdate",
+            "label": "Exp. Date",
+            "type": "date",
+            "required": false,
+            "defaultValue": ""
+          }
+        ],
+        "sheets": [
+          {
+            "id": "sheet-bt-main",
+            "name": "Batch Record",
+            "sections": [
+              {
+                "id": "s-bt-ing",
+                "type": "table",
+                "title": "Bill of Materials",
+                "config": {
+                  "columns": [
+                    {
+                      "id": "tc-bt-item",
+                      "label": "Raw Material",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-bt-code",
+                      "label": "Item Code",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-bt-qty",
+                      "label": "Required (kg)",
+                      "type": "number"
+                    },
+                    {
+                      "id": "tc-bt-act",
+                      "label": "Actual (kg)",
+                      "type": "number"
+                    },
+                    {
+                      "id": "tc-bt-lot",
+                      "label": "Lot No.",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-bt-init",
+                      "label": "Initials",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "s-bt-pt",
+                "type": "parameterTable",
+                "title": "Critical Parameters",
+                "config": {}
+              },
+              {
+                "id": "s-bt-qc",
+                "type": "table",
+                "title": "In-Process QC",
+                "config": {
+                  "columns": [
+                    {
+                      "id": "tc-bt-qcstep",
+                      "label": "Step",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-bt-qcspec",
+                      "label": "Spec",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-bt-qcval",
+                      "label": "Value",
+                      "type": "text"
+                    },
+                    {
+                      "id": "tc-bt-qcok",
+                      "label": "OK?",
+                      "type": "select",
+                      "options": [
+                        "Yes",
+                        "No",
+                        "N/A"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "s-bt-ch",
+                "type": "changeHistory",
+                "title": "Change History",
+                "config": {}
+              }
+            ]
+          }
+        ]
+      },
+      "createdAt": "2026-03-05T23:26:14.691Z",
+      "updatedAt": "2026-03-05T23:26:14.691Z",
+      "versionStamp": "1772753174691",
+      "publishedBy": "u-rde2"
+    },
+    {
+      "id": "9826a45b-ca3f-4a96-a4d8-28451842a916",
+      "templateId": "a3412574-d30e-4e4f-acb4-520bd3db9b66",
+      "versionNumber": 1,
+      "status": "ACTIVE",
+      "schemaJson": {
+        "headerFields": [
+          {
+            "id": "cca57b4a-fe26-4f18-826d-1921409ed253",
+            "label": "New Field 2",
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+          }
+        ],
+        "sheets": [
+          {
+            "id": "7aed7df9-3ede-42a1-b629-ee7cab38d532",
+            "name": "New Sheet",
+            "sections": [
+              {
+                "id": "336dbf35-a363-44b8-a0d5-e4c93d3d7a49",
+                "type": "media",
+                "title": "Test",
+                "config": {}
+              },
+              {
+                "id": "e6ed5768-acee-4a7c-a1f8-39c8e5041dee",
+                "type": "richText",
+                "title": "Rich Text 22222",
+                "config": {}
+              }
+            ]
+          }
+        ]
+      },
+      "createdAt": "2026-03-05T23:33:56.410Z",
+      "updatedAt": "2026-03-05T23:35:52.149Z",
+      "versionStamp": "1772753752149",
+      "publishedBy": "u-rde1"
+    }
+  ]
+}

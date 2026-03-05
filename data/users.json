@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": "u-rde1",
+      "name": "Anna Müller",
+      "email": "anna@eu.plant",
+      "role": "RD_ENGINEER",
+      "siteId": "site-eu"
+    },
+    {
+      "id": "u-mte1",
+      "name": "Klaus Weber",
+      "email": "klaus@eu.plant",
+      "role": "MT_ENGINEER",
+      "siteId": "site-eu"
+    },
+    {
+      "id": "u-apr1",
+      "name": "Dr. Hans Braun",
+      "email": "hans@eu.plant",
+      "role": "APPROVER",
+      "siteId": "site-eu"
+    },
+    {
+      "id": "u-opr1",
+      "name": "Petra Lang",
+      "email": "petra@eu.plant",
+      "role": "OPERATOR",
+      "siteId": "site-eu"
+    },
+    {
+      "id": "u-rde2",
+      "name": "James Carter",
+      "email": "james@us.plant",
+      "role": "RD_ENGINEER",
+      "siteId": "site-us"
+    },
+    {
+      "id": "u-mte2",
+      "name": "Sarah Johnson",
+      "email": "sarah@us.plant",
+      "role": "MT_ENGINEER",
+      "siteId": "site-us"
+    },
+    {
+      "id": "u-apr2",
+      "name": "Dr. Mark Davis",
+      "email": "mark@us.plant",
+      "role": "APPROVER",
+      "siteId": "site-us"
+    },
+    {
+      "id": "u-opr2",
+      "name": "Lisa Brown",
+      "email": "lisa@us.plant",
+      "role": "OPERATOR",
+      "siteId": "site-us"
+    }
+  ]
+}

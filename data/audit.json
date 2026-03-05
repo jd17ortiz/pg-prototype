@@ -1,0 +1,134 @@
+{
+  "events": [
+    {
+      "id": "ae1",
+      "entityType": "Guideline",
+      "entityId": "gl-parent-eu-001",
+      "action": "CREATED",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "data": {
+        "name": "Alpha Compound – Processleitplan"
+      },
+      "createdAt": "2026-03-05T23:26:14.694Z"
+    },
+    {
+      "id": "ae2",
+      "entityType": "GuidelineVersion",
+      "entityId": "glv-parent-eu-001-v1",
+      "action": "SUBMITTED_FOR_REVIEW",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "data": {},
+      "createdAt": "2026-03-05T23:26:14.694Z"
+    },
+    {
+      "id": "ae3",
+      "entityType": "Approval",
+      "entityId": "apr-001",
+      "action": "APPROVED",
+      "userId": "u-apr1",
+      "userName": "Dr. Hans Braun",
+      "data": {
+        "comment": "Reviewed and approved."
+      },
+      "createdAt": "2026-03-05T23:26:14.694Z"
+    },
+    {
+      "id": "ae4",
+      "entityType": "Guideline",
+      "entityId": "gl-local-eu-001",
+      "action": "CREATED",
+      "userId": "u-mte1",
+      "userName": "Klaus Weber",
+      "data": {
+        "name": "Cleaning SOP"
+      },
+      "createdAt": "2026-03-05T23:26:14.694Z"
+    },
+    {
+      "id": "ae5",
+      "entityType": "Approval",
+      "entityId": "apr-002",
+      "action": "APPROVED",
+      "userId": "u-apr1",
+      "userName": "Dr. Hans Braun",
+      "data": {
+        "comment": "Approved after audit."
+      },
+      "createdAt": "2026-03-05T23:26:14.694Z"
+    },
+    {
+      "id": "ae6",
+      "entityType": "Guideline",
+      "entityId": "gl-child-us-001",
+      "action": "CLONED_FROM_PARENT",
+      "userId": "u-rde2",
+      "userName": "James Carter",
+      "data": {
+        "parentGuidelineId": "gl-parent-eu-001"
+      },
+      "createdAt": "2026-03-05T23:26:14.694Z"
+    },
+    {
+      "id": "6a3a8af7-7984-4b60-8a35-bd48c3ee9b22",
+      "entityType": "Template",
+      "entityId": "a3412574-d30e-4e4f-acb4-520bd3db9b66",
+      "action": "CREATED",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "data": {
+        "name": "Test"
+      },
+      "createdAt": "2026-03-05T23:33:56.410Z"
+    },
+    {
+      "id": "4c092bfe-63e8-4982-8e1b-8778620a8b4f",
+      "entityType": "TemplateVersion",
+      "entityId": "9826a45b-ca3f-4a96-a4d8-28451842a916",
+      "action": "SAVED",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "createdAt": "2026-03-05T23:34:12.161Z"
+    },
+    {
+      "id": "c4c01334-c0a5-4c87-bd1a-1ff1ca258e7b",
+      "entityType": "TemplateVersion",
+      "entityId": "9826a45b-ca3f-4a96-a4d8-28451842a916",
+      "action": "SAVED",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "createdAt": "2026-03-05T23:34:18.682Z"
+    },
+    {
+      "id": "5fe29be6-5af2-4339-beb5-d6d7616d4615",
+      "entityType": "TemplateVersion",
+      "entityId": "9826a45b-ca3f-4a96-a4d8-28451842a916",
+      "action": "SAVED",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "createdAt": "2026-03-05T23:35:01.935Z"
+    },
+    {
+      "id": "1946b7cb-88a8-480f-a649-b1e514ebc778",
+      "entityType": "TemplateVersion",
+      "entityId": "9826a45b-ca3f-4a96-a4d8-28451842a916",
+      "action": "SAVED",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "createdAt": "2026-03-05T23:35:50.992Z"
+    },
+    {
+      "id": "ec46f737-38cf-44cc-806a-c9c395f67f38",
+      "entityType": "TemplateVersion",
+      "entityId": "9826a45b-ca3f-4a96-a4d8-28451842a916",
+      "action": "PUBLISHED",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "data": {
+        "versionNumber": 1
+      },
+      "createdAt": "2026-03-05T23:35:52.149Z"
+    }
+  ]
+}

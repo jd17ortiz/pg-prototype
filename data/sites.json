@@ -1,0 +1,14 @@
+{
+  "sites": [
+    {
+      "id": "site-eu",
+      "name": "EU Plant - Frankfurt",
+      "code": "EU-FRA"
+    },
+    {
+      "id": "site-us",
+      "name": "US Plant - Houston",
+      "code": "US-HOU"
+    }
+  ]
+}
