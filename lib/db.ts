@@ -8,9 +8,11 @@ import type {
   GuidelinesStore,
   AuditStore,
   AuditEvent,
+  ComplianceStore,
 } from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "data");
+export const UPLOADS_DIR = path.join(DATA_DIR, "uploads");
 
 function dataPath(name: string) {
   return path.join(DATA_DIR, `${name}.json`);
@@ -75,6 +77,15 @@ export function writeGuidelines(store: GuidelinesStore): void {
   writeStore("guidelines", store);
 }
 
+// ─── Compliance ───────────────────────────────────────────────────────────────
+export function readCompliance(): ComplianceStore {
+  return readStore<ComplianceStore>("compliance", { tasks: [] });
+}
+
+export function writeCompliance(store: ComplianceStore): void {
+  writeStore("compliance", store);
+}
+
 // ─── Audit ────────────────────────────────────────────────────────────────────
 export function readAudit(): AuditStore {
   return readStore<AuditStore>("audit", { events: [] });
@@ -84,6 +95,11 @@ export function appendAudit(event: AuditEvent): void {
   const store = readAudit();
   store.events.push(event);
   writeStore("audit", store);
+}
+
+// ─── Uploads ──────────────────────────────────────────────────────────────────
+export function ensureUploadsDir(): void {
+  fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────

@@ -52,6 +52,7 @@ export interface TableColumn {
   label: string;
   type: FieldType;
   width?: number;
+  options?: string[];
 }
 
 export interface SectionConfig {
@@ -125,6 +126,8 @@ export interface MediaFile {
   size: number;
   uploadedAt: string;
   description?: string;
+  // attachment ref (E)
+  fileId?: string;
 }
 
 export interface ChangeHistoryEntry {
@@ -183,6 +186,8 @@ export interface Guideline {
   type: GuidelineType;
   siteId: string;
   parentGuidelineId?: string;
+  /** The parent's ACTIVE version ID at the time of cloning (PASS 2 lock enforcement) */
+  parentActiveVersionId?: string;
   templateVersionId: string;
   createdAt: string;
   updatedAt: string;
@@ -220,7 +225,8 @@ export type AuditEntityType =
   | "TemplateVersion"
   | "Guideline"
   | "GuidelineVersion"
-  | "Approval";
+  | "Approval"
+  | "ComplianceTask";
 
 export interface AuditEvent {
   id: string;
@@ -231,6 +237,42 @@ export interface AuditEvent {
   userName?: string;
   data?: Record<string, unknown>;
   createdAt: string;
+}
+
+// ─── Compliance Tasks (PASS 2 C) ──────────────────────────────────────────────
+export type ComplianceTaskStatus = "OPEN" | "DONE";
+
+export interface ComplianceTask {
+  id: string;
+  parentGuidelineId: string;
+  parentVersionId: string;  // the new ACTIVE parent version that triggered this
+  childGuidelineId: string;
+  siteId: string;
+  status: ComplianceTaskStatus;
+  createdAt: string;
+  completedAt?: string;
+}
+
+export interface ComplianceStore {
+  tasks: ComplianceTask[];
+}
+
+// ─── Diff types (PASS 2 B) ────────────────────────────────────────────────────
+export type DiffChangeType = "added" | "removed" | "changed";
+
+export interface DiffEntry {
+  type: DiffChangeType;
+  path: string;        // e.g. "Sheet: Mixing / Section: Params / pH min"
+  field?: string;      // which field changed (value, unit, min, max…)
+  oldValue?: string;
+  newValue?: string;
+  label: string;       // human-readable description
+}
+
+export interface DiffResult {
+  hasChanges: boolean;
+  summary: { added: number; removed: number; changed: number };
+  entries: DiffEntry[];
 }
 
 // ─── DB Store types ───────────────────────────────────────────────────────────
@@ -266,4 +308,13 @@ export interface ApiError {
 export interface StaleWriteError extends ApiError {
   code: "STALE_WRITE";
   current: string;
+}
+
+// ─── Lock validation result ───────────────────────────────────────────────────
+export interface LockViolation {
+  paramName: string;
+  field: string;
+  parentValue: string;
+  childValue: string;
+  message: string;
 }

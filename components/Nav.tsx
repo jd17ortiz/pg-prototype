@@ -41,6 +41,7 @@ export default function Nav() {
               {link("/guidelines", "Guidelines")}
               {link("/templates", "Templates")}
               {user.role === "APPROVER" && link("/inbox", "Inbox")}
+              {link("/compliance", "Compliance")}
               {link("/demo", "Demo")}
             </>
           )}

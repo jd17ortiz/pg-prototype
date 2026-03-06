@@ -394,6 +394,9 @@ const auditEvents = [
 ];
 write("audit", { events: auditEvents });
 
+// ─── Compliance ───────────────────────────────────────────────────────────────
+write("compliance", { tasks: [] });
+
 console.log("✓ Seed complete:");
 console.log(`  Sites:    ${[SITE_EU, SITE_US].length}`);
 console.log(`  Users:    ${users.length}`);

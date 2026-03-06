@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { readGuidelines, writeGuidelines, appendAudit, nowStamp, versionStamp } from "@/lib/db";
 import { getCurrentUser, canEdit } from "@/lib/auth";
+import { validateLockConstraints } from "@/lib/locks";
 import { v4 as uuid } from "uuid";
 
 const SubmitSchema = z.object({
@@ -25,6 +26,9 @@ export async function POST(
   }
 
   const store = readGuidelines();
+  const guideline = store.guidelines.find((g) => g.id === id);
+  if (!guideline) return NextResponse.json({ error: "Guideline not found" }, { status: 404 });
+
   const idx = store.versions.findIndex((v) => v.id === versionId && v.guidelineId === id);
   if (idx === -1) return NextResponse.json({ error: "Version not found" }, { status: 404 });
 
@@ -36,6 +40,23 @@ export async function POST(
   // Enforce: if versionNumber > 1, reasonForChange is required
   if (version.versionNumber > 1 && !parsed.data.reasonForChange?.trim()) {
     return NextResponse.json({ error: "Reason for change is required for new versions" }, { status: 400 });
+  }
+
+  // PASS 2 A: Lock constraint check on submit for CHILD guidelines
+  if (guideline.type === "CHILD" && guideline.parentActiveVersionId) {
+    const parentVersion = store.versions.find((v) => v.id === guideline.parentActiveVersionId);
+    if (parentVersion) {
+      const violations = validateLockConstraints(
+        version.normalizedPayload.parameters,
+        parentVersion.normalizedPayload.parameters
+      );
+      if (violations.length > 0) {
+        return NextResponse.json(
+          { error: "Cannot submit: lock constraint violations", violations },
+          { status: 422 }
+        );
+      }
+    }
   }
 
   const now = nowStamp();

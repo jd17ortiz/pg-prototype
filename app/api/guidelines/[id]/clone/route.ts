@@ -54,6 +54,8 @@ export async function POST(
     type: "CHILD" as const,
     siteId: parsed.data.siteId,
     parentGuidelineId: id,
+    // PASS 2: record which parent active version was used
+    parentActiveVersionId: activeVersion.id,
     templateVersionId: parentGuideline.templateVersionId,
     createdAt: now,
     updatedAt: now,
@@ -83,7 +85,7 @@ export async function POST(
     action: "CLONED_FROM_PARENT",
     userId: user.id,
     userName: user.name,
-    data: { parentGuidelineId: id, siteId: parsed.data.siteId },
+    data: { parentGuidelineId: id, parentActiveVersionId: activeVersion.id, siteId: parsed.data.siteId },
     createdAt: now,
   });
 

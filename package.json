@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "seed": "node scripts/seed.mjs"
+    "seed": "node scripts/seed.mjs",
+    "sanity": "node scripts/sanity-check.mjs"
   },
   "dependencies": {
     "next": "16.1.6",

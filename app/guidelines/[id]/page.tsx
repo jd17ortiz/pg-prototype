@@ -5,11 +5,12 @@ import { useAuth } from "@/lib/client-auth";
 import { useRouter } from "next/navigation";
 import Badge from "@/components/Badge";
 import Modal from "@/components/Modal";
+import { useToast } from "@/components/Toast";
 import { v4 as uuid } from "uuid";
 import type {
   Guideline, GuidelineVersion, Approval, Template, TemplateVersion, TemplateSchema,
   ContentJson, SectionContentValue, ParameterRow, MediaFile, ChangeHistoryEntry,
-  NormalizedParameter, AuditEvent, Site
+  NormalizedParameter, AuditEvent, Site, LockViolation
 } from "@/lib/types";
 
 interface PageProps { params: Promise<{ id: string }> }
@@ -47,8 +48,10 @@ export default function GuidelinePage({ params }: PageProps) {
   const [cloneName, setCloneName] = useState("");
   const [cloneSiteId, setCloneSiteId] = useState("");
   const [actionBusy, setActionBusy] = useState(false);
+  const [lockViolations, setLockViolations] = useState<LockViolation[]>([]);
 
   const autosaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { toast } = useToast();
 
   useEffect(() => {
     if (!user) { router.push("/login"); return; }
@@ -115,7 +118,7 @@ export default function GuidelinePage({ params }: PageProps) {
 
   const doSave = useCallback(async (c: ContentJson) => {
     if (!isDraft || !currentVersion) return;
-    setSaving(true); setSaveError("");
+    setSaving(true); setSaveError(""); setLockViolations([]);
     const res = await fetch(`/api/guidelines/${id}/versions`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -128,11 +131,18 @@ export default function GuidelinePage({ params }: PageProps) {
       setDirty(false);
     } else if (res.status === 409) {
       setSaveError("Stale write – please reload.");
+      toast("Stale write detected. Please reload the page.", "error");
+    } else if (res.status === 422) {
+      const d = await res.json();
+      setLockViolations(d.violations ?? []);
+      setSaveError("Lock constraint violations (see below).");
+      toast("Locked parameter constraints violated.", "error");
     } else {
       setSaveError("Save failed.");
+      toast("Save failed.", "error");
     }
     setSaving(false);
-  }, [id, currentVersion, isDraft, currentStamp]);
+  }, [id, currentVersion, isDraft, currentStamp, toast]);
 
   // Warn on leave with unsaved changes
   useEffect(() => {
@@ -167,7 +177,6 @@ export default function GuidelinePage({ params }: PageProps) {
     if (!currentVersion) return;
     if (currentVersion.versionNumber > 1 && !submitReason.trim()) return;
     setActionBusy(true);
-    // Save first
     if (dirty && content) await doSave(content);
     const res = await fetch(`/api/guidelines/${id}/versions/${currentVersion.id}/submit`, {
       method: "POST",
@@ -177,7 +186,16 @@ export default function GuidelinePage({ params }: PageProps) {
     if (res.ok) {
       setSubmitModal(false);
       setSubmitReason("");
+      toast("Submitted for review.", "success");
       await loadGuideline();
+    } else {
+      const d = await res.json();
+      if (res.status === 422) {
+        setLockViolations(d.violations ?? []);
+        toast("Cannot submit: locked parameter violations.", "error");
+      } else {
+        toast(d.error ?? "Submit failed.", "error");
+      }
     }
     setActionBusy(false);
   }
@@ -193,7 +211,16 @@ export default function GuidelinePage({ params }: PageProps) {
     if (res.ok) {
       setApproveModal(false);
       setApproveComment("");
+      toast(approveDecision === "APPROVE" ? "Approved and now ACTIVE." : "Rejected — returned to DRAFT.", approveDecision === "APPROVE" ? "success" : "warning");
       await loadGuideline();
+    } else {
+      const d = await res.json();
+      if (res.status === 422) {
+        setLockViolations(d.violations ?? []);
+        toast("Cannot approve: locked parameter violations.", "error");
+      } else {
+        toast(d.error ?? "Action failed.", "error");
+      }
     }
     setActionBusy(false);
   }
@@ -303,6 +330,16 @@ export default function GuidelinePage({ params }: PageProps) {
                 Print
               </Link>
             )}
+            {versions.length >= 2 && (
+              <Link href={`/guidelines/${id}/diff`} className="px-3 py-1.5 text-sm border rounded hover:bg-gray-50">
+                Diff
+              </Link>
+            )}
+            {canEdit && isDraft && (
+              <Link href={`/import?guidelineId=${id}`} className="px-3 py-1.5 text-sm border rounded hover:bg-gray-50">
+                Import CSV
+              </Link>
+            )}
             <button onClick={() => { setShowParamPanel(p => !p); }} className="px-3 py-1.5 text-sm border rounded hover:bg-gray-50">
               Params
             </button>
@@ -330,6 +367,24 @@ export default function GuidelinePage({ params }: PageProps) {
           ))}
         </div>
       </div>
+
+      {/* Lock violation banner */}
+      {lockViolations.length > 0 && (
+        <div className="bg-red-50 border border-red-300 rounded-xl p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-semibold text-red-800">Locked Parameter Violations ({lockViolations.length})</h3>
+            <button onClick={() => setLockViolations([])} className="text-red-400 hover:text-red-700 text-lg leading-none">×</button>
+          </div>
+          <ul className="space-y-1">
+            {lockViolations.map((v, i) => (
+              <li key={i} className="text-xs text-red-700">
+                <span className="font-medium">{v.paramName}</span>
+                {" — "}{v.field}: child value <code className="bg-red-100 px-1 rounded">{v.childValue}</code> violates parent constraint <code className="bg-red-100 px-1 rounded">{v.parentValue}</code>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="flex gap-4">
         {/* Sidebar: sheets */}
@@ -780,16 +835,35 @@ function MediaEditor({ files, readOnly, onChange }: {
   readOnly: boolean;
   onChange: (files: MediaFile[]) => void;
 }) {
-  const [fileName, setFileName] = useState("");
+  const [uploading, setUploading] = useState(false);
   const [fileDesc, setFileDesc] = useState("");
+  const fileRef = useRef<HTMLInputElement>(null);
 
-  function addFile() {
-    if (!fileName.trim()) return;
-    onChange([...files, {
-      id: uuid(), fileName, fileType: fileName.split(".").pop() ?? "file",
-      size: 0, uploadedAt: new Date().toISOString(), description: fileDesc
-    }]);
-    setFileName(""); setFileDesc("");
+  async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setUploading(true);
+    const form = new FormData();
+    form.append("file", file);
+    const res = await fetch("/api/upload", { method: "POST", body: form });
+    if (res.ok) {
+      const d = await res.json();
+      onChange([...files, {
+        id: d.fileId, fileId: d.fileId, fileName: d.fileName,
+        fileType: d.fileType, size: d.size, uploadedAt: d.uploadedAt,
+        description: fileDesc,
+      }]);
+      setFileDesc("");
+      if (fileRef.current) fileRef.current.value = "";
+    }
+    setUploading(false);
+  }
+
+  async function removeFile(f: MediaFile) {
+    if (f.fileId) {
+      await fetch(`/api/uploads/${f.fileId}`, { method: "DELETE" });
+    }
+    onChange(files.filter(x => x.id !== f.id));
   }
 
   return (
@@ -799,24 +873,36 @@ function MediaEditor({ files, readOnly, onChange }: {
           <div key={f.id} className="flex items-center gap-2 text-sm border rounded px-3 py-2">
             <span className="text-gray-500">📄</span>
             <div className="flex-1">
-              <div className="font-medium">{f.fileName}</div>
+              {f.fileId ? (
+                <a href={`/api/uploads/${f.fileId}`} target="_blank" rel="noreferrer" className="font-medium text-indigo-700 hover:underline">{f.fileName}</a>
+              ) : (
+                <div className="font-medium">{f.fileName}</div>
+              )}
               {f.description && <div className="text-xs text-gray-500">{f.description}</div>}
+              <div className="text-xs text-gray-400">{f.fileType} · {f.size ? `${Math.round(f.size / 1024)} KB` : "–"}</div>
             </div>
             {!readOnly && (
-              <button onClick={() => onChange(files.filter(x => x.id !== f.id))} className="text-red-400 hover:text-red-600">×</button>
+              <button onClick={() => removeFile(f)} className="text-red-400 hover:text-red-600">×</button>
             )}
           </div>
         ))}
         {files.length === 0 && <p className="text-xs text-gray-400">No files attached.</p>}
       </div>
       {!readOnly && (
-        <div className="border-t pt-3 flex gap-2">
-          <input className="border rounded px-2 py-1 text-sm flex-1" placeholder="filename.pdf" value={fileName} onChange={e => setFileName(e.target.value)} />
-          <input className="border rounded px-2 py-1 text-sm flex-1" placeholder="Description (optional)" value={fileDesc} onChange={e => setFileDesc(e.target.value)} />
-          <button onClick={addFile} className="px-3 py-1 text-sm bg-indigo-50 text-indigo-700 rounded border border-indigo-200 hover:bg-indigo-100">Add</button>
+        <div className="border-t pt-3 space-y-2">
+          <div className="flex gap-2">
+            <input
+              ref={fileRef}
+              type="file"
+              className="border rounded px-2 py-1 text-sm flex-1 file:mr-2 file:py-0.5 file:px-2 file:rounded file:border-0 file:text-xs file:bg-indigo-50 file:text-indigo-700"
+              onChange={handleUpload}
+              disabled={uploading}
+            />
+            <input className="border rounded px-2 py-1 text-sm w-40" placeholder="Description (optional)" value={fileDesc} onChange={e => setFileDesc(e.target.value)} />
+          </div>
+          {uploading && <p className="text-xs text-indigo-600">Uploading…</p>}
         </div>
       )}
-      <p className="text-xs text-gray-400 mt-1">Note: file upload is metadata-only in this prototype.</p>
     </div>
   );
 }
