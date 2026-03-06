@@ -118,6 +118,43 @@ Select any user on the login page. RBAC is enforced server-side.
 - All actions logged (create, save, submit, approve, reject, clone, publish)
 - Audit timeline modal on guideline detail page
 
+### 8. Guidelines Filter Bar
+- Sticky filter bar with debounced search, site select, sort dropdown
+- "More filters" drawer: status/type checkboxes with facet counts, hasDraft/hasOpenCompliance toggles
+- Active filter chips with individual × removal and "Reset all"
+- URL-synced state — filters survive page refresh and can be shared as links
+- Facets computed server-side before text/status/type filters are applied
+
+### 9. Excel Migration Studio (`/migration`)
+Import existing process guideline Excel files (.xlsx / .xlsm) as DRAFT versions.
+
+**Steps:**
+1. `npm run dev` — start the dev server
+2. Open `/migration` in the browser
+3. Select site, template, upload an `.xlsx` or `.xlsm` file
+4. Review the extracted preview: header fields, ingredient tables, KV parameters,
+   change history, warnings — each item shows a source badge (sheet · cell · label)
+5. Click **Create Draft** — creates a new DRAFT guideline version in the system
+6. Click **Open Draft** to continue editing in the guideline editor
+
+**Profile system:**
+- Profiles are TypeScript configs in `lib/migration/profiles.ts`
+- Auto-detected by sheet name signature (≥2 matching sheet names)
+- Current profile: **Fermentation PLP (xlsm)** — Niebull NOMI bilingual German/English xlsm
+- Supports anchor-based extraction (no hardcoded cell addresses)
+
+**Idempotency:**
+- If a guideline with the same identifier already exists for that site, a new DRAFT
+  version is created instead of duplicating the guideline
+- Returns 409 if an open DRAFT already exists for that guideline
+
+**API routes:**
+```
+GET    /api/migration/upload          → list available profiles
+POST   /api/migration/upload          → upload file, parse, return preview + runId
+POST   /api/migration/create-draft    → create DRAFT version from import run
+```
+
 ## API Routes
 
 ```
@@ -134,7 +171,7 @@ PATCH  /api/templates/[id]
 GET    /api/templates/[id]/versions
 PUT    /api/templates/[id]/versions          (save draft schema)
 POST   /api/templates/[id]/versions/[vid]/publish
-GET    /api/guidelines?siteId=...&type=...
+GET    /api/guidelines?siteId=&q=&status=&type=&hasDraft=1&hasOpenCompliance=1&sort=
 POST   /api/guidelines
 GET    /api/guidelines/[id]
 PUT    /api/guidelines/[id]/versions         (save draft content)
@@ -142,6 +179,9 @@ POST   /api/guidelines/[id]/versions/[vid]/submit
 POST   /api/guidelines/[id]/versions/[vid]/approve
 POST   /api/guidelines/[id]/versions/[vid]/new-version
 POST   /api/guidelines/[id]/clone
+GET    /api/migration/upload
+POST   /api/migration/upload
+POST   /api/migration/create-draft
 ```
 
 ## 6-Step Demo Script
