@@ -28,6 +28,46 @@
       "templateVersionId": "tmplv-eu-plp-1",
       "createdAt": "2026-03-06T09:14:25.441Z",
       "updatedAt": "2026-03-06T09:14:25.441Z"
+    },
+    {
+      "id": "gl-niebull-plp-7034",
+      "name": "PLP 7034 – Na-Formiat 50%",
+      "type": "LOCAL",
+      "siteId": "site-niebull",
+      "templateVersionId": "tmplv-nomi-plp-1",
+      "createdAt": "2026-03-06T09:52:31.499Z",
+      "updatedAt": "2026-03-06T10:02:57.691Z",
+      "identifier": "PLP-7034"
+    },
+    {
+      "id": "gl-niebull-plp-7194",
+      "name": "PLP 7194 – Lb. acidophilus LA-11",
+      "type": "LOCAL",
+      "siteId": "site-niebull",
+      "templateVersionId": "tmplv-nomi-plp-1",
+      "createdAt": "2026-03-06T09:52:31.508Z",
+      "updatedAt": "2026-03-06T10:02:57.817Z",
+      "identifier": "PLP-7194"
+    },
+    {
+      "id": "gl-niebull-plp-7203",
+      "name": "PLP 7203 – Kefir",
+      "type": "LOCAL",
+      "siteId": "site-niebull",
+      "templateVersionId": "tmplv-nomi-plp-1",
+      "createdAt": "2026-03-06T09:52:31.517Z",
+      "updatedAt": "2026-03-06T10:02:57.978Z",
+      "identifier": "PLP-7203"
+    },
+    {
+      "id": "gl-niebull-plp-7253",
+      "name": "PLP 7253 – Holdbac Listeria",
+      "type": "LOCAL",
+      "siteId": "site-niebull",
+      "templateVersionId": "tmplv-nomi-plp-1",
+      "createdAt": "2026-03-06T09:52:31.531Z",
+      "updatedAt": "2026-03-06T10:02:58.173Z",
+      "identifier": "PLP-7253"
     }
   ],
   "versions": [
@@ -957,6 +997,562 @@
       "createdAt": "2026-03-06T09:14:25.442Z",
       "updatedAt": "2026-03-06T09:14:25.442Z",
       "versionStamp": "1772788465442"
+    },
+    {
+      "id": "glv-niebull-plp-7034-v1-1772791377690",
+      "guidelineId": "gl-niebull-plp-7034",
+      "versionNumber": 1,
+      "status": "ACTIVE",
+      "contentJson": {
+        "headerValues": {
+          "nh-plpnr": "7034",
+          "nh-rev": "5",
+          "nh-produktname": "Na-Formiat 50%",
+          "nh-erstellt": "",
+          "nh-herstellform": "Lyophilisat",
+          "nh-spezies": "",
+          "nh-dgcc": "",
+          "nh-allergen": "Unbekannt",
+          "nh-kosher": "Unbekannt"
+        },
+        "sheets": {
+          "ns-uebersicht": {
+            "sections": {
+              "ns-ueb-rte": {
+                "type": "richText",
+                "html": "<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nÜbersicht\nBESONDERE\nBEDINGUNGEN\nIMPFER 1\nIMPFER 2\nIMPFER 3\nHAUPTIMPFER\nFERMENTATION\nFERMENTATION DVI\nSCHUTZKOLLOID\nKONZENTRIERUNG Theoretische Ausbeute\nKonzentrierungsfaktor\nPELLETIERUNG Tropfgerät\nGEFRIERTROCKNUNG\nkosher\n-\n100 %\nSKP\nC5919\nINOCULUM\n-\t-\n-\t-\n5 Na-Formiat 50% NOMI 01.03.2024\n-\nTINS\n1239814\n-\n-\nLYO\nLYO Ground\nLIQ\nFRO\n-\n1239813\n-\nDVI SEED\nkeine Impferzüchtung\nProzessleitplan\nAllgemeine Informationen\nSD - -\n-\n- -\nPRODUCT LIFE\tSAP NUMMERN\n1,5 mm\n-\n-\n7034\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 1 von 14</p>\n<p>-- 1 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nIMPFERMEDIUM\nNAME:\nSAP-NR.:\nBEMERKUNGEN\nPH-WERTE\nVor Steri. Nach Steri. Soll vor Beimpfen\n-\n-\nkosher\n13\n15\n01.03.2024\n12\n11\n6\n9\n10\nImpferzüchtung\n7034 5 Na-Formiat 50% NOMI\nNr. Menge\n(pro 1000 l) Einheit\n1\n2\n-\nkeine Impferzüchtung\n3\nEinstellen mit\n-\n4\nProzessleitplan\n14\nSAP-Artikelnr.\tRohstoff\n7\n5\nNach Auflösung\n8\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 2 von 14</p>\n<p>-- 2 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nFERMENTATIONSBEDINGUNGEN\nBEMERKUNGEN\nLAGERUNG NACH KÜHLUNGSENDE\n-\n-\nkosher\nTemperatur Zeit\n7034 5 Na-Formiat 50% NOMI\nArt\nBiostat\nImpferstufe\nFermenter\nInfors\n01.03.2024\nImpferzüchtung\t\nImpfer 3\nImpfer 2\nProzessleitplan\nMetallfermenter\nGlas\nImpfer 1\nUHT\nZeit\nTempe-\nratur\npH-Wert\nZüchtungsende\nHauptimpfer\nMedium Impfmenge\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 3 von 14</p>\n<p>-- 3 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nHAUPTFERMENTATIONSMEDIUM\nNAME:\nSAP-NR.:\nBEMERKUNGEN\nSAP-Artikelnr.\n019999\n2 500,00\n4\n5\n-\n-\nkosher\nMedia Na-Formiat 50% NOMI\n1239811\nNr. Menge\n(pro 1000 l) Einheit Rohstoff\n01.03.2024\n1 500,00 L Tap water\nkg Sodiumformiate 015009\n3\n6\n9\n7\n8\n10\nFermentation\n7034 5 Na-Formiat 50% NOMI\n13\n14\n11\nSicherheitshinweise:\nBeim Arbeiten mit Na-Formiat Staubbildung vermeiden und Staub bzw. Pulver nicht einatmen.\nMundschutz tragen!\nNa-Formiat sollte nicht mit der Haut und den Augen in Berührung kommen.\nHandschuhe und Schutzbrille tragen!\nHerstellung Medium:\nWasser in den Hofbehälter bzw. 800L -Tank füllen und auf 65 ± 2 °C erwärmen.\nUnter ständigem Rühren Na-Formiat zugeben und vollständig lösen.\nSterilisation bei 138 °C / 25 s (UHT) oder 121 °C / 30 min (Insitu).\nDanach Herunterkühlen auf 18 - 20 °C.\n15\nProzessleitplan\n12\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 4 von 14</p>\n<p>-- 4 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nPH-WERTE\nSoll vor Beimpfen\nBEMERKUNGEN\nSTERILISATIONSBEDINGUNGEN\nBEMERKUNGEN\n45 - 48\t&gt; 34\n25 s\n≤ 60 °C\n≤ 30 °C\n-\n-\nkosher\nVor Sterilisation muss die Trockenmasse mit dem Refraktometer bestimmt werden (&gt;34).\nNach der Sterilisation erfolgt die Trockenmassebestimmung mittels Halogen- bzw. CEM-Trockner\n(WICHTIG bei CEM: Nur Formiat Methode verwenden!)\n-\nAA-Ferm-003-A001*\nAA-Ferm-003-A001*\n121 °C\n121 °C\n138 °C\n60 min\n30 min\tInsitu\nDirektdampf-\nsterilisation\nNach Auflösung\nVor Beimpfen Bemerkungen\tNach Sterilisation\nFermentation\nUHT\nVor Sterilisation\n7034 5 Na-Formiat 50% NOMI\nAuslauf-\ntemperatur\nArt Temperatur Zeit\nProzessleitplan\n-\n01.03.2024\nRührwerks-geschwindigkeit\nREFRAKTOMETERWERTE [° Brix]\nVor Steri. Einstellen mit\tNach Steri.\n* hohe Drehzahl\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 5 von 14</p>\n<p>-- 5 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nSICHERHEITSDATENBLATT 1/2\n-\n-\nkosher\n01.03.2024\nFermentation\nProzessleitplan\n7034 5 Na-Formiat 50% NOMI\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 6 von 14</p>\n<p>-- 6 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nSICHERHEITSDATENBLATT 2/2\n-\n-\nkosher\n01.03.2024\nFermentation\n7034 5 Na-Formiat 50% NOMI\nProzessleitplan\nWICHTIGER\nHINWEIS:\nFür den Gebrauch dieser Sicherheitsinformationen wird seitens CEC, IPCS bzw. von ihnen\nbeauftragten Personen keine Verantwortung übernommen. Die Karte gibt die gemeinsam getragenen\nAnsichten des IPCS Peer Review Committee wieder und muß nicht immer die einschlägigen nationalen\nRegelungen im Einzelnen darstellen. Die Benutzer sollten daher die gültigen Bestimmungen des\njeweiligen Landes beachten.\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 7 von 14</p>\n<p>-- 7 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nKONZENTRIERUNGSBEDINGUNGEN\nSCHWIERIG ZU KONZENTRIEREN Ja Nein x\nFERMENT pH-WERT (SOLL): EINSTELLEN MIT\nBemerkungen:\nBEMERKUNGEN\n-\n-\nkosher\nKonzentrierungsfaktor\nBemerkungen\nmm\nmm\nkeine Konzentrierung\nCFE\nAusbeute\nKonzentratdruck Permeatdruck\nAlfa\nZentrifuge\nCFD\nZulauf [l/h] Düsengröße\nmm\nkeine Konzentrierung\nKonzentrierung\nTM Konzentrat\nOD-Wert Permeat 660 nm\npH-Einstellung mit\n7034\nProzessleitplan\n01.03.2024\nHaltezeiten Konzentrat\nTemperatur Konzentrat\nKonzentrat pH-Wert (soll)\nTemperatur Ferment\n5 Na-Formiat 50% NOMI\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 8 von 14</p>\n<p>-- 8 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nNAME:\nSAP-NR.:\nTROCKENMASSE SCHUKO\nBEMERKUNGEN\nHERSTELLUNG\n-\n-\nkosher\nkeine Verwendung von Schutzkolloiden\n4\n-\nSchutzkolloid\n01.03.2024\t7034 5 Na-Formiat 50% NOMI\n1 - -\nNr.\n2\n3\n5\n-\n-\nRohstoff\n-\nSAP-Nr.\nMenge\n(pro 1000 l) Einheit\n7\n6\nProzessleitplan\n10\n9\n8\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 9 von 14</p>\n<p>-- 9 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nSTERILISATIONSBEDINGUNGEN\nSCHUTZKOLLOID KANN VORGELEGT WERDEN Ja Nein\nVERHÄLTNIS SCHUTZKOLLOID - KONZENTRAT\nBEMERKUNGEN\nTROCKENMASSE SCHUKO + KONZENTRAT\n-\n-\nSchutzkolloid\nNa-Formiat 50% NOMI 01.03.2024\nkosher\nArt Temperatur Zeit Auslauftemperatur\nInsitu\nUHT\nProzessleitplan\n7034 5\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 10 von 14</p>\n<p>-- 10 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nPH-WERTE\nBEMERKUNGEN\nTEMPERATUR VOR PELLETIERUNG\nDURCHMESSER TROPFGERÄT\nRICHTWERT REGELNIVEAU\nRICHTWERT PUMPENDREHZAHL\nABLÜFTER\nBEMERKUNGEN\n800 - 850 U / min\nEinstellen mit\n-\n-\nkosher\nProzessleitplan\nPelletierung\n01.03.2024\t7034 5 Na-Formiat 50% NOMI\n1,5 mm\n- 170 °C bis - 180 °C\nDie Pelletierung vorrangig auf der Anlage C3 vornehmen!\n1200 - 1500 U/min\n18 - 20 °C\nVor Pelletieren\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 11 von 14</p>\n<p>-- 11 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nTROCKNUNGSBEDINGUNGEN\nTROCKNUNGSPROFIL\nPARAMETER\n5 Na-Formiat 50% NOMI\nGefriertrocknung\n \nDK Aufheizen (Start Temp.Stellf.)\nEndtemperatur\nDruck\nKondensatortemperatur\n-\n-\nkosher\nEinfriertemperatur\nProzessleitplan\nBemerkungen\nkeine Gefriertrocknung\nRezept-Nummer\nFüllhöhe\nn/a\n01.03.2024\t7034\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 12 von 14</p>\n<p>-- 12 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nRAMPEN\nBEMERKUNGEN\nGefriertrocknung\n7034 5 Na-Formiat 50% NOMI\nn/a\n01.03.2024\nkosher\n-\n-\nProzessleitplan\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 13 von 14</p>\n<p>-- 13 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am\nHerstellform LIQ FRO x LYO TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\n1 neue Ausgabe aufgrund von SharePoint-Umstellung\n27.07.2018 SBA\n2\n08.04.2020 JACW\nBemerkung eingefügt, dass die Trockenmassebestimmung immer mit dem Refraktometer\nerfolgen muss.\n3\n22.09.2020 GUN\nTemperatur beim Pelletieren und vor Bereitstellen auf 18-20°C geändert. Zusatz eingefügt,\ndass vorrangig auf C3 pelletiert werden soll.\n4\n04.08.2021 GUN\nProzessleitplan\n01.03.2024\t7034 5 Na-Formiat 50% NOMI\n-\n-\nkosher\nTM-Wert nach Sterilisation eingefügt; Nutzung des CEM-Trockners nach Steri mit\nentsprechender Methode eingefügt; Name und Medien durch Zusatz Nomi ergänzt.\n5\n01.03.2024 GUN\nErhitzungstemperatur UHT von 145°C auf 138°C gesenkt.\t\nÄnderungshistorie\n8\n9\n6\n7\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 14 von 14</p>\n<p>-- 14 of 14 --</p>"
+              },
+              "ns-ueb-media": {
+                "type": "media",
+                "files": [
+                  {
+                    "id": "8f3c5b3e-8330-4202-9d5f-bbbfb0f2d524",
+                    "fileName": "7034 Rev.5 Na-Formiat 50% NOMI.pdf",
+                    "fileType": "application/pdf",
+                    "size": 759164,
+                    "uploadedAt": "2026-03-06T10:02:57.673Z",
+                    "description": "PLP 7034 Rev.5 — Originaldokument",
+                    "fileId": "f2f4c5c4-0b21-49d6-aa76-94b37bb2d4ab.pdf"
+                  }
+                ]
+              }
+            }
+          },
+          "ns-impf": {
+            "sections": {
+              "ns-impf-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-impf-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-ferm": {
+            "sections": {
+              "ns-ferm-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-ferm-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-konz": {
+            "sections": {
+              "ns-konz-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-konz-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-schk": {
+            "sections": {
+              "ns-schk-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-schk-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-pell": {
+            "sections": {
+              "ns-pell-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-pell-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-gefrtr": {
+            "sections": {
+              "ns-gefrtr-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-gefrtr-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-aendh": {
+            "sections": {
+              "ns-aendh-ch": {
+                "type": "changeHistory",
+                "entries": [
+                  {
+                    "id": "f9da111d-c78e-4fff-9678-0006a41a7187",
+                    "date": "2026-03-06",
+                    "author": "Lars Petersen",
+                    "description": "Importiert aus PDF: PLP 7034 Rev.5",
+                    "version": "5"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "normalizedPayload": {
+        "parameters": []
+      },
+      "reasonForChange": "Importiert aus PDF Rev.5",
+      "authorId": "u-nie-mte1",
+      "createdAt": "2026-03-06T10:02:57.691Z",
+      "updatedAt": "2026-03-06T10:02:57.691Z",
+      "versionStamp": "1772791377691"
+    },
+    {
+      "id": "glv-niebull-plp-7194-v1-1772791377817",
+      "guidelineId": "gl-niebull-plp-7194",
+      "versionNumber": 1,
+      "status": "ACTIVE",
+      "contentJson": {
+        "headerValues": {
+          "nh-plpnr": "7194",
+          "nh-rev": "26",
+          "nh-produktname": "Lb. acidophilus LA-11",
+          "nh-erstellt": "",
+          "nh-herstellform": "Lyophilisat",
+          "nh-spezies": "",
+          "nh-dgcc": "",
+          "nh-allergen": "Unbekannt",
+          "nh-kosher": "Unbekannt"
+        },
+        "sheets": {
+          "ns-uebersicht": {
+            "sections": {
+              "ns-ueb-rte": {
+                "type": "richText",
+                "html": "<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nÜbersicht\nBESONDERE\nBEDINGUNGEN\nIMPFER 1\nIMPFER 2\nIMPFER 3\nHAUPTIMPFER\nFERMENTATION\nFERMENTATION DVI\nSCHUTZKOLLOID\nKONZENTRIERUNG Theoretische Ausbeute\nKonzentrierungsfaktor\nPELLETIERUNG Tropfgerät\nGEFRIERTROCKNUNG\nSAP NUMMERN PRODUCT LIFE\nProduktion in\nVorfermenter F09 - F15 - CFE - KB5 - DIP 1 und 2\n-\nPL48112\n-\n-\n-\nPL37313\nPL38232\nPL55680\n-\n-\n1291890\n1291888\n1292277\n61014427\n-\nLactobacillus acidophilus\n11491\n61003900\n61014538\n5.8%\n32°C 0,14 ± 0,05 mbar\n14 ± 1h 38 °C\n-\n38 °C\n38 °C\npH 4,5 ± 0,1\n-\nAllgemeine Informationen\nProzessleitplan\nSD\n1,5 mm\n-\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\n18 h 38 °C\n11,5 ± 1h\n38 °C\nkosher\n23\nTINS\nLYO\nLYO Ground\nLIQ\nFRO\nINOCULUM\nTin/Tube\nDVI SEED\n1291891\npH 5,5 ± 0,1\n4 ± 0,5 h\n-\n10 - 12 h\nTKP\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 1 von 15</p>\n<p>-- 1 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nIMPFERMEDIUM\nNAME:\nSAP-NR.:\nBEMERKUNGEN\nPH-WERTE\nVor Steri. Nach Steri. Soll vor Beimpfen\nImpferzüchtung\n6,5 - 6,8 NaOH / H3PO4\t5,5 ± 0,2 6,8 ± 0,1\n014605\n9\n61007452\n5\nkg\nSAP-Artikelnr.\n016802 / 1292869\n8 0,1\n5\n014635\tManganese-(II)-sulphatemonohydrate\n7\nL\nAnti-foaming agent 012505\nNr.\n4 6,25\n50\n1\n10\nProzessleitplan\nMenge\n(pro 1000 l) Einheit\n1 944 L\n2\nkg\n3\nkg\nkg\nMedia LA11-2 NOMI\nkg\n7\n1220864\nYeast extract FNI 800\nSaccharose / Big Bag\nTap water\nRohstoff\n019999\n0,05 kg\n0,001 Cyanocobalamin kosher\nMagnesiumsulphateheptahydrate\nyeast extract powder NuCel 582 MG\nkg\n011101\n61042096\n1700030\tAscorbic acid box 25kg\nLumisorb PSMO-20 NGM\nNach Auflösung Einstellen mit\n15\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\nLactobacillus acidophilus\n11491\nkosher\n12\n11\n18,75\n6\n13\nkg\nMR1020\n6,5 - 6,8\n14\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 2 von 15</p>\n<p>-- 2 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nSTERILISATIONSBEDINGUNGEN\nFERMENTATIONSBEDINGUNGEN\nBEMERKUNGEN\nLAGERUNG NACH KÜHLUNGSENDE\nImpferzüchtung\nDrei Impfschritte sind nur nötig, wenn die Produktionsmenge es erfordert. Ansonsten kann Impfer\n2 ausgelassen werden.\n*Der Hauptimfer wird auf pH 5.5 mit mit NH4OH gepuffert\nWenn der Hauptimpfer in der angegebenen Zeit keine Lauge mehr verbraucht und der\nHauptfermenter nicht bereit ist, wird die Kultur gekühlt. Ansonsten möglichst die Kultur warm\nüberimpfen, ein Ende des Laugenverbrauches ist nicht abzuwarten und das Zeitfensster kann\nvollausgenutzt werden.\nAlternativ kann mit DVI beimpft werden.\nAlle Impfer sind nach Möglichkeit warm zu überimpfen. Sollte dies nicht möglich sein, muss der\nImpfer gekühlt werden.\n25 s\n121 °C\nMetallfermenter 121 °C 20 Min\nGlas 121 °C 20 Min\nStoppkriterium bei den einzelnen Impfschritten ist grundsätzlich der angegebene pH-Wert. Die\nangegebene Zeit dient als Richtlinie.\nFalls Belüftung möglich ist, diese entsprechend der Belüftung des Hauptmediums\n(Fermentationsbedingungen) durchführen.\nImpfer 1\nUHT\nZeit\nTempe-\nratur\n-\npH 5,5 ± 0,1*\npH-Wert\nZüchtungsende\n-\n38 °C\n38 °C\n-\n38 °C\n18 h\n4 ± 0,5 h\n-\n10 - 12 h\n-\npH 4,5 ± 0,1\nImpfer 3\nImpfer 2\nHauptimpfer\n1 cryotube pro\n500 mL Medium\nMedium\nMedia LA11-2 NOMI 2 %\n-\nMedia LA11-2 NOMI 2 %\nImpferstufe\nMedia LA11-2 NOMI\n30 Min\n121 °C\nImpfmenge\nTemperatur Zeit\n30 Min\n30 Min\n7194 26 Lb. acidophilus LA-11 NOMI\nArt\nBiostat\nFermenter\nInfors\n138 °C\n121 °C\n06.01.2025\nLactobacillus acidophilus\n11491\nkosher\nProzessleitplan\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 3 von 15</p>\n<p>-- 3 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nHAUPTFERMENTATIONSMEDIUM\nNAME:\nSAP-NR.:\nBEMERKUNGEN\nFermentation\n12\n14\n15\nProzessleitplan\n0,05 kg Antifoaming Agent 012505\n0,001 kg\n9\n7 1 kg Ascorbic acid box 25kg 1700030\n8 0,1\n5\nMedia LA11 NOMI\n1291889\nkg\n014605\tkg\nManganese-(II)-sulphatemonohydrate 014635\nMagnesiumsulphateheptahydrate\t4 7\n13\n11\nL\nkg\n6,25 kg yeast extract powder NuCel 582 MG 1220864\nSAP-Artikelnr.\nYeast extract (Flavormate 7957) MR196\n1 944 L Tap Water 019999\n2 50 kg Saccharose / Big Bag 016802 / 1292869\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\nLactobacillus acidophilus\n11491\nkosher\nNr. Menge\n(pro 1000 l) Einheit Rohstoff\n10\n6 Lumisorb PSMO-20 NGM 61042096\nCyanocobalamin kosher 011101\n5\n3 18,75\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 4 von 15</p>\n<p>-- 4 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nPH-WERTE\nSoll vor Beimpfen\nBEMERKUNGEN\nSTERILISATIONSBEDINGUNGEN\nBEMERKUNGEN\nAA-Ferm-003-A001\nAA-Ferm-003-A001\nTemperatur\tArt\n&gt; 121 °C\n110 °C\n9,0 ± 0,2 9,0 ± 0,2\n60 Min\n30 Min\n25 s\t138 °C\tUHT\ngem. UT-428\n&lt; 60 °C\n-\n= 38 °C\nFermentation\n \nVor Sterilisation\nProzessleitplan\n-\nNach Auflösung\nInsitu\nDirektdampf-sterilisation\nBemerkungen\n5,5 ± 0,2 6,8 ± 0,1 6,5 – 6,8 6,8 ± 0,1 NH4OH/H3PO4\nLactobacillus acidophilus\n11491\nkosher\nRührwerks-\ngeschwindigkeit\nAuslauf-\ntemperatur\nZeit\nVor Steri.\nNach Sterilisation Vor Beimpfen\nEinstellen mit\tNach Steri.\nREFRAKTOMETERWERTE [° Brix]\nTM nach Steri: 8,5 ± 0,2\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 5 von 15</p>\n<p>-- 5 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nBEMERKUNGEN\nSTOPP-KRITERIEN\n1\n2\nBEMERKUNGEN\nSTANDZEITEN\nFermentation\nProzessleitplan\nNeutralisation (pH-Wert) pH 5,5\nFermentationszeit\nImpfmenge 2 %*\nTemperatur\n&gt; 7,5\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\nLactobacillus acidophilus\n11491\nkosher\n*Alternativ kann mit Kulturenkonzentrat beimpft werden (Infusionsbeutel). Die Beimpfung erfolgt\nkeimzahlabhängig.\nKühlung 20 °C\nKühlung bei geringem bis keinem Laugenverbrauch\nOD Ferment (660nm): &gt; 16\nFERMENTATIONSBEDINGUNGEN\n14 ± 1h\tFermentationszeit DVI\nTM FKE\nAA-Ferm-003-A001\tRührwerksgeschwindigkeit\n9 ± 0,5 h\n38 °C\nBemerkungen\nLuft im Kopfraum\tBelüftung\nNH4OH\nPufferungsbeginn nach 1,75 ± 0,25 h\nPufferungsdauer 7,25 ± 0,25 h\nDVI: 5 - 7 h\nDVI: 7,5 - 8,5 h\npH-Wert (Soll) 6,5\nLeitfähigkeitsdifferenz zwischen Probe 0h und Probe kurz vor Kühlung &gt; 24 mS/cm\n(Probe 0h: Leitfähigkeit messen)\nWenn die Werte nicht erreicht werden, ist der Schichtleiter zu kontaktieren.\nWenn direkt Konzentriert werden kann, Ferment auf 20 °C kühlen und konzentrieren.\nBei absehbaren Ferment Standzeiten &gt; 4 h auf &lt; 12 °C kühlen.\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 6 von 15</p>\n<p>-- 6 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nFERMENTATIONSPLOT\nMIKROBILD FERMENT\nProzessleitplan\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\nFermentation\nLactobacillus acidophilus\n11491\nkosher\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 7 von 15</p>\n<p>-- 7 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nKONZENTRIERUNGSBEDINGUNGEN\nSCHWIERIG ZU KONZENTRIEREN Ja X Nein\nFERMENT pH-WERT (SOLL): EINSTELLEN MIT\nBemerkungen:\nBEMERKUNGEN\nKonzentrierung\nTM Konzentrat\nHaltezeiten Konzentrat\nKonzentrat pH-Wert (soll)\n-\n-\n&gt; 1,5 bar\n-\n-\n6,3 bar\n-\nmm\nmm\ngemessen im KB\nsiehe nächste Seite\nProzessleitplan\n-\nZulauf [l/h]\n-\n-\nmax. 20-22m³/h\nDüsengröße\nAusbeute\nKonzentratdruck Permeatdruck\nAlfa\nZentrifuge\nCFE\n23\n11491\nkosher\n6,2 ± 0,2\nMinimum: 19%, Ziel: &gt;19%\nNH4OH / H3PO4\n&lt; 0,55\tOD-Wert Permeat 660 nm\npH-Einstellung mit\nKonzentrierungsfaktor\nTemperatur Konzentrat\n-\n1,6\n26 Lb. acidophilus LA-11 NOMI 06.01.2025\nLactobacillus acidophilus\nTemperatur Ferment\n6,5 ± 0,1\nAA-Ferm-001-F001\nNH4OH / H3PO4\nCFD\n7194\n4,00%\nBemerkungen\nmm\n20 ± 1 °C\n5 °C\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 8 von 15</p>\n<p>-- 8 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nBEMERKUNGEN\nKonzentrierung\nEinstellung CFE: Kolben auf 55mm\nParameter-Eingabe Start:\n- Teilentleerung = 400sec\n- Zulauf = Maximum, ca. 22,000L/h; Druck im Fermenterkopfraum auf 0.8bar erhöhen. Zulauf\nsinkt über die Konzentrierung bis auf ca. 20.000L/h\n- Impulsunterdrückung TE = 150sec für die ersten 5min (bis Trommel gefüllt)\n- Produktzulauf = Automatik\n- Ausbeute = 4%\n- Konzentratdruck = &gt;1,5bar\nNach dem Start der Produktion die CFE so lange mit diesen Parametern laufen lassen, bis die\nAnlage gefüllt ist (~5min). Es wird kein Produkt verworfen (Falls Produktpumpe nicht ansaugt,\nkann kurzzeitig Material verworfen werden). Danach Produktzulauf auf Auto und Parameter fur\nProduktion einstellen.\nParameter-Eingabe Produktion:\n- Teilentleerung = 400 sec (Ziel &gt;300sec)\n- Zulauf = Maximum beibehalten, wie beim Start, 22,\n- Impulsunterdruckung TE = 60sec\n- Produktzulauf = Automatik\n- Ausbeute = 4%\n- Konzentratdruck = &gt;1,5bar\nIst der Motorstrom dauerhaft nahe 80 Ampere, die Temperatur im Konzentrat &gt;35°C und die\nAuslauftrübung &gt;400 ppm , dann sollte man manuell eine Entleerung einstreuen.\nMan sollte der Maschine aber min. 60 - 90 Sekunden Zeit geben sich selbst wieder zu\nstabilisieren.\nDer Kolben ist so eingestellt (55mm), dass ein Drehzahlabfall von 80-100 UpM erreicht werden\nsoll, der Motorstrom steigt hierbei auf 50 Ampere (+/- 5)\nLactobacillus acidophilus\n11491\nkosher\nProzessleitplan\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 9 von 15</p>\n<p>-- 9 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nNAME:\nSAP-NR.:\nTROCKENMASSE SCHUKO\nHERSTELLUNG\n019999\nTKP\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\nLactobacillus acidophilus\n61011570\nFür die Herstellung muss der Rohmixtank zuvor gereinigt worden, sowie der Citrattank sterilisiert\nworden sein.\nMonopotassiumhydrogenphosphate und di-Potassium hydrogenphosphate in 400 L 60 °C\nwarmem Wasser lösen, 15 min warten. Anschliesend Trehalose hinzugeben und weitere 15min\nwarten. Die Trockenmasse von dem Schuko TKP soll 57 ± 1,5 % sein. Wird dieser Wert nicht\nerreicht, ist umgehend der Area Manager und/oder MT zu informieren. Nach dem Anmischen\nwird die Lösung heiß in den Citrattank überführt. Anschließend erfolgt eine Pasteurisierung für\n30 min bei 70-75°C. Das Schuko wird im Anschluss auf &lt; 12°C gekühlt (dieser Vorgang dauert\nmind. 6h).\nDie Schutzkolloidmengenzugabe erfolgt massenbezogen (+45%). Das bedeutet, dass pro 100kg\nKonzentrat 45kg der TKP Lösung zugegeben werden. Falls eine Gewichtsmessung am\nKB nicht vorhanden ist, wird das TKP volumenbezogen zudosiert (Dichte TKP 1,341\nkg/L; Dichte Konzentrat 1,056kg/L).\nFür die exakte Bestimmung des Füllvolumens ist das Rührwerk abzustellen, die Flüssigkeit im\nKB 5 muss sich beruhigen und der Behälterdruck eingependeln haben, erst dann wird das\nVolumen abgelesen. Der rechnerische Wert sowie die tatsächliche Menge Schuko (in L bzw. kg)\nwerden dokumentiert.\nMenge Konzentrat in kg * 0,354 = Volumen TKP Lösung\nBeispiel:\n2090kg Konzentrat im KB: 2090kg * 0,354 = 740 L TKP Lösung werden auf die Konzentratmenge\nzugegeben.\nNach Schukozugabe steigt die Trockenmasse um ca. 11,3% +/-0,6% (Richtwert)\nBeispiel: 20% Trockenmasse im KB Ende Konzentrierung, nach Schutzkolloidzugabe sollte\ndieTrockenmasse bei 31,3% liegen (Richtbereich 30,7-31,9%).\nkg\nkg 11312\tDipotassiumhydrogenphosphate\nMR1023\t2\n3\n382,10\n97,30\nSchutzkolloid\n13803\tMonopotassiumhydrogenphosphate\nMenge\n(pro 45m3) SAP-Nr.\tEinheit\n400,00\n4 76,00\n11491\nProzessleitplan\n1\nNr.\nL Tap Water 80°C\nRohstoff\nkosher\nkg\nTrehalose IP FG 20kg BG\n57 ± 1,5 %\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 10 von 15</p>\n<p>-- 10 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nSTERILISATIONSBEDINGUNGEN\nSCHUTZKOLLOID KANN VORGELEGT WERDEN Ja Nein x\nVERHÄLTNIS SCHUTZKOLLOID - KONZENTRAT\nBEMERKUNGEN\nTROCKENMASSE SCHUKO + KONZENTRAT\n-\tUHT\nZeit\nInsitu\n-\n7194 26\n70 - 75 °C 30 min\nSchutzkolloid\n 18 kg Schutzkolloid + 40 kg Konzentrat\nEs erfolgt Zugabe im KB.\nLactobacillus acidophilus\n11491\nkosher\nLb. acidophilus LA-11 NOMI 06.01.2025\n31,5% (Richtbereich 30,4-33,4%)\nProzessleitplan\nWird der Konzentrierungsfaktor geändert, ist die Schutzkolloidmenge entsprechend anzupassen.\nDas Schutzkolloid wird im KB pasteurisiert und muss nach diesem Schritt innerhalb von 60h\neingesetzt werden. Die Kühlzeit im Citrattank ist hierbei zu berücksichtigen, sie beträgt 6h. Das\nSchutzkolloid darf nur bei Temperaturen von &lt; 20°C eingesetzt werden. Während der Lagerung\nmuss das Schutzkolloid auf &lt; 12°C gehalten werden.\nArt Temperatur\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 11 von 15</p>\n<p>-- 11 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nPH-WERTE\nBEMERKUNGEN\nTEMPERATUR VOR PELLETIERUNG\nDURCHMESSER TROPFGERÄT\nRICHTWERT REGELNIVEAU\nRICHTWERT PUMPENDREHZAHL\nABLÜFTER\nBEMERKUNGEN\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\nLactobacillus acidophilus\n11491\nkosher\nProzessleitplan\nPelletierung\n 1,5 mm\n-170 °C bis -180 °C\n1200-1500 U/min\n&lt; 10 °C\nVor Pelletieren\n6,2 ± 0,2\n800-850 U/min\nEinstellen mit\nNH4OH / H3PO4\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 12 von 15</p>\n<p>-- 12 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nTROCKNUNGSBEDINGUNGEN\nTROCKNUNGSPROFIL\nPARAMETER\nGefriertrocknung\nDK Aufheizen (Start Temp.Stellf.)\nEndtemperatur\nProzessleitplan\nBemerkungen\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\nLactobacillus acidophilus\n11491\nkosher\nDruck 0,14 ± 0,05 mbar\nEFD\tKondensatortemperatur\nEinfriertemperatur\nRezept-Nummer\nFüllhöhe\nEFD LA-11\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 13 von 15</p>\n<p>-- 13 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nRAMPEN\nBEMERKUNGEN\nHier ist leider kein Beispiel vorhanden!\nLactobacillus acidophilus\n11491\nkosher\nProzessleitplan\nGefriertrocknung\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 14 von 15</p>\n<p>-- 14 of 15 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\n23\n14.12.2023 GUN\nKonz.faktor von 25 zu 23 geändert. Dadurch Ausbeute auf 4-4.4% geändert. Trockenmasse\nSchuko auf 57.5% geändert, dadurch auch Dichte und Schukoberechnung angepasst.\n22\n14.06.2023 GUN\nPolysorbat 018005 aus den Medien entfernt, 61042096 bleibt\n19\n10.10.2022 GUN\nSchutzkolloidherstellung geändert. Produktion nur noch in F15 - CFE - KB5 - C6. TM\nSchutzkolloid erhöht.\n17\nUHT-Erhitzung Impfer und HF-Medien auf 138°C reduziert. HF-Medium wird kalt in einem Teil\nangemischt. Dosifox entfernt. Konzentrierungsparameter CFE angepasst (Konzentratdruck,\nZeit Teilentleerung).\n18\n01.07.2022\nGUN\t25.05.2022\nLumisorb in allen Medien entfernt.\nGUN\n61042096 als Alternative eingefügt. TM Konzentrat auf 19% angehoben, gemessen im KB.\n20\n02.12.2022 GUN\nSchutzkolloidherstellung und -erhitzung geändert, TM Schutzkolloid sowie TM Schutzkolloid\nplus Konzentrat erhöht.\n21\n30.01.2023 GUN\nProzessleitplan\n7194 26 Lb. acidophilus LA-11 NOMI 06.01.2025\n26\n06.01.2025 GUN\nC6 entfernt.\nÄnderungshistorie\n25\n12.07.2024 GUN\nProduktionslinie erweitert. Hauptimpferherstellung überarbeitet, Zeiten angepasst.\nFermentation Hauptfermentation geändert.\n24\n07.06.2024 GUN\nKonzentrierungsbedingungen überarbeitet, daher auch Trockenmassen angepasst.\nLactobacillus acidophilus\n11491\nkosher\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 15 von 15</p>\n<p>-- 15 of 15 --</p>"
+              },
+              "ns-ueb-media": {
+                "type": "media",
+                "files": [
+                  {
+                    "id": "3c5592b0-b06b-4424-9368-e48324889ad1",
+                    "fileName": "7194 Rev.26 Lb. acidophilus LA-11 NOMI.pdf",
+                    "fileType": "application/pdf",
+                    "size": 521733,
+                    "uploadedAt": "2026-03-06T10:02:57.817Z",
+                    "description": "PLP 7194 Rev.26 — Originaldokument",
+                    "fileId": "88b87677-2ef4-4dbd-a413-b0c51f31723e.pdf"
+                  }
+                ]
+              }
+            }
+          },
+          "ns-impf": {
+            "sections": {
+              "ns-impf-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-impf-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-ferm": {
+            "sections": {
+              "ns-ferm-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-ferm-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-konz": {
+            "sections": {
+              "ns-konz-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-konz-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-schk": {
+            "sections": {
+              "ns-schk-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-schk-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-pell": {
+            "sections": {
+              "ns-pell-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-pell-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-gefrtr": {
+            "sections": {
+              "ns-gefrtr-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-gefrtr-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-aendh": {
+            "sections": {
+              "ns-aendh-ch": {
+                "type": "changeHistory",
+                "entries": [
+                  {
+                    "id": "a78350c6-9790-40c0-8051-fe95eb9713cf",
+                    "date": "2026-03-06",
+                    "author": "Lars Petersen",
+                    "description": "Importiert aus PDF: PLP 7194 Rev.26",
+                    "version": "26"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "normalizedPayload": {
+        "parameters": []
+      },
+      "reasonForChange": "Importiert aus PDF Rev.26",
+      "authorId": "u-nie-mte1",
+      "createdAt": "2026-03-06T10:02:57.817Z",
+      "updatedAt": "2026-03-06T10:02:57.817Z",
+      "versionStamp": "1772791377817"
+    },
+    {
+      "id": "glv-niebull-plp-7203-v1-1772791377978",
+      "guidelineId": "gl-niebull-plp-7203",
+      "versionNumber": 1,
+      "status": "ACTIVE",
+      "contentJson": {
+        "headerValues": {
+          "nh-plpnr": "7203",
+          "nh-rev": "2",
+          "nh-produktname": "Kefir",
+          "nh-erstellt": "",
+          "nh-herstellform": "Lyophilisat",
+          "nh-spezies": "",
+          "nh-dgcc": "",
+          "nh-allergen": "Unbekannt",
+          "nh-kosher": "Unbekannt"
+        },
+        "sheets": {
+          "ns-uebersicht": {
+            "sections": {
+              "ns-ueb-rte": {
+                "type": "richText",
+                "html": "<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nÜbersicht\nBESONDERE\nBEDINGUNGEN\nIMPFER 1\nIMPFER 2\nHAUPTIMPFER\nFERMENTATION 19 - 22 °C, 19 - 24 h pro Zyklus\nFERMENTATION DVI\nSCHUTZKOLLOID\nKONZENTRIERUNG Theoretische Ausbeute\nKonzentrierungsfaktor\nPELLETIERUNG Tropfgerät\nGEFRIERTROCKNUNG\n-\n7203 2 Kefir 01.03.2024\nundefinierte Komplexkultur\nkeine Impferzüchtung\nBEMERKUNGEN\nKefir Grains\nKefir Inoculum Grains\nDVI SEED\nINOCULUM\n-\n6,3%\nKefir Inoculum Grains\n-\t-\n-\t1280390\nTIN/TUBE - -\n1280385\n-\n-\nLYO\nLYO Ground\nLIQ\nFRO\n1280054\n1280390\nPL17616\n-\nProzessleitplan\nAllgemeine Informationen\nSD - -\n-\n1280387 -\nPRODUCT LIFE\tSAP NUMMERN\n-\n-\nkosher\nTINS\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 1 von 16</p>\n<p>-- 1 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nIMPFERMEDIUM\nNAME:\nSAP-NR.:\nBEMERKUNGEN\nPH-WERTE\nVor Steri. Nach Steri. Soll vor Beimpfen\nSTERILISATIONSBEDINGUNGEN\nkosher\n7203 2 Kefir 01.03.2024\nundefinierte Komplexkultur\n-\nNach Auflösung\nArt\nBiostat\nFermenter\nInfors\nUHT\nMetallfermenter\nImpferzüchtung\nNr. Menge\n(pro 1000 l) Einheit\nkeine Impferzüchtung\nGlas\nProzessleitplan\nSAP-Artikelnr.\tRohstoff\nTemperatur Zeit\nEinstellen mit\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 2 von 16</p>\n<p>-- 2 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nFERMENTATIONSBEDINGUNGEN\nBEMERKUNGEN\nLAGERUNG NACH KÜHLUNGSENDE\nImpferzüchtung\n7203 2 Kefir 01.03.2024\nProzessleitplan\nundefinierte Komplexkultur\n-\nkosher\nZeit\nTempe-\nratur\npH-Wert\nZüchtungsende\nEs gibt für diese Kultur keinen Impfprozeß, da aus aufgetauten Knollen geimpft wird.\nAuftauprozeß: 20h bei Raumptemperatur.\nHauptimpfer\nImpfer 1\nImpferstufe Medium Impfmenge\nImpfer 3\nImpfer 2\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 3 von 16</p>\n<p>-- 3 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nHAUPTFERMENTATIONSMEDIUM\nNAME:\nSAP-NR.:\nBEMERKUNGEN\nMenge\n(pro 1000 l) Einheit Rohstoff SAP-Artikelnr.\n019999\n9\n4\nAntifoaming Agent 012505\n7203 2 Kefir 01.03.2024\nundefinierte Komplexkultur\n-\nkosher\n1 950 L Tap water\nMedia 10% MMP\nW411175\nNr.\nkg Cow skim milk powder kosher 1700007\n3 0,05 kg\n2 100\n8\n6\n7\nFermentation\n13\n14\n11\nDie Rohstoffe in Wasser lösen und sterilisieren.\n5\nProzessleitplan\n12\n15\n10\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 4 von 16</p>\n<p>-- 4 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nPH-WERTE\nSoll vor Beimpfen\nBEMERKUNGEN\nSTERILISATIONSBEDINGUNGEN\nBEMERKUNGEN\nREFRAKTOMETERWERTE [° Brix]\nDurchfluss-\nmenge\n-\nRührwerks-\ngeschwindigkeit\n-\n- -\tInsitu\nDirektdampf-\nsterilisation\n10000 l/h*\t25 sec\n-\n≤ 19 °C\n121 °C 60 min\nundefinierte Komplexkultur\n-\nkosher\n7203 2 Kefir 01.03.2024\n-\nAA-Ferm-003-A001\n*Mini-UHT: 200 l/h\n-\n138 °C\n-\nNach Auflösung\nVor Beimpfen Bemerkungen\tNach Sterilisation\ngem. UT-428\nFermentation\nUHT\nVor Sterilisation\n6,7 ± 0,2\nAuslauf-\ntemperatur\nArt Temperatur Zeit\nProzessleitplan\n6,5 ± 0,2 6,5 ± 0,2\t6,7 ± 0,2\nVor Steri. Einstellen mit\nkeine Einstellung\nNach Steri.\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 5 von 16</p>\n<p>-- 5 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nFERMENTATIONSBEDINGUNGEN\nBEMERKUNGEN\nSTOPP-KRITERIEN\nBEMERKUNGEN\n19 - 22 °C\nTemperatur richtet sich nach Flora;\nÄnderungen nur nach Diskussion mit\ndem Line Managment\nDie gesiebten Knollen werden bis zu weiteren Beimpfung in 10% Milch gelagert.\nMischung: 1 Teil Knollen : 1 Teil Milch\nBeim Weiterimpfen erhöht sich somit auch das Milchvolumen.\nBei jedem Zyklus werden repräsentative Mikrobilder angefertigt, die Aufschluß über die\nFlorazusammensetzung geben\n*Impfratensteigerung langsam, abhängig von der erwarteten Anzahl der Zyklen. Im erwarteten\nletzten Zyklus bei ca. 8% ankommen\n2 Kefir 01.03.2024\nundefinierte Komplexkultur\n-\nTM FKE\nca. 7%\nca. 5%\nBemerkungen\nkosher\n2\n1\nFermentation\nProzessleitplan\nNeutralisation (pH-Wert) nein\npH-Wert (Soll) Ende Ferm.\n1. Zyklus: pH 4,0 - 4,2\nalle folgenden Zyklen: 3,8 - 4,2\nKeine Kühlung!\nRührwerksgeschwindigkeit\nzwischendurch sind nach Absprache\nmit Line Managment auch 40h\nFermentationen möglich - diese werden\nimmer mit 4% angeimpft (Ausnahme!)\n*\nAA-Ferm-003-A001\n19 - 24 h (Knollen frisch) 40 h (Knollen aufgetaut)\njeder Zyklus muss individuell gestoppt werden, Anhaltspunkt ist der pH-Wert im Ferment\nBelüftung Luft im Kopfraum\nFermentationszeit\nImpfmenge 1. Zyklus 4% pure Knolle (aufgetaut)\nImpfemenge 4. Zyklus\nImpfmenge 2. Zyklus\nImpfemenge 3. Zyklus ca. 6%\nImpfemenge folgendeZyklen ca. 5-8%\nTemperatur\n7203\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 6 von 16</p>\n<p>-- 6 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nSTANDZEITEN\nFERMENTATIONSPLOT\nMIKROBILD FERMENT\n-\nkosher\n7203 2 Kefir 01.03.2024\nFermentation\nProzessleitplan\nmaximal 4 h Standzeit\nundefinierte Komplexkultur\nKnolle Brühe\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 7 von 16</p>\n<p>-- 7 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nPROZESSFLIESSBILD 1/2\n7203 2 Kefir 01.03.2024\nundefinierte Komplexkultur\n-\nkosher\nFermentation\nProzessleitplan\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 8 von 16</p>\n<p>-- 8 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nPROZESSFLIESSBILD 2/2\nFermentation\n7203 2 Kefir 01.03.2024\nundefinierte Komplexkultur\n-\nProzessleitplan\nkosher\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 9 von 16</p>\n<p>-- 9 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nKONZENTRIERUNGSBEDINGUNGEN\nSCHWIERIG ZU KONZENTRIEREN Ja - Nein -\nFERMENT pH-WERT (SOLL): EINSTELLEN MIT\nBEMERKUNGEN\n-\nkosher\n7203 2 Kefir 01.03.2024\nundefinierte Komplexkultur\nAblauf [l/h] Düsengröße\nBemerkungen: keine Konzentrierung\n-\n- -\t- -\nmm\nZentrifuge\n- -\n-\t-\t- -\nmm\nBemerkungen\nZulauf [l/h]\nCFD\n- - -\nKonzentratdruck Permeatdruck\nAlfa -\nCFE\n-\nDiese Kultur wird nicht konzentriert, die Knollen werden mit einer Siebmaschine geerntet.\nKonzentrierung\nTM Konzentrat\n5%\n-\n-\nOD-Wert Permeat 660 nm\npH-Einstellung mit\nProzessleitplan\nHaltezeiten Konzentrat\n-\tmm\nentspricht 80 kg / 1600 L\nTemperatur Konzentrat\nKonzentrat pH-Wert (soll)\nTemperatur Ferment\nAusbeute\nKonzentrierungsfaktor -\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 10 von 16</p>\n<p>-- 10 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nSCHUTZKOLLOID FÜR EINLAGERUNG KNOLLEN\nTROCKENMASSE SCHUKO\nBEMERKUNGEN\nHERSTELLUNG\nSTERILISATIONSBEDINGUNGEN\nSCHUTZKOLLOID KANN VORGELEGT WERDEN Ja Nein x\nVERHÄLTNIS SCHUTZKOLLOID - KONZENTRAT\nBEMERKUNGEN\nTROCKENMASSE SCHUKO + KONZENTRAT\nArt Temperatur Zeit\nKnollen, die als Impferknollen eingelagert werden sollen, werden wie folgt gemischt:\n100 kg gesiebte Knolle + 45,05 kg 10% MMP + 21,45 kg Lactoselösung\nDie Mischung wird in 500 g - Portionen in großen Probenbechern abgefüllt.\nDas ergibt dann pro Becher: 300 g Knolle + 135,15 g 10% MMP + 64,35 g Lactoselösung\n≤ 19 °C\tUHT 138 °C 25 sec\nAuslauftemperatur\n-\tInsitu 30% Lactose 15 Min\nInsitu 10% MMP 110 °C 30 Min -\n121 °C\nSchutzkolloid\n1 55,06 L\nNr.\n2\n3 7,15 kg\nMenge\n(pro 100kg\nKnolle)\n4,29 kg\nEinheit\nProzessleitplan\nRohstoff\n19999\nSAP-Nr.\n7203 2 Kefir 01.03.2024\nundefinierte Komplexkultur\n-\nkosher\n014638 / 1294401\tLactose Edible / 25 kg bag\nTap Water\n4,29 kg Skim milk Powder in 40,76 L Wasser lösen und sterilisieren.\n7,15 kg Lactose in 14,3 L Wasser lösen und sterilisieren.\n1700007\tCow skim milk powder kosher\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 11 von 16</p>\n<p>-- 11 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nSCHUTZKOLLOID FÜR GEFRIERTROCKNUNG\nTROCKENMASSE SCHUKO\nBEMERKUNGEN\nHERSTELLUNG\nSTERILISATIONSBEDINGUNGEN\nSCHUTZKOLLOID KANN VORGELEGT WERDEN Ja Nein x\nVERHÄLTNIS SCHUTZKOLLOID - KONZENTRAT\nBEMERKUNGEN\nTROCKENMASSE SCHUKO + KONZENTRAT (Halogentrockner)\nSchutzkolloid\nInsitu 121°C 15 Min -\nUHT 138 °C 25 sec ≤ 19 °C\nKnollen, die gefriergetrocknet werden sollen, werden wie folgt gemischt:\n100kg gesiebte Knolle +100 L Kefirmilk + 75 kg Lactoselösung\nDer pH-Wert sollte vor GT auf pH 6,5 ± 0,1 eingestellt werden mit KOH. Falls die Knollen sehr\naktiv sind, kann eine weitere Einstellung beim Befüllen der GT erforderlich sein.\nL Tap Water 19999\nZeit Auslauftemperatur\n25 kg Lactose in 50 L Wasser lösen und sterilisieren.\nArt Temperatur\n3 25 kg Lactose Edible / 25 kg bag 014638 / 1294401\n2 50\n1280389\nNr.\nMenge\n(pro 100kg\nKnolle)\nEinheit Rohstoff SAP-Nr.\nProzessleitplan\n7203 2 Kefir 01.03.2024\nundefinierte Komplexkultur\n-\nkosher\n1 100 L Kefirmilk\n(extra Fermentation, PLP 7202)\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 12 von 16</p>\n<p>-- 12 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nPH-WERTE\nBEMERKUNGEN\nTEMPERATUR VOR PELLETIERUNG\nDURCHMESSER TROPFGERÄT\nRICHTWERT REGELNIVEAU\nRICHTWERT PUMPENDREHZAHL\nABLÜFTER\nBEMERKUNGEN\n2 Kefir 01.03.2024\nundefinierte Komplexkultur\n-\nkosher\nPelletierung\nkeine Pelletierung\nVor Pelletieren\n-\nEinstellen mit\n-\nProzessleitplan\n7203\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 13 von 16</p>\n<p>-- 13 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nTROCKNUNGSBEDINGUNGEN\nTROCKNUNGSPROFIL\nPARAMETER\nRezept-Nummer\nFüllhöhe 1,5 cm\n1\nkosher\n-\n- 42 / - 45 °C\nDruck 0,3 mbar\nKondensatortemperatur\nEinfriertemperatur\nGefriertrocknung\n \nDK Aufheizen (Start Temp.Stellf.) -\n25 °C\tEndtemperatur\nProzessleitplan\nBemerkungen\n7203 2 Kefir 01.03.2024\nundefinierte Komplexkultur\n-\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 14 von 16</p>\n<p>-- 14 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nRAMPEN\nBEMERKUNGEN\n7203 2 Kefir 01.03.2024\nGefriertrocknung\nDer Prozeß dauert insgesamt ca. 36 h, davon ca. 28 h Haupttrocknung.\nNach 28 h Haupttrocknungszeit soll ein Druckanstiegstest durchgeführt werden. Je nach Ergebnis wird\nweitergetrocknet oder die Nachtrocknung gestartet.\nWenn die Temperaturen Stellfläche und Produkt eine Stunde zusammenlaufen, Druckanstiegsmessung\ndurchführen, sofern sich die Anlage nicht bereits im automatischen Druckanstiegsintervall befindet.\nDruckanstieg &lt; 80 μbar = Trocknung stoppen (DK= &lt; 40 μbar). Wenn die Druckanstiegsmessung nicht\nkonform ist, jede weitere Stunde Druckanstiegsmessung durchführen bis der Druckanstieg konform ist.\nDie Trocknungszeiten richten sich nach der Füllmenge - ist die Anlage nicht voll belegt, sind die\nTrocknungszeiten anzupassen.\nundefinierte Komplexkultur\n-\nkosher\nProzessleitplan\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 15 von 16</p>\n<p>-- 15 of 16 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL DAIRY x SOY GLUTEN\nKosherstatus\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\n1 SAP-Nr. Milchpulver 014604/014625 gegen 1700007/1700000 ausgetauscht. Satz GT-\nBemerkungen erweitert.\n27.07.2018 TIP\n2\n01.03.2024 GUN\nErhitzungstemperatur UHT von 145°C auf 138°C gesenkt.\n3\n4\nProzessleitplan\n7203 2 Kefir 01.03.2024\nundefinierte Komplexkultur\n-\nkosher\n5\t\nÄnderungshistorie\n8\n9\n6\n7\nP2-F005 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2\n# Internal Seite 16 von 16</p>\n<p>-- 16 of 16 --</p>"
+              },
+              "ns-ueb-media": {
+                "type": "media",
+                "files": [
+                  {
+                    "id": "40d4c7c8-8473-41b3-9723-7872cc7cb422",
+                    "fileName": "7203 Rev.2 Kefir.pdf",
+                    "fileType": "application/pdf",
+                    "size": 663932,
+                    "uploadedAt": "2026-03-06T10:02:57.978Z",
+                    "description": "PLP 7203 Rev.2 — Originaldokument",
+                    "fileId": "e8f00426-6109-491c-884b-6dc3aa3e4c77.pdf"
+                  }
+                ]
+              }
+            }
+          },
+          "ns-impf": {
+            "sections": {
+              "ns-impf-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-impf-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-ferm": {
+            "sections": {
+              "ns-ferm-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-ferm-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-konz": {
+            "sections": {
+              "ns-konz-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-konz-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-schk": {
+            "sections": {
+              "ns-schk-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-schk-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-pell": {
+            "sections": {
+              "ns-pell-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-pell-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-gefrtr": {
+            "sections": {
+              "ns-gefrtr-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-gefrtr-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-aendh": {
+            "sections": {
+              "ns-aendh-ch": {
+                "type": "changeHistory",
+                "entries": [
+                  {
+                    "id": "3781a8df-c5a5-44e4-9176-aa18ff87d75d",
+                    "date": "2026-03-06",
+                    "author": "Lars Petersen",
+                    "description": "Importiert aus PDF: PLP 7203 Rev.2",
+                    "version": "2"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "normalizedPayload": {
+        "parameters": []
+      },
+      "reasonForChange": "Importiert aus PDF Rev.2",
+      "authorId": "u-nie-mte1",
+      "createdAt": "2026-03-06T10:02:57.979Z",
+      "updatedAt": "2026-03-06T10:02:57.979Z",
+      "versionStamp": "1772791377979"
+    },
+    {
+      "id": "glv-niebull-plp-7253-v1-1772791378173",
+      "guidelineId": "gl-niebull-plp-7253",
+      "versionNumber": 1,
+      "status": "ACTIVE",
+      "contentJson": {
+        "headerValues": {
+          "nh-plpnr": "7253",
+          "nh-rev": "3",
+          "nh-produktname": "Holdbac Listeria",
+          "nh-erstellt": "",
+          "nh-herstellform": "Lyophilisat",
+          "nh-spezies": "",
+          "nh-dgcc": "",
+          "nh-allergen": "Unbekannt",
+          "nh-kosher": "Unbekannt"
+        },
+        "sheets": {
+          "ns-uebersicht": {
+            "sections": {
+              "ns-ueb-rte": {
+                "type": "richText",
+                "html": "<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nÜbersicht\nBESONDERE\nBEDINGUNGEN\nIMPFER 1\nIMPFER 2\nIMPFER 3\nHAUPTIMPFER\nFERMENTATION\nFERMENTATION DVI\nSCHUTZKOLLOID\nKONZENTRIERUNG Theoretische Ausbeute\nKonzentrierungsfaktor\nPELLETIERUNG Tropfgerät\nGEFRIERTROCKNUNG\nSAP NUMMERN PRODUCT LIFE\nkosher\n20\nTINS\nLYO\nLYO Ground\nLIQ\nFRO\nINOCULUM\nTin/Tube\nDVI SEED\n61030263\npH 3,9 ± 0,2\n18 ± 2 h\n-\n18 ± 2 h\nAllgemeine Informationen\nProzessleitplan\nSD\n1,5 / 2,0 mm\n-\n7253 3 Holdbac Listeria NOMI 01.03.2024\n20 h 37 °C\n14 ± 1 h\n37 °C\nLactiplantibacillus plantarum\n1246\n61025837\n6,4%\n30 °C 0,4 mbar\n37 ± 0,5 °C\n-\n37 °C\n37 ± 0,5 °C\npH 3,9 ± 0,2\n-\nW411167\n-\n-\n-\n-\n-\n-\nPL60753\n-\n-\n-\n61030266\n61030260\n61030124\n61030256\n-\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 1 von 14</p>\n<p>-- 1 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nIMPFERMEDIUM\nNAME:\nSAP-NR.:\nBEMERKUNGEN\nPH-WERTE\nVor Steri. Nach Steri. Soll vor Beimpfen\n7253 3 Holdbac Listeria NOMI 01.03.2024\nLactiplantibacillus plantarum\n1246\nkosher\n12\n11 10\n5\n6\nkg\n103088\n0,2\nSAP-Artikelnr.\n012801\nNr.\n4 014605\nTrisodiumcitrate dihydrate\nyeast extract powder without salt\n20\nNach Auflösung\nkg\n7,2 ± 0,2 6,8 ± 0,2 NaOH / H3PO4\t7,2 ± 0,2\nEinstellen mit\n15\n7,2 ± 0,2\n14\nTap Water\nRohstoff\n019999\n400 mg\n16 Folacid KOSHER*\nManganese-(II)-sulphatemonohydrate\nMagnesiumsulphateheptahydrate\n012202\n012505\tAntifoaming Agent\n20\n19998\n012503\tGlucose**\nVerwendung des Mediums NOMI HLD ausschließlich für Impfer 1 und Impfer 2 (Sterilisation des\nMediums mittels Autoklavieren bei 121 °C für 20 bzw. 30 min).\n* Vitaminmix: Zusatzstoffe p-Aminobenzoic acid (400mg), Folic acid (16mg) und Cyanocobalamin\n(10mg) in 1L Wasser lösen, mit NaOH auf pH 8,5 einstellen. Die gesamte Lösung wird sterilfiltriert\n(0,2μm Filter) und anschließend zum sterilisierten Medium zugegeben. Der Vitaminmix muß für\njede Fermentation frisch hergestellt werden. Verwendung der \"einfachen\" Menge Vitaminmix (im\nVergleich zur Vitaminmix-Menge für Hauptfermentationsmedium).\n** Einzelne Sterilisation: Glucose in 80 L Wasser lösen. Sterilisation 110 °C / 30min oder UHT 138\n°C /25 s. Zugabe nach der Sterilisation; keine pH Einstellung.\n10\nProzessleitplan\nMenge\n(pro 1000 l) Einheit\n1 875 L\n2\nkg\n3\nmg\nL\nMedia NOMI HLD\nkg\n0,05 014635\n9\n1277024\n5\n011101\n019999\nWater VE*\n7\nkg\nP-Aminobenzoic acid kosher* 019901\nmg\n80 L Tap Water**\nCyanocobalamin kosher*\n13\nImpferzüchtung\n8 1\n0,05\nkg\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 2 von 14</p>\n<p>-- 2 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nSTERILISATIONSBEDINGUNGEN\nFERMENTATIONSBEDINGUNGEN\nBEMERKUNGEN\nLAGERUNG NACH KÜHLUNGSENDE\nFermenter\nInfors\n138 °C\n121 °C\nProzessleitplan\n01.03.2024\nLactiplantibacillus plantarum\n1246\nkosher\n30 Min\n121 °C\n-\npH 3,9 ± 0,2\tImpfer 2\n1 cryotube pro\n100 mL Medium\nMedium\nMedia NOMI HLD\nImpferstufe\nMedia NOMI HLD\nImpfmenge\n2 %\n3 Holdbac Listeria NOMI\nStoppkriterium bei den einzelnen Impfschritten ist grundsätzlich der angegebene pH-Wert. Die\nangegebene Zeit dient als Richtlinie.\nFalls Belüftung möglich ist, diese entsprechend der Belüftung des Hauptmediums\n(Fermentationsbedingungen) durchführen.\nImpfer 1\nUHT\nZeit\nTempe-\nratur\n-\npH 3,9 ± 0,2\npH-Wert\nZüchtungsende\n- -\n37 °C\n-\n18 ± 2 h\nImpfer 3\nHauptimpfer Media NOMI HLD UHT 2 %\n-\n37 °C\n37 °C\n20 h\n18 ± 2 h\nArt\nBiostat\nDrei Impfschritte sind nur nötig, wenn die Produktionsmenge es erfordert. Ansonsten kann Impfer\n2 ausgelassen werden.\nAlternativ kann mit DVI geimpft werden.\nAlle Impfer sind nach Möglichkeit warm zu überimpfen. Sollte dies nicht möglich sein, muss der\nImpfer gekühlt werden.\n25 s\n121 °C\nMetallfermenter 121 °C 20 Min\nGlas 121 °C 20 Min\nImpferzüchtung\nTemperatur Zeit\n30 Min\n30 Min\n7253\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 3 von 14</p>\n<p>-- 3 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nHAUPTFERMENTATIONSMEDIUM\nNAME:\nSAP-NR.:\nBEMERKUNGEN\n7253 3 Holdbac Listeria NOMI 01.03.2024\nLactiplantibacillus plantarum\n1246\nkosher\nNr. Menge\n(pro 1000 l) Einheit Rohstoff\n10\n6 Antifoaming Agent 012505\nVerwendung des Mediums NOMI HLD UHT ausschließlich für den Hauptimpfer und die\nHauptfermentation (Sterilisation des Mediums mittels UHT / MUHT). Einsatz von unsterilem\nVitaminmix, Sterilisation erfolgt mittels UHT / MUHT.\n* Vitaminmix: Zusatzstoffe P-Aminobenzoic acid (4 g), Folic acid (0,16 g) und Cyanocobalmin\n(0,1 g) in 1 L Wasser lösen, mit NaOH auf pH 8,5 einstellen. Die gesamte Lösung wird zu den\nrestlichen Medienkomponenten zugegeben, das komplette Medium inklusive Vitaminmix wird\nmittels UHT sterilisiert. Der Vitaminmix muss für jede Fermentation frisch hergestellt werden.\nVerwendung der \"10fachen\" Menge Vitaminmix (im Vergleich zur Vitaminmix-Menge für die\nImpfer1 und 2).\n** Einzelne Sterilisation: Glucose in 80 Liter Wasser lösen. Sterilisation 110 °C / 30 min oder\nUHT 138 °C / 25 s. Zugabe nach der Sterilisation; keine pH Einstellung.\n3 5\nSAP-Artikelnr.\nTrisodiumcitrate dihydrate 103088\n1 875 L Tap Water 019999\n2 20 kg yeast extract powder without salt 012801\nMagnesiumsulphateheptahydrate\n014635\n4 0,2\n20 kg\nkg Manganese-(II)-sulphatemonohydrate\nGlucose** 012503\t13\n11\nkg\nkg\nCyanocobalamin kosher* 011101\n0,05\nProzessleitplan\n0,00016 kg Folacid KOSHER* 012202\n0,0001 kg\n9\n7\n8 0,004\n5\nMedia NOMI HLD UHT\n1283345\n0,05\nkg\n014605\tkg\n4-Aminobenzoic acid* 019901\n12 80 L Tap Water** 019999\n14\n15\nFermentation\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 4 von 14</p>\n<p>-- 4 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nPH-WERTE\nSoll vor Beimpfen\nBEMERKUNGEN\nSTERILISATIONSBEDINGUNGEN\nBEMERKUNGEN\n7253 3 Holdbac Listeria NOMI 01.03.2024\nKOH / H3PO4\nLactiplantibacillus plantarum\n1246\nkosher\nRührwerks-\ngeschwindigkeit\nAuslauf-\ntemperatur\nZeit\nVor Steri.\nNach Sterilisation Vor Beimpfen\nEinstellen mit\tNach Steri.\nREFRAKTOMETERWERTE [° Brix]\n7,2 ± 0,2 7,2 ± 0,2 7,2 ± 0,2 6,8 ± 0,2\nFermentation\n \nVor Sterilisation\nProzessleitplan\nNach Auflösung\nInsitu\nDirektdampf-sterilisation\nBemerkungen\n60 Min\n-\n25 s\t138 °C\tUHT\ngem. UT-428\n&lt; 60 °C\n-\n≤ 37 °C\nAA-Ferm-003-A001\nAA-Ferm-003-A001\nTemperatur\tArt\n&gt; 121 °C\n-\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 5 von 14</p>\n<p>-- 5 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nBEMERKUNGEN\nSTOPP-KRITERIEN\n1\n2\nBEMERKUNGEN\nSTANDZEITEN\nHoldbac Listeria NOMI 01.03.2024\nLactiplantibacillus plantarum\n1246\nkosher\nFERMENTATIONSBEDINGUNGEN\nFermentationszeit DVI\n37 ± 0,5 °C\nBemerkungen\nN2 im Kopfraum\tBelüftung\nKOH\nPufferungsbeginn nach\nPufferungsdauer\n*Alternativ kann mit Kulturenkonzentrat beimpft werden (Infusionsbeutel). Die Beimpfung erfolgt\nkeimzahlabhängig.\nKühlung &lt; 12 °C\nKühlung bei Laugenknick\nFermentation\nProzessleitplan\nNeutralisation (pH-Wert) pH 5,5 ± 0,2\nFermentationszeit\nImpfmenge 2 %*\nTemperatur\n&gt; 4\npH-Wert (Soll) 5,5 ± 0,2\n7253 3\nTM FKE\nAA-Ferm-003-A001\tRührwerksgeschwindigkeit\n14 ± 1 h\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 6 von 14</p>\n<p>-- 6 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nFERMENTATIONSPLOT\nMIKROBILD FERMENT\n7253 3 Holdbac Listeria NOMI 01.03.2024\nProzessleitplan\nFermentation\nHier ist leider kein Beispiel vorhanden!\nHier ist leider kein Beispiel vorhanden!\nLactiplantibacillus plantarum\n1246\nkosher\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 7 von 14</p>\n<p>-- 7 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nKONZENTRIERUNGSBEDINGUNGEN\nSCHWIERIG ZU KONZENTRIEREN Ja Nein\nFERMENT pH-WERT (SOLL): EINSTELLEN MIT\nBemerkungen:\nBEMERKUNGEN\n1246\nkosher\n7253 3 Holdbac Listeria NOMI 01.03.2024\nLactiplantibacillus plantarum\nHaltezeiten Konzentrat\nZulauf [l/h]\n4800\n-\n-\nDüsengröße\nAusbeute\nKonzentratdruck Permeatdruck\nAlfa\nZentrifuge\nCFE\nWenn mit den vorgegebenen Parametern der Konzentrierungsfaktor nicht erreicht werden kann,\nmuss manuell adaptiert werden.\nKonzentrierung\nTM Konzentrat\n5 %\n&lt; 12 °C\n&lt; 10 °C\n&gt; 9\n&lt; 0,1\tOD-Wert Permeat 660 nm\npH-Einstellung mit\nProzessleitplan\nentspricht 50 ± 5 kg / 1000 L\nKonzentrierungsfaktor 20\nCFD\nTemperatur Konzentrat\n6,2 ± 0,2\nAA-Ferm-002-A001\nKOH / H3PO4\nKonzentrat pH-Wert (soll)\nTemperatur Ferment\nBemerkungen\nmm\t0,6\nmm\nmm\n-\n-\n150 - 250 kPa\n-\n-\n6 bar\n-\n-\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 8 von 14</p>\n<p>-- 8 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nNAME:\nSAP-NR.:\nTROCKENMASSE SCHUKO\nBEMERKUNGEN\nHERSTELLUNG\n1246\nkosher\nkg 61007748\tBio-Maltodextrin\nSAP-Nr.\tEinheit\n8\n7\n4,5 kg Bio-Maltodextrin in 9 L Wasser lösen und sterilisieren.\nSchutzkolloid\n10\n9\nMenge\n(pro 1000 l)\n9,00\n5\n4\n4,5\n6\nProzessleitplan\n2\n3\n1\nNr.\nL Tap Water\nRohstoff\n019999\n7253 3 Holdbac Listeria NOMI 01.03.2024\nLactiplantibacillus plantarum\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 9 von 14</p>\n<p>-- 9 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nSTERILISATIONSBEDINGUNGEN\nSCHUTZKOLLOID KANN VORGELEGT WERDEN Ja Nein x\nVERHÄLTNIS SCHUTZKOLLOID - KONZENTRAT\nBEMERKUNGEN\nTROCKENMASSE SCHUKO + KONZENTRAT\nLactiplantibacillus plantarum\n1246\nHoldbac Listeria NOMI 01.03.2024\nProzessleitplan\nWird der Konzentrierungsfaktor geändert, ist die Schutzkolloidmenge entsprechend anzupassen.\nArt Temperatur Zeit\nInsitu\nUHT\nkosher\n13,5 kg Schutzkolloid + 50 kg Konzentrat\n110 °C 30 min\n25 s\n3\n138 °C\n7253\nSchutzkolloid\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 10 von 14</p>\n<p>-- 10 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nPH-WERTE\nBEMERKUNGEN\nTEMPERATUR VOR PELLETIERUNG\nDURCHMESSER TROPFGERÄT\nRICHTWERT REGELNIVEAU\nRICHTWERT PUMPENDREHZAHL\nABLÜFTER\nBEMERKUNGEN\n01.03.2024\nLactiplantibacillus plantarum\n1246\nkosher\nProzessleitplan\nPelletierung\n 1,5 / 2,0 mm\n-170 °C bis -180 °C\nAuf den Anlagen C3 und C4 dürfen maximal 500 kg / h pelletiert werden.\n1200-1500 U/min\n&lt; 10 °C\nVor Pelletieren\n-\n800-850 U/min\nEinstellen mit\n-\n7253 3 Holdbac Listeria NOMI\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 11 von 14</p>\n<p>-- 11 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nTROCKNUNGSBEDINGUNGEN\nTROCKNUNGSPROFIL\nPARAMETER\nKondensatortemperatur\nEinfriertemperatur\n390 kg / 260Schalen\nRezept-Nummer\nFüllhöhe 1,5 kg / Schale\n3\nkosher\n-40 °C\n-40 °C\nDruck 0,4 mbar\nStellflächen\nGT 502\nGefriertrocknung\nAA-Dry-002-M001\nDK Aufheizen (Start Temp.Stellf.) 30 °C\nxx\tEndtemperatur\nProzessleitplan\nBemerkungen\n7253 3 Holdbac Listeria NOMI 01.03.2024\nLactiplantibacillus plantarum\n1246\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 12 von 14</p>\n<p>-- 12 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nRAMPEN\nBEMERKUNGEN\nProzessleitplan\nGefriertrocknung\n7253 3 Holdbac Listeria NOMI 01.03.2024\nHier ist leider kein Beispiel vorhanden!\nWenn die Temperaturen Stellfläche und Produkt eine Stunde zusammenlaufen,\nDruckanstiegsmessung durchführen, sofern sich die Anlage nicht bereits im automatischen\nDruckanstiegsintervall befindet. Druckanstieg &lt; 40 μbar = Trocknung stoppen. Wenn die\nDruckanstiegsmessung nicht konform ist, jede weitere Stunde Druckanstiegsmessung\ndurchführen bis der Druckanstieg konform ist.\nDie Trocknungszeiten richten sich nach der Füllmenge - ist die Anlage nicht voll belegt, sind die\nTrocknungszeiten anzupassen.\nLactiplantibacillus plantarum\n1246\nkosher\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 13 von 14</p>\n<p>-- 13 of 14 --</p>\n<p>Internal#\nPLP-NR. REV. PRODUKTNAME Erstellt am:\nHerstellform LIQ FRO x LYO x TINS SD\nSpezies\nDGCC-Nr.\nAllergenstatus NOAL x DAIRY SOY GLUTEN\nKosherstatus\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\nDatum: Name:\n1 Namensänderung von TS-H zu kommerziellem Namen\n21.01.2021 SOHN\n2\n14.08.2023 MIP\nTrisociumcitrat ausgetauscht: 017905 gegen 103088.\n3\n01.03.2024 GUN\nErhitzungstemperatur UHT von 145°C auf 138°C gesenkt.\nProzessleitplan\n7253 3 Holdbac Listeria NOMI 01.03.2024\nLactiplantibacillus plantarum\n1246\nkosher\nÄnderungshistorie\nP2-F001 / 03.02.2016 (SBA)\nSPECIAL CONTROL / EF0069-2 (permanent)\n# Internal Seite 14 von 14</p>\n<p>-- 14 of 14 --</p>"
+              },
+              "ns-ueb-media": {
+                "type": "media",
+                "files": [
+                  {
+                    "id": "62be2442-8560-4400-9281-33c8fde87fd6",
+                    "fileName": "7253 Rev.3 Holdbac Listeria NOMI.pdf",
+                    "fileType": "application/pdf",
+                    "size": 1049748,
+                    "uploadedAt": "2026-03-06T10:02:58.173Z",
+                    "description": "PLP 7253 Rev.3 — Originaldokument",
+                    "fileId": "1b4f429d-2687-46cf-9975-7ad49f34e9fa.pdf"
+                  }
+                ]
+              }
+            }
+          },
+          "ns-impf": {
+            "sections": {
+              "ns-impf-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-impf-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-ferm": {
+            "sections": {
+              "ns-ferm-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-ferm-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-konz": {
+            "sections": {
+              "ns-konz-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-konz-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-schk": {
+            "sections": {
+              "ns-schk-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-schk-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-pell": {
+            "sections": {
+              "ns-pell-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-pell-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-gefrtr": {
+            "sections": {
+              "ns-gefrtr-rte": {
+                "type": "richText",
+                "html": "<p></p>"
+              },
+              "ns-gefrtr-pt": {
+                "type": "parameterTable",
+                "rows": []
+              }
+            }
+          },
+          "ns-aendh": {
+            "sections": {
+              "ns-aendh-ch": {
+                "type": "changeHistory",
+                "entries": [
+                  {
+                    "id": "ed6569e7-02a3-4689-8a18-d18725e37f8d",
+                    "date": "2026-03-06",
+                    "author": "Lars Petersen",
+                    "description": "Importiert aus PDF: PLP 7253 Rev.3",
+                    "version": "3"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "normalizedPayload": {
+        "parameters": []
+      },
+      "reasonForChange": "Importiert aus PDF Rev.3",
+      "authorId": "u-nie-mte1",
+      "createdAt": "2026-03-06T10:02:58.173Z",
+      "updatedAt": "2026-03-06T10:02:58.173Z",
+      "versionStamp": "1772791378173"
     }
   ],
   "approvals": [
@@ -975,6 +1571,70 @@
       "decision": "APPROVE",
       "comment": "Approved after audit review.",
       "createdAt": "2026-03-06T09:14:25.442Z"
+    },
+    {
+      "id": "da24751a-6bf6-42db-8898-edaf4677cf67",
+      "guidelineVersionId": "glv-niebull-plp-7034-v1",
+      "approverId": "u-nie-apr1",
+      "decision": "APPROVE",
+      "comment": "PDF-Import genehmigt. PLP 7034 Rev.5.",
+      "createdAt": "2026-03-06T09:52:31.499Z"
+    },
+    {
+      "id": "dc5801cc-3d2c-420b-9b0a-ab076b7a026a",
+      "guidelineVersionId": "glv-niebull-plp-7194-v1",
+      "approverId": "u-nie-apr1",
+      "decision": "APPROVE",
+      "comment": "PDF-Import genehmigt. PLP 7194 Rev.26.",
+      "createdAt": "2026-03-06T09:52:31.508Z"
+    },
+    {
+      "id": "6ce07449-954d-495a-81dc-ab5c135f8b7c",
+      "guidelineVersionId": "glv-niebull-plp-7203-v1",
+      "approverId": "u-nie-apr1",
+      "decision": "APPROVE",
+      "comment": "PDF-Import genehmigt. PLP 7203 Rev.2.",
+      "createdAt": "2026-03-06T09:52:31.523Z"
+    },
+    {
+      "id": "2581b6d6-1836-4ce2-a5d0-ed44ce014b48",
+      "guidelineVersionId": "glv-niebull-plp-7253-v1",
+      "approverId": "u-nie-apr1",
+      "decision": "APPROVE",
+      "comment": "PDF-Import genehmigt. PLP 7253 Rev.3.",
+      "createdAt": "2026-03-06T09:52:31.531Z"
+    },
+    {
+      "id": "6a5c5c34-031d-4b02-bbe1-e1517a1c2a97",
+      "guidelineVersionId": "glv-niebull-plp-7034-v1-1772791377690",
+      "approverId": "u-nie-apr1",
+      "decision": "APPROVE",
+      "comment": "PDF-Import genehmigt. PLP 7034 Rev.5.",
+      "createdAt": "2026-03-06T10:02:57.691Z"
+    },
+    {
+      "id": "df642b06-5dee-421c-966e-fd61a972d4a3",
+      "guidelineVersionId": "glv-niebull-plp-7194-v1-1772791377817",
+      "approverId": "u-nie-apr1",
+      "decision": "APPROVE",
+      "comment": "PDF-Import genehmigt. PLP 7194 Rev.26.",
+      "createdAt": "2026-03-06T10:02:57.817Z"
+    },
+    {
+      "id": "8a21595b-fa72-4005-8f0f-23f18ed066ea",
+      "guidelineVersionId": "glv-niebull-plp-7203-v1-1772791377978",
+      "approverId": "u-nie-apr1",
+      "decision": "APPROVE",
+      "comment": "PDF-Import genehmigt. PLP 7203 Rev.2.",
+      "createdAt": "2026-03-06T10:02:57.979Z"
+    },
+    {
+      "id": "07237600-2fdf-4274-a871-218bea21900a",
+      "guidelineVersionId": "glv-niebull-plp-7253-v1-1772791378173",
+      "approverId": "u-nie-apr1",
+      "decision": "APPROVE",
+      "comment": "PDF-Import genehmigt. PLP 7253 Rev.3.",
+      "createdAt": "2026-03-06T10:02:58.173Z"
     }
   ]
 }

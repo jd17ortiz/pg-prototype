@@ -7,10 +7,12 @@
     "build": "next build",
     "start": "next start",
     "seed": "node scripts/seed.mjs",
-    "sanity": "node scripts/sanity-check.mjs"
+    "sanity": "node scripts/sanity-check.mjs",
+    "import:niebull": "node scripts/import-niebull-guidelines.mjs"
   },
   "dependencies": {
     "next": "16.1.6",
+    "pdf-parse": "^2.4.5",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "uuid": "^13.0.0",

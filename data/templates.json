@@ -20,6 +20,13 @@
       "description": "Table-first batch manufacturing record",
       "createdAt": "2026-03-06T09:14:25.438Z",
       "updatedAt": "2026-03-06T09:14:25.438Z"
+    },
+    {
+      "id": "tmpl-nomi-plp",
+      "name": "EU Processleitplan (NOMI)",
+      "description": "Niebull NOMI process documentation: 8 sheets, 9 header fields",
+      "createdAt": "2026-03-06T09:52:31.463Z",
+      "updatedAt": "2026-03-06T09:52:31.473Z"
     }
   ],
   "versions": [
@@ -529,6 +536,242 @@
       "updatedAt": "2026-03-06T09:14:25.438Z",
       "versionStamp": "1772788465438",
       "publishedBy": "u-rde2"
+    },
+    {
+      "id": "tmplv-nomi-plp-1",
+      "templateId": "tmpl-nomi-plp",
+      "versionNumber": 1,
+      "status": "ACTIVE",
+      "schemaJson": {
+        "headerFields": [
+          {
+            "id": "nh-plpnr",
+            "label": "PLP-NR",
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "nh-rev",
+            "label": "REV",
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "nh-produktname",
+            "label": "PRODUKTNAME",
+            "type": "text",
+            "required": true,
+            "defaultValue": ""
+          },
+          {
+            "id": "nh-erstellt",
+            "label": "Erstellt am",
+            "type": "date",
+            "required": false,
+            "defaultValue": ""
+          },
+          {
+            "id": "nh-herstellform",
+            "label": "Herstellform",
+            "type": "select",
+            "required": false,
+            "defaultValue": "",
+            "options": [
+              "Lyophilisat",
+              "Flüssig",
+              "Granulat",
+              "Pulver",
+              "Suspension"
+            ]
+          },
+          {
+            "id": "nh-spezies",
+            "label": "Spezies",
+            "type": "text",
+            "required": false,
+            "defaultValue": ""
+          },
+          {
+            "id": "nh-dgcc",
+            "label": "DGCC-Nr",
+            "type": "text",
+            "required": false,
+            "defaultValue": ""
+          },
+          {
+            "id": "nh-allergen",
+            "label": "Allergenstatus",
+            "type": "select",
+            "required": false,
+            "defaultValue": "",
+            "options": [
+              "Allergenfrei",
+              "Enthält Allergen",
+              "Unbekannt"
+            ]
+          },
+          {
+            "id": "nh-kosher",
+            "label": "Kosherstatus",
+            "type": "select",
+            "required": false,
+            "defaultValue": "",
+            "options": [
+              "Kosher",
+              "Nicht Kosher",
+              "Unbekannt"
+            ]
+          }
+        ],
+        "sheets": [
+          {
+            "id": "ns-uebersicht",
+            "name": "Übersicht",
+            "sections": [
+              {
+                "id": "ns-ueb-rte",
+                "type": "richText",
+                "title": "Übersicht",
+                "config": {
+                  "placeholder": "Allgemeine Beschreibung des Prozesses…"
+                }
+              },
+              {
+                "id": "ns-ueb-media",
+                "type": "media",
+                "title": "Anhänge / Dokumente",
+                "config": {}
+              }
+            ]
+          },
+          {
+            "id": "ns-impf",
+            "name": "Impferzüchtung",
+            "sections": [
+              {
+                "id": "ns-impf-rte",
+                "type": "richText",
+                "title": "Prozessbeschreibung",
+                "config": {}
+              },
+              {
+                "id": "ns-impf-pt",
+                "type": "parameterTable",
+                "title": "Prozessparameter",
+                "config": {}
+              }
+            ]
+          },
+          {
+            "id": "ns-ferm",
+            "name": "Fermentation",
+            "sections": [
+              {
+                "id": "ns-ferm-rte",
+                "type": "richText",
+                "title": "Prozessbeschreibung",
+                "config": {}
+              },
+              {
+                "id": "ns-ferm-pt",
+                "type": "parameterTable",
+                "title": "Prozessparameter",
+                "config": {}
+              }
+            ]
+          },
+          {
+            "id": "ns-konz",
+            "name": "Konzentrierung",
+            "sections": [
+              {
+                "id": "ns-konz-rte",
+                "type": "richText",
+                "title": "Prozessbeschreibung",
+                "config": {}
+              },
+              {
+                "id": "ns-konz-pt",
+                "type": "parameterTable",
+                "title": "Prozessparameter",
+                "config": {}
+              }
+            ]
+          },
+          {
+            "id": "ns-schk",
+            "name": "Schutzkolloid",
+            "sections": [
+              {
+                "id": "ns-schk-rte",
+                "type": "richText",
+                "title": "Prozessbeschreibung",
+                "config": {}
+              },
+              {
+                "id": "ns-schk-pt",
+                "type": "parameterTable",
+                "title": "Prozessparameter",
+                "config": {}
+              }
+            ]
+          },
+          {
+            "id": "ns-pell",
+            "name": "Pelletierung",
+            "sections": [
+              {
+                "id": "ns-pell-rte",
+                "type": "richText",
+                "title": "Prozessbeschreibung",
+                "config": {}
+              },
+              {
+                "id": "ns-pell-pt",
+                "type": "parameterTable",
+                "title": "Prozessparameter",
+                "config": {}
+              }
+            ]
+          },
+          {
+            "id": "ns-gefrtr",
+            "name": "Gefriertrocknung",
+            "sections": [
+              {
+                "id": "ns-gefrtr-rte",
+                "type": "richText",
+                "title": "Prozessbeschreibung",
+                "config": {}
+              },
+              {
+                "id": "ns-gefrtr-pt",
+                "type": "parameterTable",
+                "title": "Prozessparameter",
+                "config": {}
+              }
+            ]
+          },
+          {
+            "id": "ns-aendh",
+            "name": "Änderungshistorie",
+            "sections": [
+              {
+                "id": "ns-aendh-ch",
+                "type": "changeHistory",
+                "title": "Änderungshistorie",
+                "config": {}
+              }
+            ]
+          }
+        ]
+      },
+      "createdAt": "2026-03-06T09:52:31.473Z",
+      "updatedAt": "2026-03-06T09:52:31.473Z",
+      "versionStamp": "1772790751474",
+      "publishedBy": "u-nie-apr1"
     }
   ]
 }

@@ -55,6 +55,20 @@
       "email": "lisa@us.plant",
       "role": "OPERATOR",
       "siteId": "site-us"
+    },
+    {
+      "id": "u-nie-mte1",
+      "name": "Lars Petersen",
+      "email": "lars@niebull.plant",
+      "role": "MT_ENGINEER",
+      "siteId": "site-niebull"
+    },
+    {
+      "id": "u-nie-apr1",
+      "name": "Dr. Eva Schmidt",
+      "email": "eva@niebull.plant",
+      "role": "APPROVER",
+      "siteId": "site-niebull"
     }
   ]
 }

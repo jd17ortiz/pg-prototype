@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { readDemoConfig } from "@/lib/demo";
+import { readGuidelines, readSites } from "@/lib/db";
 import type { DiffDemoConfig } from "@/lib/demo";
 
 const STEPS = [
@@ -74,6 +75,13 @@ export default function DemoPage() {
   } catch (e: unknown) {
     diffDemoError = e instanceof Error ? e.message : "Demo config unavailable.";
   }
+
+  // Niebull guidelines (site-niebull), read at render time
+  const niebullSiteId = "site-niebull";
+  const glStore = readGuidelines();
+  const sitesStore = readSites();
+  const niebullSite = sitesStore.sites.find(s => s.id === niebullSiteId);
+  const niebullGuidelines = glStore.guidelines.filter(g => g.siteId === niebullSiteId);
 
   // Route: /guidelines/[id]/diff  — supports ?vA=&vB= query params for pre-selection
   const diffUrl = diffDemo
@@ -223,6 +231,77 @@ export default function DemoPage() {
               </details>
             </>
           ) : null}
+        </div>
+      </div>
+
+      {/* ── Niebull Imported Guidelines ──────────────────────────────────── */}
+      <div className="mt-10 bg-white border-2 border-green-300 rounded-xl overflow-hidden shadow-sm">
+        <div className="bg-green-700 px-5 py-3 flex items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-white text-green-700 flex items-center justify-center font-bold text-sm shrink-0">
+            N
+          </div>
+          <div>
+            <div className="font-semibold text-white">Niebull — Imported Guidelines</div>
+            <div className="text-xs text-green-200">Real PDFs → guidelines via <code className="font-mono">npm run import:niebull</code></div>
+          </div>
+        </div>
+        <div className="px-5 py-4">
+          {niebullGuidelines.length === 0 ? (
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-sm text-yellow-800">
+              <strong>No Niebull guidelines found.</strong><br />
+              Place the 4 NOMI PDFs in <code className="bg-yellow-100 px-1 rounded font-mono">/imports/</code> then run:{" "}
+              <code className="bg-yellow-100 px-1 rounded font-mono">npm run import:niebull</code>
+              <div className="mt-2 text-xs text-yellow-700 space-y-0.5">
+                <div>• 7034 Rev.5 Na-Formiat 50% NOMI.pdf</div>
+                <div>• 7194 Rev.26 Lb. acidophilus LA-11 NOMI.pdf</div>
+                <div>• 7203 Rev.2 Kefir.pdf</div>
+                <div>• 7253 Rev.3 Holdbac Listeria NOMI.pdf</div>
+              </div>
+            </div>
+          ) : (
+            <>
+              <p className="text-sm text-gray-600 mb-3">
+                {niebullGuidelines.length} guideline(s) imported from PDF for site{" "}
+                <strong>{niebullSite?.name ?? "Niebull"}</strong>.
+                Each guideline has ACTIVE v1 with the parsed PDF text in the Übersicht sheet
+                and the original PDF attached as a media file.
+              </p>
+              <div className="space-y-2 mb-4">
+                {niebullGuidelines.map(g => {
+                  const lv = glStore.versions
+                    .filter(v => v.guidelineId === g.id)
+                    .sort((a, b) => b.versionNumber - a.versionNumber)[0];
+                  return (
+                    <div key={g.id} className="flex items-center justify-between border rounded-lg px-3 py-2 bg-gray-50">
+                      <div>
+                        <span className="font-medium text-gray-800 text-sm">{g.name}</span>
+                        {g.identifier && (
+                          <span className="ml-2 text-xs text-gray-400 font-mono">{g.identifier}</span>
+                        )}
+                        {lv && (
+                          <span className="ml-2 text-xs px-1.5 py-0.5 bg-green-100 text-green-700 rounded">
+                            v{lv.versionNumber} {lv.status}
+                          </span>
+                        )}
+                      </div>
+                      <Link
+                        href={`/guidelines/${g.id}`}
+                        className="text-xs px-3 py-1.5 bg-green-600 text-white rounded hover:bg-green-700"
+                      >
+                        Open
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+              <Link
+                href={`/guidelines?siteId=${niebullSiteId}`}
+                className="inline-block px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 text-sm font-medium"
+              >
+                View all Niebull guidelines →
+              </Link>
+            </>
+          )}
         </div>
       </div>
 
