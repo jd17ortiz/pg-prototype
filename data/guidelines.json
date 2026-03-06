@@ -6,8 +6,9 @@
       "type": "PARENT",
       "siteId": "site-eu",
       "templateVersionId": "tmplv-eu-plp-1",
-      "createdAt": "2026-03-06T00:21:45.085Z",
-      "updatedAt": "2026-03-06T00:21:45.085Z"
+      "createdAt": "2026-03-06T00:27:15.097Z",
+      "updatedAt": "2026-03-06T00:27:15.097Z",
+      "identifier": "DEMO-DIFF"
     },
     {
       "id": "gl-local-eu-001",
@@ -15,8 +16,8 @@
       "type": "LOCAL",
       "siteId": "site-eu",
       "templateVersionId": "tmplv-sop-1",
-      "createdAt": "2026-03-06T00:21:45.085Z",
-      "updatedAt": "2026-03-06T00:21:45.085Z"
+      "createdAt": "2026-03-06T00:27:15.097Z",
+      "updatedAt": "2026-03-06T00:27:15.097Z"
     },
     {
       "id": "gl-child-us-001",
@@ -25,8 +26,8 @@
       "siteId": "site-us",
       "parentGuidelineId": "gl-parent-eu-001",
       "templateVersionId": "tmplv-eu-plp-1",
-      "createdAt": "2026-03-06T00:21:45.085Z",
-      "updatedAt": "2026-03-06T00:21:45.085Z"
+      "createdAt": "2026-03-06T00:27:15.097Z",
+      "updatedAt": "2026-03-06T00:27:15.097Z"
     }
   ],
   "versions": [
@@ -296,9 +297,9 @@
         ]
       },
       "authorId": "u-rde1",
-      "createdAt": "2026-03-06T00:21:45.085Z",
-      "updatedAt": "2026-03-06T00:21:45.085Z",
-      "versionStamp": "1772756505085"
+      "createdAt": "2026-03-06T00:27:15.097Z",
+      "updatedAt": "2026-03-06T00:27:15.097Z",
+      "versionStamp": "1772756835097"
     },
     {
       "id": "glv-parent-eu-001-v2",
@@ -566,9 +567,9 @@
         ]
       },
       "authorId": "u-rde1",
-      "createdAt": "2026-03-06T00:21:45.085Z",
-      "updatedAt": "2026-03-06T00:21:45.085Z",
-      "versionStamp": "1772756505085",
+      "createdAt": "2026-03-06T00:27:15.097Z",
+      "updatedAt": "2026-03-06T00:27:15.097Z",
+      "versionStamp": "1772756835097",
       "reasonForChange": "Updated pH tolerance bands, raised agitator speed limit, removed Humidity param (moved to env. monitoring), added Viscosity specification per QC review."
     },
     {
@@ -683,9 +684,9 @@
         ]
       },
       "authorId": "u-mte1",
-      "createdAt": "2026-03-06T00:21:45.085Z",
-      "updatedAt": "2026-03-06T00:21:45.085Z",
-      "versionStamp": "1772756505085"
+      "createdAt": "2026-03-06T00:27:15.097Z",
+      "updatedAt": "2026-03-06T00:27:15.097Z",
+      "versionStamp": "1772756835097"
     },
     {
       "id": "glv-child-us-001-v1",
@@ -953,9 +954,9 @@
         ]
       },
       "authorId": "u-rde2",
-      "createdAt": "2026-03-06T00:21:45.085Z",
-      "updatedAt": "2026-03-06T00:21:45.085Z",
-      "versionStamp": "1772756505085"
+      "createdAt": "2026-03-06T00:27:15.097Z",
+      "updatedAt": "2026-03-06T00:27:15.097Z",
+      "versionStamp": "1772756835097"
     }
   ],
   "approvals": [
@@ -965,7 +966,7 @@
       "approverId": "u-apr1",
       "decision": "APPROVE",
       "comment": "Reviewed and approved. pH parameters validated.",
-      "createdAt": "2026-03-06T00:21:45.085Z"
+      "createdAt": "2026-03-06T00:27:15.097Z"
     },
     {
       "id": "apr-002",
@@ -973,7 +974,7 @@
       "approverId": "u-apr1",
       "decision": "APPROVE",
       "comment": "Approved after audit review.",
-      "createdAt": "2026-03-06T00:21:45.085Z"
+      "createdAt": "2026-03-06T00:27:15.097Z"
     }
   ]
 }

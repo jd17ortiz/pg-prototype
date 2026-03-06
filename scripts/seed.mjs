@@ -382,6 +382,7 @@ const guidelines = [
   {
     id: PG_ID, name: "Alpha Compound – Processleitplan", type: "PARENT",
     siteId: "site-eu", templateVersionId: T1V_ID, createdAt: now(), updatedAt: now(),
+    identifier: "DEMO-DIFF",
   },
   {
     id: LG_ID, name: "Cleaning SOP – Dispensing Area", type: "LOCAL",

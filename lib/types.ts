@@ -191,6 +191,7 @@ export interface Guideline {
   templateVersionId: string;
   createdAt: string;
   updatedAt: string;
+  identifier?: string;
 }
 
 export interface GuidelineVersion {
