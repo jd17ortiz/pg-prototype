@@ -226,11 +226,22 @@ export default function GuidelinePage({ params }: PageProps) {
   }
 
   async function createNewVersion() {
-    if (!currentVersion) return;
+    const activeVersion = versions.find(v => v.status === "ACTIVE");
+    if (!activeVersion) return;
     setActionBusy(true);
-    const res = await fetch(`/api/guidelines/${id}/versions/${currentVersion.id}/new-version`, { method: "POST" });
+    const res = await fetch(`/api/guidelines/${id}/versions/${activeVersion.id}/new-version`, { method: "POST" });
     if (res.ok) {
+      const d = await res.json();
+      toast("New draft version created.", "success");
       await loadGuideline();
+      // Switch to the new draft
+      setActiveVersionId(d.version.id);
+      setContent(structuredClone(d.version.contentJson));
+      setCurrentStamp(d.version.versionStamp);
+      setDirty(false);
+    } else {
+      const d = await res.json();
+      toast(d.error ?? "Failed to create new version.", "error");
     }
     setActionBusy(false);
   }
@@ -315,9 +326,24 @@ export default function GuidelinePage({ params }: PageProps) {
                 Review / Approve
               </button>
             )}
-            {isActive && canEdit && !versions.some(v => v.status === "DRAFT") && (
+            {canEdit && versions.some(v => v.status === "ACTIVE") && !versions.some(v => v.status === "DRAFT") && (
               <button onClick={createNewVersion} disabled={actionBusy} className="px-3 py-1.5 text-sm bg-purple-600 text-white rounded hover:bg-purple-700 disabled:opacity-50">
                 New Version
+              </button>
+            )}
+            {canEdit && versions.some(v => v.status === "ACTIVE") && versions.some(v => v.status === "DRAFT") && activeVersionId !== versions.find(v => v.status === "DRAFT")?.id && (
+              <button
+                onClick={() => {
+                  const draft = versions.find(v => v.status === "DRAFT");
+                  if (!draft) return;
+                  setActiveVersionId(draft.id);
+                  setContent(structuredClone(draft.contentJson));
+                  setCurrentStamp(draft.versionStamp);
+                  setDirty(false);
+                }}
+                className="px-3 py-1.5 text-sm bg-purple-100 text-purple-800 border border-purple-300 rounded hover:bg-purple-200"
+              >
+                Go to Draft
               </button>
             )}
             {isActive && guideline.type === "PARENT" && user && ["RD_ENGINEER","MT_ENGINEER"].includes(user.role) && (

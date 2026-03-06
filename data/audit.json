@@ -10,7 +10,7 @@
       "data": {
         "name": "Alpha Compound – Processleitplan"
       },
-      "createdAt": "2026-03-06T00:27:15.099Z"
+      "createdAt": "2026-03-06T00:34:41.711Z"
     },
     {
       "id": "ae2",
@@ -20,7 +20,7 @@
       "userId": "u-rde1",
       "userName": "Anna Müller",
       "data": {},
-      "createdAt": "2026-03-06T00:27:15.099Z"
+      "createdAt": "2026-03-06T00:34:41.711Z"
     },
     {
       "id": "ae3",
@@ -32,7 +32,7 @@
       "data": {
         "comment": "Reviewed and approved."
       },
-      "createdAt": "2026-03-06T00:27:15.099Z"
+      "createdAt": "2026-03-06T00:34:41.711Z"
     },
     {
       "id": "ae4",
@@ -44,7 +44,7 @@
       "data": {
         "name": "Cleaning SOP"
       },
-      "createdAt": "2026-03-06T00:27:15.099Z"
+      "createdAt": "2026-03-06T00:34:41.711Z"
     },
     {
       "id": "ae5",
@@ -56,7 +56,7 @@
       "data": {
         "comment": "Approved after audit."
       },
-      "createdAt": "2026-03-06T00:27:15.099Z"
+      "createdAt": "2026-03-06T00:34:41.711Z"
     },
     {
       "id": "ae6",
@@ -68,7 +68,7 @@
       "data": {
         "parentGuidelineId": "gl-parent-eu-001"
       },
-      "createdAt": "2026-03-06T00:27:15.099Z"
+      "createdAt": "2026-03-06T00:34:41.711Z"
     },
     {
       "id": "ae7",
@@ -81,7 +81,120 @@
         "versionNumber": 2,
         "reason": "Updated pH tolerance, added Viscosity, removed Humidity"
       },
-      "createdAt": "2026-03-06T00:27:15.099Z"
+      "createdAt": "2026-03-06T00:34:41.711Z"
+    },
+    {
+      "id": "05aa9033-9874-4144-a5a9-a5873566b57c",
+      "entityType": "GuidelineVersion",
+      "entityId": "glv-parent-eu-001-v2",
+      "action": "SAVED",
+      "userId": "u-mte1",
+      "userName": "Klaus Weber",
+      "createdAt": "2026-03-06T00:39:06.548Z"
+    },
+    {
+      "id": "491c5a45-c6c5-4882-85bd-adcec484be3a",
+      "entityType": "GuidelineVersion",
+      "entityId": "glv-parent-eu-001-v2",
+      "action": "SUBMITTED_FOR_REVIEW",
+      "userId": "u-mte1",
+      "userName": "Klaus Weber",
+      "data": {
+        "reasonForChange": "Update"
+      },
+      "createdAt": "2026-03-06T00:40:43.317Z"
+    },
+    {
+      "id": "14e81aee-872a-427e-830e-1e45059bb140",
+      "entityType": "Approval",
+      "entityId": "1760d089-cd32-4e74-bafb-1633c167e77b",
+      "action": "REJECTED",
+      "userId": "u-apr1",
+      "userName": "Dr. Hans Braun",
+      "data": {
+        "comment": "I dont like it",
+        "guidelineVersionId": "glv-parent-eu-001-v2"
+      },
+      "createdAt": "2026-03-06T00:42:01.748Z"
+    },
+    {
+      "id": "5d1c3fe1-7b06-40f4-8f35-f882ecccaec5",
+      "entityType": "GuidelineVersion",
+      "entityId": "glv-parent-eu-001-v2",
+      "action": "SAVED",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "createdAt": "2026-03-06T00:43:09.409Z"
+    },
+    {
+      "id": "7ae68f24-5c62-4dfd-8d02-6fb72ca29577",
+      "entityType": "GuidelineVersion",
+      "entityId": "glv-parent-eu-001-v2",
+      "action": "SAVED",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "createdAt": "2026-03-06T00:43:30.440Z"
+    },
+    {
+      "id": "ce95253f-fc3c-460d-9e6a-6b3191d8f2f7",
+      "entityType": "GuidelineVersion",
+      "entityId": "glv-parent-eu-001-v2",
+      "action": "SAVED",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "createdAt": "2026-03-06T00:43:43.970Z"
+    },
+    {
+      "id": "aa8a6885-6cf2-420b-878a-62523c2eb186",
+      "entityType": "GuidelineVersion",
+      "entityId": "glv-parent-eu-001-v2",
+      "action": "SUBMITTED_FOR_REVIEW",
+      "userId": "u-rde1",
+      "userName": "Anna Müller",
+      "data": {
+        "reasonForChange": "New parameter test"
+      },
+      "createdAt": "2026-03-06T00:44:09.302Z"
+    },
+    {
+      "id": "38ec8111-556a-49e1-86fd-1d6b5cc81f63",
+      "entityType": "ComplianceTask",
+      "entityId": "5ec25753-9976-4e61-a1c6-0652537daa20",
+      "action": "CREATED",
+      "userId": "u-apr1",
+      "userName": "Dr. Hans Braun",
+      "data": {
+        "childGuidelineId": "gl-child-us-001",
+        "parentVersionId": "glv-parent-eu-001-v2"
+      },
+      "createdAt": "2026-03-06T00:44:44.706Z"
+    },
+    {
+      "id": "20642a70-8837-4cb3-b53f-615f27ab2dd3",
+      "entityType": "Approval",
+      "entityId": "ee93a06f-566b-4a8d-9625-8d7ae14aacb4",
+      "action": "APPROVED",
+      "userId": "u-apr1",
+      "userName": "Dr. Hans Braun",
+      "data": {
+        "comment": "Good",
+        "guidelineVersionId": "glv-parent-eu-001-v2"
+      },
+      "createdAt": "2026-03-06T00:44:44.706Z"
+    },
+    {
+      "id": "eeaf229d-a10d-4079-b630-656e00542b48",
+      "entityType": "Guideline",
+      "entityId": "aeff5e56-dcec-4968-9ffd-b6f94067433f",
+      "action": "CLONED_FROM_PARENT",
+      "userId": "u-rde2",
+      "userName": "James Carter",
+      "data": {
+        "parentGuidelineId": "gl-parent-eu-001",
+        "parentActiveVersionId": "glv-parent-eu-001-v2",
+        "siteId": "site-us"
+      },
+      "createdAt": "2026-03-06T00:47:17.461Z"
     }
   ]
 }

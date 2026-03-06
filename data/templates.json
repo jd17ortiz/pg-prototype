@@ -4,22 +4,22 @@
       "id": "tmpl-eu-plp",
       "name": "EU Processleitplan",
       "description": "Sheet-per-operation format with mixed section types",
-      "createdAt": "2026-03-06T00:27:15.094Z",
-      "updatedAt": "2026-03-06T00:27:15.095Z"
+      "createdAt": "2026-03-06T00:34:41.702Z",
+      "updatedAt": "2026-03-06T00:34:41.704Z"
     },
     {
       "id": "tmpl-sop",
       "name": "Simple SOP Blocks",
       "description": "Setup / Execution / Cleanup workflow",
-      "createdAt": "2026-03-06T00:27:15.095Z",
-      "updatedAt": "2026-03-06T00:27:15.095Z"
+      "createdAt": "2026-03-06T00:34:41.704Z",
+      "updatedAt": "2026-03-06T00:34:41.704Z"
     },
     {
       "id": "tmpl-batch",
       "name": "Batch Ticket",
       "description": "Table-first batch manufacturing record",
-      "createdAt": "2026-03-06T00:27:15.095Z",
-      "updatedAt": "2026-03-06T00:27:15.095Z"
+      "createdAt": "2026-03-06T00:34:41.704Z",
+      "updatedAt": "2026-03-06T00:34:41.704Z"
     }
   ],
   "versions": [
@@ -244,9 +244,9 @@
           }
         ]
       },
-      "createdAt": "2026-03-06T00:27:15.095Z",
-      "updatedAt": "2026-03-06T00:27:15.095Z",
-      "versionStamp": "1772756835095",
+      "createdAt": "2026-03-06T00:34:41.704Z",
+      "updatedAt": "2026-03-06T00:34:41.704Z",
+      "versionStamp": "1772757281704",
       "publishedBy": "u-rde1"
     },
     {
@@ -383,9 +383,9 @@
           }
         ]
       },
-      "createdAt": "2026-03-06T00:27:15.095Z",
-      "updatedAt": "2026-03-06T00:27:15.095Z",
-      "versionStamp": "1772756835096",
+      "createdAt": "2026-03-06T00:34:41.704Z",
+      "updatedAt": "2026-03-06T00:34:41.704Z",
+      "versionStamp": "1772757281704",
       "publishedBy": "u-rde1"
     },
     {
@@ -525,9 +525,9 @@
           }
         ]
       },
-      "createdAt": "2026-03-06T00:27:15.096Z",
-      "updatedAt": "2026-03-06T00:27:15.096Z",
-      "versionStamp": "1772756835096",
+      "createdAt": "2026-03-06T00:34:41.704Z",
+      "updatedAt": "2026-03-06T00:34:41.704Z",
+      "versionStamp": "1772757281704",
       "publishedBy": "u-rde2"
     }
   ]

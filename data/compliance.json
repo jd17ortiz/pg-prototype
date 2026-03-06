@@ -1,3 +1,13 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": "5ec25753-9976-4e61-a1c6-0652537daa20",
+      "parentGuidelineId": "gl-parent-eu-001",
+      "parentVersionId": "glv-parent-eu-001-v2",
+      "childGuidelineId": "gl-child-us-001",
+      "siteId": "site-us",
+      "status": "OPEN",
+      "createdAt": "2026-03-06T00:44:44.706Z"
+    }
+  ]
 }
