@@ -234,6 +234,34 @@ export default function DemoPage() {
         </div>
       </div>
 
+      {/* ── Migration Studio ──────────────────────────────────────────────── */}
+      <div className="mt-10 bg-white border-2 border-purple-300 rounded-xl overflow-hidden shadow-sm">
+        <div className="bg-purple-700 px-5 py-3 flex items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-white text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
+            ⇪
+          </div>
+          <div>
+            <div className="font-semibold text-white">Migration Studio — Excel Importer</div>
+            <div className="text-xs text-purple-200">Upload Niebull Excel to create Draft guidelines from structured data</div>
+          </div>
+        </div>
+        <div className="px-5 py-4">
+          <p className="text-sm text-gray-600 mb-3">
+            Upload a <code className="bg-gray-100 px-1 rounded text-xs font-mono">.xlsm</code> or <code className="bg-gray-100 px-1 rounded text-xs font-mono">.xlsx</code> Processleitplan Excel.
+            The tool auto-detects the mapping profile, shows a preview with source cell references, then creates a <strong>DRAFT</strong> version.
+          </p>
+          <ul className="text-xs text-gray-500 space-y-1 mb-4">
+            <li>• Anchor-based extraction (no hardcoded cell addresses)</li>
+            <li>• Source refs shown per field and row (sheet + cell)</li>
+            <li>• Idempotent: new version if guideline already exists</li>
+            <li>• Original Excel attached as media file</li>
+          </ul>
+          <Link href="/migration" className="inline-block px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 text-sm font-medium">
+            Open Migration Studio →
+          </Link>
+        </div>
+      </div>
+
       {/* ── Niebull Imported Guidelines ──────────────────────────────────── */}
       <div className="mt-10 bg-white border-2 border-green-300 rounded-xl overflow-hidden shadow-sm">
         <div className="bg-green-700 px-5 py-3 flex items-center gap-3">

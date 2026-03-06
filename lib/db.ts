@@ -10,6 +10,7 @@ import type {
   AuditEvent,
   ComplianceStore,
 } from "./types";
+import type { ImportsStore } from "./migration/types";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 export const UPLOADS_DIR = path.join(DATA_DIR, "uploads");
@@ -95,6 +96,20 @@ export function appendAudit(event: AuditEvent): void {
   const store = readAudit();
   store.events.push(event);
   writeStore("audit", store);
+}
+
+// ─── Migration Imports ────────────────────────────────────────────────────────
+export function readImports(): ImportsStore {
+  return readStore<ImportsStore>("imports", { runs: [] });
+}
+
+export function writeImports(store: ImportsStore): void {
+  // Use same-dir temp to avoid cross-device rename on Windows
+  const dest = dataPath("imports");
+  const tmp  = path.join(DATA_DIR, `.tmp-imports-${Date.now()}.json`);
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(tmp, JSON.stringify(store, null, 2), "utf-8");
+  fs.renameSync(tmp, dest);
 }
 
 // ─── Uploads ──────────────────────────────────────────────────────────────────

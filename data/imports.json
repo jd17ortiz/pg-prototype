@@ -1,0 +1,910 @@
+{
+  "runs": [
+    {
+      "id": "2cc3fe4f-ce7b-44e5-9a46-b56f4535ffe8",
+      "fileId": "82f1a423-209d-4e10-a488-634644f5d0da.xlsm",
+      "filename": "F001_PLP_Fermentation.xlsm",
+      "siteId": "site-niebull",
+      "profileId": "nomi-plp-xlsm",
+      "templateVersionId": "",
+      "createdBy": "u-rde1",
+      "createdAt": "2026-03-06T16:34:19.637Z",
+      "warnings": [],
+      "preview": {
+        "profileId": "nomi-plp-xlsm",
+        "profileName": "Fermentation PLP (xlsm)",
+        "sheetNames": [
+          "Allgemeines",
+          "Impferzüchtung",
+          "Fermentation",
+          "Konzentrierung",
+          "Schutzkolloid",
+          "Pelletierung",
+          "Gefriertrocknung",
+          "AEnderungen",
+          "General",
+          "Inoculation",
+          "FermentationE",
+          "Concentration",
+          "Cryoprotectant",
+          "Pelletizing",
+          "Freeze_drying",
+          "Changes"
+        ],
+        "fields": [
+          {
+            "fieldId": "nh-plpnr",
+            "label": "PLP-NR",
+            "value": "7282",
+            "sourceRef": {
+              "sheet": "Allgemeines",
+              "cell": "C4",
+              "label": "PLP-NR."
+            }
+          },
+          {
+            "fieldId": "nh-rev",
+            "label": "REV",
+            "value": "4",
+            "sourceRef": {
+              "sheet": "Allgemeines",
+              "cell": "I4",
+              "label": "REV."
+            }
+          },
+          {
+            "fieldId": "nh-produktname",
+            "label": "PRODUKTNAME",
+            "value": "CHOOZIT M70 A",
+            "sourceRef": {
+              "sheet": "Allgemeines",
+              "cell": "N4",
+              "label": "PRODUKTNAME"
+            }
+          },
+          {
+            "fieldId": "nh-spezies",
+            "label": "Spezies",
+            "value": "Lactococcus lactis ssp. lactis",
+            "sourceRef": {
+              "sheet": "Allgemeines",
+              "cell": "N8",
+              "label": "Spezies"
+            }
+          },
+          {
+            "fieldId": "nh-dgcc",
+            "label": "DGCC-Nr",
+            "value": "2631",
+            "sourceRef": {
+              "sheet": "Allgemeines",
+              "cell": "N11",
+              "label": "DGCC-Nr."
+            }
+          },
+          {
+            "fieldId": "nh-allergen",
+            "label": "Allergenstatus",
+            "value": "NOAL, DAIRY, x, SOY, GLUTEN",
+            "sourceRef": {
+              "sheet": "Allgemeines",
+              "cell": "N13,S13,U13,W13,AA13",
+              "label": "Allergenstatus"
+            }
+          },
+          {
+            "fieldId": "nh-kosher",
+            "label": "Kosherstatus",
+            "value": "kosher",
+            "sourceRef": {
+              "sheet": "Allgemeines",
+              "cell": "N16",
+              "label": "Kosherstatus"
+            }
+          },
+          {
+            "fieldId": "nh-herstellform",
+            "label": "Herstellform",
+            "value": "LIQ, FRO, x, LYO, TINS, SD",
+            "sourceRef": {
+              "sheet": "Allgemeines",
+              "cell": "N6,R6,T6,V6,Z6,AE6",
+              "label": "Herstellform"
+            }
+          }
+        ],
+        "tables": [
+          {
+            "id": "impf-ingredients",
+            "title": "Impferzüchtung – Medienrezeptur",
+            "sheetName": "Impferzüchtung",
+            "columns": [
+              {
+                "id": "nr",
+                "label": "Nr."
+              },
+              {
+                "id": "menge",
+                "label": "Menge"
+              },
+              {
+                "id": "einheit",
+                "label": "Einheit"
+              }
+            ],
+            "rows": [
+              {
+                "rowIndex": 24,
+                "values": {
+                  "nr": "1",
+                  "menge": "955",
+                  "einheit": "L"
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C25:K25"
+                }
+              },
+              {
+                "rowIndex": 25,
+                "values": {
+                  "nr": "2",
+                  "menge": "90",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C26:K26"
+                }
+              },
+              {
+                "rowIndex": 26,
+                "values": {
+                  "nr": "3",
+                  "menge": "0,05",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C27:K27"
+                }
+              },
+              {
+                "rowIndex": 27,
+                "values": {
+                  "nr": "4",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C28:K28"
+                }
+              },
+              {
+                "rowIndex": 28,
+                "values": {
+                  "nr": "5",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C29:K29"
+                }
+              },
+              {
+                "rowIndex": 29,
+                "values": {
+                  "nr": "6",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C30:K30"
+                }
+              },
+              {
+                "rowIndex": 30,
+                "values": {
+                  "nr": "7",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C31:K31"
+                }
+              },
+              {
+                "rowIndex": 31,
+                "values": {
+                  "nr": "8",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C32:K32"
+                }
+              },
+              {
+                "rowIndex": 32,
+                "values": {
+                  "nr": "9",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C33:K33"
+                }
+              },
+              {
+                "rowIndex": 33,
+                "values": {
+                  "nr": "10",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C34:K34"
+                }
+              },
+              {
+                "rowIndex": 34,
+                "values": {
+                  "nr": "11",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C35:K35"
+                }
+              },
+              {
+                "rowIndex": 35,
+                "values": {
+                  "nr": "12",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C36:K36"
+                }
+              },
+              {
+                "rowIndex": 36,
+                "values": {
+                  "nr": "13",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C37:K37"
+                }
+              },
+              {
+                "rowIndex": 37,
+                "values": {
+                  "nr": "14",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C38:K38"
+                }
+              },
+              {
+                "rowIndex": 38,
+                "values": {
+                  "nr": "15",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C39:K39"
+                }
+              },
+              {
+                "rowIndex": 40,
+                "values": {
+                  "nr": "BEMERKUNGEN",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Impferzüchtung",
+                  "range": "C41:K41"
+                }
+              }
+            ],
+            "headerRef": {
+              "sheet": "Impferzüchtung",
+              "range": "C24:K24",
+              "label": "Header row 24"
+            }
+          },
+          {
+            "id": "ferm-ingredients",
+            "title": "Fermentation – Medienrezeptur",
+            "sheetName": "Fermentation",
+            "columns": [
+              {
+                "id": "nr",
+                "label": "Nr."
+              },
+              {
+                "id": "menge",
+                "label": "Menge"
+              },
+              {
+                "id": "einheit",
+                "label": "Einheit"
+              }
+            ],
+            "rows": [
+              {
+                "rowIndex": 24,
+                "values": {
+                  "nr": "1",
+                  "menge": "960",
+                  "einheit": "L"
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C25:K25"
+                }
+              },
+              {
+                "rowIndex": 25,
+                "values": {
+                  "nr": "2",
+                  "menge": "47",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C26:K26"
+                }
+              },
+              {
+                "rowIndex": 26,
+                "values": {
+                  "nr": "3",
+                  "menge": "21",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C27:K27"
+                }
+              },
+              {
+                "rowIndex": 27,
+                "values": {
+                  "nr": "4",
+                  "menge": "0,9",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C28:K28"
+                }
+              },
+              {
+                "rowIndex": 28,
+                "values": {
+                  "nr": "5",
+                  "menge": "0.5",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C29:K29"
+                }
+              },
+              {
+                "rowIndex": 29,
+                "values": {
+                  "nr": "6",
+                  "menge": "0.13",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C30:K30"
+                }
+              },
+              {
+                "rowIndex": 30,
+                "values": {
+                  "nr": "7",
+                  "menge": "0.05",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C31:K31"
+                }
+              },
+              {
+                "rowIndex": 31,
+                "values": {
+                  "nr": "8",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C32:K32"
+                }
+              },
+              {
+                "rowIndex": 32,
+                "values": {
+                  "nr": "9",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C33:K33"
+                }
+              },
+              {
+                "rowIndex": 33,
+                "values": {
+                  "nr": "10",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C34:K34"
+                }
+              },
+              {
+                "rowIndex": 34,
+                "values": {
+                  "nr": "11",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C35:K35"
+                }
+              },
+              {
+                "rowIndex": 35,
+                "values": {
+                  "nr": "12",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C36:K36"
+                }
+              },
+              {
+                "rowIndex": 36,
+                "values": {
+                  "nr": "13",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C37:K37"
+                }
+              },
+              {
+                "rowIndex": 37,
+                "values": {
+                  "nr": "14",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C38:K38"
+                }
+              },
+              {
+                "rowIndex": 38,
+                "values": {
+                  "nr": "15",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C39:K39"
+                }
+              },
+              {
+                "rowIndex": 40,
+                "values": {
+                  "nr": "BEMERKUNGEN",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Fermentation",
+                  "range": "C41:K41"
+                }
+              }
+            ],
+            "headerRef": {
+              "sheet": "Fermentation",
+              "range": "C24:K24",
+              "label": "Header row 24"
+            }
+          },
+          {
+            "id": "schk-ingredients",
+            "title": "Schutzkolloid – Rezeptur",
+            "sheetName": "Schutzkolloid",
+            "columns": [
+              {
+                "id": "nr",
+                "label": "Nr."
+              },
+              {
+                "id": "menge",
+                "label": "Menge"
+              },
+              {
+                "id": "einheit",
+                "label": "Einheit"
+              }
+            ],
+            "rows": [
+              {
+                "rowIndex": 23,
+                "values": {
+                  "nr": "1",
+                  "menge": "3.67",
+                  "einheit": "L"
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C24:K24"
+                }
+              },
+              {
+                "rowIndex": 24,
+                "values": {
+                  "nr": "2",
+                  "menge": "1,31",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C25:K25"
+                }
+              },
+              {
+                "rowIndex": 25,
+                "values": {
+                  "nr": "3",
+                  "menge": "5",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C26:K26"
+                }
+              },
+              {
+                "rowIndex": 26,
+                "values": {
+                  "nr": "4",
+                  "menge": "0,022",
+                  "einheit": "kg"
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C27:K27"
+                }
+              },
+              {
+                "rowIndex": 27,
+                "values": {
+                  "nr": "5",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C28:K28"
+                }
+              },
+              {
+                "rowIndex": 28,
+                "values": {
+                  "nr": "6",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C29:K29"
+                }
+              },
+              {
+                "rowIndex": 29,
+                "values": {
+                  "nr": "7",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C30:K30"
+                }
+              },
+              {
+                "rowIndex": 30,
+                "values": {
+                  "nr": "8",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C31:K31"
+                }
+              },
+              {
+                "rowIndex": 31,
+                "values": {
+                  "nr": "9",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C32:K32"
+                }
+              },
+              {
+                "rowIndex": 32,
+                "values": {
+                  "nr": "10",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C33:K33"
+                }
+              },
+              {
+                "rowIndex": 34,
+                "values": {
+                  "nr": "TROCKENMASSE SCHUKO",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C35:K35"
+                }
+              },
+              {
+                "rowIndex": 36,
+                "values": {
+                  "nr": "63,3 ± 2%",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C37:K37"
+                }
+              },
+              {
+                "rowIndex": 38,
+                "values": {
+                  "nr": "BEMERKUNGEN",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C39:K39"
+                }
+              },
+              {
+                "rowIndex": 40,
+                "values": {
+                  "nr": "Achtung: Schutzkolloid ist sehr viskos, Auslauftemperatur der MUHT bei Sterilisation ausreichend hoch wählen, Sollwert 40 °C",
+                  "menge": "",
+                  "einheit": ""
+                },
+                "sourceRef": {
+                  "sheet": "Schutzkolloid",
+                  "range": "C41:K41"
+                }
+              }
+            ],
+            "headerRef": {
+              "sheet": "Schutzkolloid",
+              "range": "C23:K23",
+              "label": "Header row 23"
+            }
+          }
+        ],
+        "parameterTables": [
+          {
+            "id": "konz-params",
+            "sheetName": "Konzentrierung",
+            "parameters": [
+              {
+                "id": "9483699e-f422-410b-b279-48771062745a",
+                "name": "Ausbeute",
+                "value": "5 %",
+                "unit": "",
+                "min": "",
+                "max": "",
+                "isLocked": false,
+                "isCritical": false,
+                "sourceRef": {
+                  "sheet": "Konzentrierung",
+                  "range": "C32:O32",
+                  "label": "Ausbeute"
+                }
+              },
+              {
+                "id": "984804f7-9200-4e8c-8298-2ae20f5b234b",
+                "name": "Temperatur Ferment",
+                "value": "< 12 °C",
+                "unit": "",
+                "min": "",
+                "max": "",
+                "isLocked": false,
+                "isCritical": false,
+                "sourceRef": {
+                  "sheet": "Konzentrierung",
+                  "range": "C33:O33",
+                  "label": "Temperatur Ferment"
+                }
+              },
+              {
+                "id": "f4f29205-7629-4ddc-923d-7b4d3a740893",
+                "name": "Temperatur Konzentrat",
+                "value": "< 10 °C",
+                "unit": "",
+                "min": "",
+                "max": "",
+                "isLocked": false,
+                "isCritical": false,
+                "sourceRef": {
+                  "sheet": "Konzentrierung",
+                  "range": "C34:O34",
+                  "label": "Temperatur Konzentrat"
+                }
+              },
+              {
+                "id": "a0eb623b-87f6-4485-8e60-119ad4dc37c5",
+                "name": "Konzentrat pH-Wert (soll)",
+                "value": "6,8 ± 0,3",
+                "unit": "",
+                "min": "",
+                "max": "",
+                "isLocked": false,
+                "isCritical": false,
+                "sourceRef": {
+                  "sheet": "Konzentrierung",
+                  "range": "C35:O35",
+                  "label": "Konzentrat pH-Wert (soll)"
+                }
+              },
+              {
+                "id": "e73acee1-0d24-4ea8-b304-9868ae9bd297",
+                "name": "pH-Einstellung mit",
+                "value": "keine pH-Einstellung",
+                "unit": "",
+                "min": "",
+                "max": "",
+                "isLocked": false,
+                "isCritical": false,
+                "sourceRef": {
+                  "sheet": "Konzentrierung",
+                  "range": "C36:O36",
+                  "label": "pH-Einstellung mit"
+                }
+              },
+              {
+                "id": "fc19ee21-5201-49b2-ada6-bdbbc5d8e3d0",
+                "name": "OD-Wert Permeat 660 nm",
+                "value": "< 0,5",
+                "unit": "",
+                "min": "",
+                "max": "",
+                "isLocked": false,
+                "isCritical": false,
+                "sourceRef": {
+                  "sheet": "Konzentrierung",
+                  "range": "C37:O37",
+                  "label": "OD-Wert Permeat 660 nm"
+                }
+              },
+              {
+                "id": "4ef3930e-8802-45f4-819c-ed70a210044c",
+                "name": "TM Konzentrat",
+                "value": "> 15",
+                "unit": "",
+                "min": "",
+                "max": "",
+                "isLocked": false,
+                "isCritical": false,
+                "sourceRef": {
+                  "sheet": "Konzentrierung",
+                  "range": "C41:O41",
+                  "label": "TM Konzentrat"
+                }
+              }
+            ]
+          }
+        ],
+        "changeHistory": [
+          {
+            "num": 1,
+            "date": "2024-07-18",
+            "author": "GUN",
+            "description": "Impfer 2 gestrichen, Impfer 1 größeres Volumen. Fermentationszeit Hauptfermentation und Pufferungszeiten angepasst. TM und OD FKE angepassst. Fermentationsplot und Mikrobild eingefügt.",
+            "sourceRef": {
+              "sheet": "AEnderungen",
+              "range": "D18:D19"
+            }
+          },
+          {
+            "num": 2,
+            "date": "2024-09-24",
+            "author": "GUN",
+            "description": "Wassermenge im Medium SM8 von 947 auf 960 L / 1000 L erhöht.",
+            "sourceRef": {
+              "sheet": "AEnderungen",
+              "range": "D23:D24"
+            }
+          },
+          {
+            "num": 3,
+            "date": "2024-11-13",
+            "author": "GUN",
+            "description": "Zu verwendendes Equipment eingefügt. Änderung der Konzentrierungsparameter: Änderung Zuflussrate, Düsengröße und Permeatdruck. Konzentrierungsbeginn detailliert beschrieben.",
+            "sourceRef": {
+              "sheet": "AEnderungen",
+              "range": "D28:D29"
+            }
+          },
+          {
+            "num": 4,
+            "date": "2025-01-08",
+            "author": "GUN",
+            "description": "Konzentrierung detailliert erläutert, Fermentationsplot ausgetauscht, pH-Werte Konzentrat geändert.",
+            "sourceRef": {
+              "sheet": "AEnderungen",
+              "range": "D33:D34"
+            }
+          }
+        ],
+        "warnings": [],
+        "identifier": "7282",
+        "productName": "CHOOZIT M70 A",
+        "revision": "4"
+      }
+    }
+  ]
+}
