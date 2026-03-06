@@ -6,8 +6,8 @@
       "type": "PARENT",
       "siteId": "site-eu",
       "templateVersionId": "tmplv-eu-plp-1",
-      "createdAt": "2026-03-05T23:26:14.693Z",
-      "updatedAt": "2026-03-05T23:26:14.693Z"
+      "createdAt": "2026-03-06T00:21:45.085Z",
+      "updatedAt": "2026-03-06T00:21:45.085Z"
     },
     {
       "id": "gl-local-eu-001",
@@ -15,8 +15,8 @@
       "type": "LOCAL",
       "siteId": "site-eu",
       "templateVersionId": "tmplv-sop-1",
-      "createdAt": "2026-03-05T23:26:14.693Z",
-      "updatedAt": "2026-03-05T23:26:14.693Z"
+      "createdAt": "2026-03-06T00:21:45.085Z",
+      "updatedAt": "2026-03-06T00:21:45.085Z"
     },
     {
       "id": "gl-child-us-001",
@@ -25,8 +25,8 @@
       "siteId": "site-us",
       "parentGuidelineId": "gl-parent-eu-001",
       "templateVersionId": "tmplv-eu-plp-1",
-      "createdAt": "2026-03-05T23:26:14.693Z",
-      "updatedAt": "2026-03-05T23:26:14.693Z"
+      "createdAt": "2026-03-06T00:21:45.085Z",
+      "updatedAt": "2026-03-06T00:21:45.085Z"
     }
   ],
   "versions": [
@@ -296,9 +296,280 @@
         ]
       },
       "authorId": "u-rde1",
-      "createdAt": "2026-03-05T23:26:14.693Z",
-      "updatedAt": "2026-03-05T23:26:14.693Z",
-      "versionStamp": "1772753174693"
+      "createdAt": "2026-03-06T00:21:45.085Z",
+      "updatedAt": "2026-03-06T00:21:45.085Z",
+      "versionStamp": "1772756505085"
+    },
+    {
+      "id": "glv-parent-eu-001-v2",
+      "guidelineId": "gl-parent-eu-001",
+      "versionNumber": 2,
+      "status": "DRAFT",
+      "contentJson": {
+        "headerValues": {
+          "h-docno": "PLP-EU-001",
+          "h-product": "Alpha Compound",
+          "h-version": "2.2",
+          "h-date": "2025-01-15",
+          "h-site": "Frankfurt",
+          "h-dept": "R&D Manufacturing"
+        },
+        "sheets": {
+          "sheet-op1": {
+            "sections": {
+              "s-op1-rte": {
+                "type": "richText",
+                "html": "<p>This procedure covers the <strong>dispensing and pre-weighing</strong> of raw materials for Alpha Compound Batch 3.x production. Updated per Q3 2025 process review.</p>"
+              },
+              "s-op1-fg": {
+                "type": "fieldGrid",
+                "values": {
+                  "fg-op1-eq": "DISP-001",
+                  "fg-op1-mat": "MAT-ALP-01",
+                  "fg-op1-op": ""
+                }
+              },
+              "s-op1-pt": {
+                "type": "parameterTable",
+                "rows": [
+                  {
+                    "id": "pr1",
+                    "name": "pH min",
+                    "value": "6.9",
+                    "unit": "pH",
+                    "min": "6.5",
+                    "max": "7.1",
+                    "isLocked": true,
+                    "isCritical": true
+                  },
+                  {
+                    "id": "pr2",
+                    "name": "pH max",
+                    "value": "7.2",
+                    "unit": "pH",
+                    "min": "7.0",
+                    "max": "7.5",
+                    "isLocked": true,
+                    "isCritical": true
+                  },
+                  {
+                    "id": "pr3",
+                    "name": "Temperature",
+                    "value": "22",
+                    "unit": "°C",
+                    "min": "20",
+                    "max": "28",
+                    "isLocked": false,
+                    "isCritical": false
+                  },
+                  {
+                    "id": "pr7",
+                    "name": "Viscosity",
+                    "value": "500",
+                    "unit": "mPa·s",
+                    "min": "400",
+                    "max": "600",
+                    "isLocked": false,
+                    "isCritical": true
+                  }
+                ]
+              },
+              "s-op1-tbl": {
+                "type": "table",
+                "rows": [
+                  {
+                    "tc-name": "Compound A",
+                    "tc-qty": "12.5",
+                    "tc-lot": "LOT-2024-001"
+                  },
+                  {
+                    "tc-name": "Buffer B",
+                    "tc-qty": "5.0",
+                    "tc-lot": "LOT-2024-002"
+                  }
+                ]
+              }
+            }
+          },
+          "sheet-op2": {
+            "sections": {
+              "s-op2-fg": {
+                "type": "fieldGrid",
+                "values": {
+                  "fg-op2-spd": "180",
+                  "fg-op2-dur": "30"
+                }
+              },
+              "s-op2-pt": {
+                "type": "parameterTable",
+                "rows": [
+                  {
+                    "id": "pr5",
+                    "name": "Agitator Speed",
+                    "value": "150",
+                    "unit": "rpm",
+                    "min": "100",
+                    "max": "200",
+                    "isLocked": true,
+                    "isCritical": true
+                  },
+                  {
+                    "id": "pr6",
+                    "name": "Mix Time",
+                    "value": "35",
+                    "unit": "min",
+                    "min": "30",
+                    "max": "40",
+                    "isLocked": false,
+                    "isCritical": false
+                  }
+                ]
+              },
+              "s-op2-fd": {
+                "type": "flowDiagram",
+                "description": "Raw materials → Dispensing → Pre-mix → Main mixing vessel → QC sampling → Transfer"
+              }
+            }
+          },
+          "sheet-op3": {
+            "sections": {
+              "s-op3-tbl": {
+                "type": "table",
+                "rows": [
+                  {
+                    "tc-qctest": "pH",
+                    "tc-qcspec": "6.8–7.2",
+                    "tc-qcresult": "7.0",
+                    "tc-qcpass": "Pass"
+                  },
+                  {
+                    "tc-qctest": "Appearance",
+                    "tc-qcspec": "Clear",
+                    "tc-qcresult": "Clear",
+                    "tc-qcpass": "Pass"
+                  }
+                ]
+              },
+              "s-op3-media": {
+                "type": "media",
+                "files": []
+              },
+              "s-op3-ch": {
+                "type": "changeHistory",
+                "entries": [
+                  {
+                    "id": "ch1",
+                    "date": "2025-01-10",
+                    "author": "Anna Müller",
+                    "description": "Initial release",
+                    "version": "1.0"
+                  },
+                  {
+                    "id": "ch2",
+                    "date": "2025-01-15",
+                    "author": "Anna Müller",
+                    "description": "Updated pH parameters per validation study",
+                    "version": "2.1"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "normalizedPayload": {
+        "parameters": [
+          {
+            "id": "pr1",
+            "name": "pH min",
+            "value": "6.9",
+            "unit": "pH",
+            "min": "6.5",
+            "max": "7.1",
+            "isLocked": true,
+            "isCritical": true,
+            "sheetId": "sheet-op1",
+            "sheetName": "Operation 1 – Dispensing",
+            "sectionId": "s-op1-pt",
+            "sectionTitle": "Process Parameters"
+          },
+          {
+            "id": "pr2",
+            "name": "pH max",
+            "value": "7.2",
+            "unit": "pH",
+            "min": "7.0",
+            "max": "7.5",
+            "isLocked": true,
+            "isCritical": true,
+            "sheetId": "sheet-op1",
+            "sheetName": "Operation 1 – Dispensing",
+            "sectionId": "s-op1-pt",
+            "sectionTitle": "Process Parameters"
+          },
+          {
+            "id": "pr3",
+            "name": "Temperature",
+            "value": "22",
+            "unit": "°C",
+            "min": "20",
+            "max": "28",
+            "isLocked": false,
+            "isCritical": false,
+            "sheetId": "sheet-op1",
+            "sheetName": "Operation 1 – Dispensing",
+            "sectionId": "s-op1-pt",
+            "sectionTitle": "Process Parameters"
+          },
+          {
+            "id": "pr7",
+            "name": "Viscosity",
+            "value": "500",
+            "unit": "mPa·s",
+            "min": "400",
+            "max": "600",
+            "isLocked": false,
+            "isCritical": true,
+            "sheetId": "sheet-op1",
+            "sheetName": "Operation 1 – Dispensing",
+            "sectionId": "s-op1-pt",
+            "sectionTitle": "Process Parameters"
+          },
+          {
+            "id": "pr5",
+            "name": "Agitator Speed",
+            "value": "150",
+            "unit": "rpm",
+            "min": "100",
+            "max": "200",
+            "isLocked": true,
+            "isCritical": true,
+            "sheetId": "sheet-op2",
+            "sheetName": "Operation 2 – Mixing",
+            "sectionId": "s-op2-pt",
+            "sectionTitle": "Process Parameters"
+          },
+          {
+            "id": "pr6",
+            "name": "Mix Time",
+            "value": "35",
+            "unit": "min",
+            "min": "30",
+            "max": "40",
+            "isLocked": false,
+            "isCritical": false,
+            "sheetId": "sheet-op2",
+            "sheetName": "Operation 2 – Mixing",
+            "sectionId": "s-op2-pt",
+            "sectionTitle": "Process Parameters"
+          }
+        ]
+      },
+      "authorId": "u-rde1",
+      "createdAt": "2026-03-06T00:21:45.085Z",
+      "updatedAt": "2026-03-06T00:21:45.085Z",
+      "versionStamp": "1772756505085",
+      "reasonForChange": "Updated pH tolerance bands, raised agitator speed limit, removed Humidity param (moved to env. monitoring), added Viscosity specification per QC review."
     },
     {
       "id": "glv-local-eu-001-v1",
@@ -412,9 +683,9 @@
         ]
       },
       "authorId": "u-mte1",
-      "createdAt": "2026-03-05T23:26:14.693Z",
-      "updatedAt": "2026-03-05T23:26:14.693Z",
-      "versionStamp": "1772753174693"
+      "createdAt": "2026-03-06T00:21:45.085Z",
+      "updatedAt": "2026-03-06T00:21:45.085Z",
+      "versionStamp": "1772756505085"
     },
     {
       "id": "glv-child-us-001-v1",
@@ -682,9 +953,9 @@
         ]
       },
       "authorId": "u-rde2",
-      "createdAt": "2026-03-05T23:26:14.693Z",
-      "updatedAt": "2026-03-05T23:26:14.693Z",
-      "versionStamp": "1772753174693"
+      "createdAt": "2026-03-06T00:21:45.085Z",
+      "updatedAt": "2026-03-06T00:21:45.085Z",
+      "versionStamp": "1772756505085"
     }
   ],
   "approvals": [
@@ -694,7 +965,7 @@
       "approverId": "u-apr1",
       "decision": "APPROVE",
       "comment": "Reviewed and approved. pH parameters validated.",
-      "createdAt": "2026-03-05T23:26:14.693Z"
+      "createdAt": "2026-03-06T00:21:45.085Z"
     },
     {
       "id": "apr-002",
@@ -702,7 +973,7 @@
       "approverId": "u-apr1",
       "decision": "APPROVE",
       "comment": "Approved after audit review.",
-      "createdAt": "2026-03-05T23:26:14.693Z"
+      "createdAt": "2026-03-06T00:21:45.085Z"
     }
   ]
 }

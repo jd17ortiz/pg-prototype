@@ -4,29 +4,22 @@
       "id": "tmpl-eu-plp",
       "name": "EU Processleitplan",
       "description": "Sheet-per-operation format with mixed section types",
-      "createdAt": "2026-03-05T23:26:14.689Z",
-      "updatedAt": "2026-03-05T23:26:14.691Z"
+      "createdAt": "2026-03-06T00:21:45.082Z",
+      "updatedAt": "2026-03-06T00:21:45.084Z"
     },
     {
       "id": "tmpl-sop",
       "name": "Simple SOP Blocks",
       "description": "Setup / Execution / Cleanup workflow",
-      "createdAt": "2026-03-05T23:26:14.691Z",
-      "updatedAt": "2026-03-05T23:26:14.691Z"
+      "createdAt": "2026-03-06T00:21:45.084Z",
+      "updatedAt": "2026-03-06T00:21:45.084Z"
     },
     {
       "id": "tmpl-batch",
       "name": "Batch Ticket",
       "description": "Table-first batch manufacturing record",
-      "createdAt": "2026-03-05T23:26:14.691Z",
-      "updatedAt": "2026-03-05T23:26:14.691Z"
-    },
-    {
-      "id": "a3412574-d30e-4e4f-acb4-520bd3db9b66",
-      "name": "Test",
-      "description": "",
-      "createdAt": "2026-03-05T23:33:56.410Z",
-      "updatedAt": "2026-03-05T23:33:56.410Z"
+      "createdAt": "2026-03-06T00:21:45.084Z",
+      "updatedAt": "2026-03-06T00:21:45.084Z"
     }
   ],
   "versions": [
@@ -251,9 +244,9 @@
           }
         ]
       },
-      "createdAt": "2026-03-05T23:26:14.691Z",
-      "updatedAt": "2026-03-05T23:26:14.691Z",
-      "versionStamp": "1772753174691",
+      "createdAt": "2026-03-06T00:21:45.084Z",
+      "updatedAt": "2026-03-06T00:21:45.084Z",
+      "versionStamp": "1772756505084",
       "publishedBy": "u-rde1"
     },
     {
@@ -390,9 +383,9 @@
           }
         ]
       },
-      "createdAt": "2026-03-05T23:26:14.691Z",
-      "updatedAt": "2026-03-05T23:26:14.691Z",
-      "versionStamp": "1772753174691",
+      "createdAt": "2026-03-06T00:21:45.084Z",
+      "updatedAt": "2026-03-06T00:21:45.084Z",
+      "versionStamp": "1772756505084",
       "publishedBy": "u-rde1"
     },
     {
@@ -532,51 +525,10 @@
           }
         ]
       },
-      "createdAt": "2026-03-05T23:26:14.691Z",
-      "updatedAt": "2026-03-05T23:26:14.691Z",
-      "versionStamp": "1772753174691",
+      "createdAt": "2026-03-06T00:21:45.084Z",
+      "updatedAt": "2026-03-06T00:21:45.084Z",
+      "versionStamp": "1772756505084",
       "publishedBy": "u-rde2"
-    },
-    {
-      "id": "9826a45b-ca3f-4a96-a4d8-28451842a916",
-      "templateId": "a3412574-d30e-4e4f-acb4-520bd3db9b66",
-      "versionNumber": 1,
-      "status": "ACTIVE",
-      "schemaJson": {
-        "headerFields": [
-          {
-            "id": "cca57b4a-fe26-4f18-826d-1921409ed253",
-            "label": "New Field 2",
-            "type": "text",
-            "required": true,
-            "defaultValue": ""
-          }
-        ],
-        "sheets": [
-          {
-            "id": "7aed7df9-3ede-42a1-b629-ee7cab38d532",
-            "name": "New Sheet",
-            "sections": [
-              {
-                "id": "336dbf35-a363-44b8-a0d5-e4c93d3d7a49",
-                "type": "media",
-                "title": "Test",
-                "config": {}
-              },
-              {
-                "id": "e6ed5768-acee-4a7c-a1f8-39c8e5041dee",
-                "type": "richText",
-                "title": "Rich Text 22222",
-                "config": {}
-              }
-            ]
-          }
-        ]
-      },
-      "createdAt": "2026-03-05T23:33:56.410Z",
-      "updatedAt": "2026-03-05T23:35:52.149Z",
-      "versionStamp": "1772753752149",
-      "publishedBy": "u-rde1"
     }
   ]
 }

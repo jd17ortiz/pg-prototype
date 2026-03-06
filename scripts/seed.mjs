@@ -267,10 +267,51 @@ function normalizeParams(contentJson, schema) {
   return { parameters };
 }
 
-// Parent Guideline - ACTIVE
+// Parent Guideline - ACTIVE v1 + DRAFT v2 (diff demo)
 const PG_ID = "gl-parent-eu-001";
-const PGV_ID = "glv-parent-eu-001-v1";
+const PGV_ID  = "glv-parent-eu-001-v1";
+const PGV2_ID = "glv-parent-eu-001-v2";
 const parentContent = makeParentContent();
+
+// Version 2 content — intentional differences for diff demo:
+//   CHANGED:  pH min value 6.8→6.9, max 7.0→7.1
+//   CHANGED:  Temperature min 18→20, max 25→28
+//   REMOVED:  Humidity parameter
+//   ADDED:    Viscosity parameter (new)
+//   CHANGED:  Mix Time value 30→35, min 25→30, max 35→40
+//   CHANGED:  richText Purpose & Scope (extended)
+//   CHANGED:  fieldGrid Mixer Speed 150→180 rpm
+function makeParentContentV2() {
+  const c = JSON.parse(JSON.stringify(makeParentContent()));
+
+  // richText change — Operation 1 Purpose & Scope
+  c.sheets["sheet-op1"].sections["s-op1-rte"].html =
+    "<p>This procedure covers the <strong>dispensing and pre-weighing</strong> of raw materials for Alpha Compound Batch 3.x production. Updated per Q3 2025 process review.</p>";
+
+  // fieldGrid change — Mixer Speed: 150 → 180
+  c.sheets["sheet-op2"].sections["s-op2-fg"].values["fg-op2-spd"] = "180";
+
+  // Parameter table changes — Operation 1
+  c.sheets["sheet-op1"].sections["s-op1-pt"].rows = [
+    { id: "pr1", name: "pH min",      value: "6.9",  unit: "pH",    min: "6.5", max: "7.1",  isLocked: true,  isCritical: true  }, // value+max changed
+    { id: "pr2", name: "pH max",      value: "7.2",  unit: "pH",    min: "7.0", max: "7.5",  isLocked: true,  isCritical: true  }, // unchanged
+    { id: "pr3", name: "Temperature", value: "22",   unit: "°C",    min: "20",  max: "28",   isLocked: false, isCritical: false }, // min+max changed
+    // Humidity REMOVED (moved to environment monitoring system)
+    { id: "pr7", name: "Viscosity",   value: "500",  unit: "mPa·s", min: "400", max: "600",  isLocked: false, isCritical: true  }, // ADDED
+  ];
+
+  // Parameter table changes — Operation 2
+  c.sheets["sheet-op2"].sections["s-op2-pt"].rows = [
+    { id: "pr5", name: "Agitator Speed", value: "150", unit: "rpm", min: "100", max: "200", isLocked: true,  isCritical: true  }, // unchanged
+    { id: "pr6", name: "Mix Time",       value: "35",  unit: "min", min: "30",  max: "40",  isLocked: false, isCritical: false }, // value+min+max changed
+  ];
+
+  // Header version bump
+  c.headerValues["h-version"] = "2.2";
+  return c;
+}
+
+const parentContentV2 = makeParentContentV2();
 
 // Local Guideline - ACTIVE (Site EU, uses SOP template)
 const LG_ID = "gl-local-eu-001";
@@ -359,6 +400,12 @@ const guidelineVersions = [
     authorId: "u-rde1", createdAt: now(), updatedAt: now(), versionStamp: vs(),
   },
   {
+    id: PGV2_ID, guidelineId: PG_ID, versionNumber: 2, status: "DRAFT",
+    contentJson: parentContentV2, normalizedPayload: normalizeParams(parentContentV2, t1Schema),
+    authorId: "u-rde1", createdAt: now(), updatedAt: now(), versionStamp: vs(),
+    reasonForChange: "Updated pH tolerance bands, raised agitator speed limit, removed Humidity param (moved to env. monitoring), added Viscosity specification per QC review.",
+  },
+  {
     id: LGV_ID, guidelineId: LG_ID, versionNumber: 1, status: "ACTIVE",
     contentJson: localContent, normalizedPayload: normalizeParams(localContent, t2Schema),
     authorId: "u-mte1", createdAt: now(), updatedAt: now(), versionStamp: vs(),
@@ -391,6 +438,7 @@ const auditEvents = [
   { id: "ae4", entityType: "Guideline",         entityId: LG_ID,  action: "CREATED",              userId: "u-mte1", userName: "Klaus Weber",    data: { name: "Cleaning SOP" }, createdAt: now() },
   { id: "ae5", entityType: "Approval",          entityId: "apr-002", action: "APPROVED",          userId: "u-apr1", userName: "Dr. Hans Braun", data: { comment: "Approved after audit." }, createdAt: now() },
   { id: "ae6", entityType: "Guideline",         entityId: CG_ID,  action: "CLONED_FROM_PARENT",   userId: "u-rde2", userName: "James Carter",   data: { parentGuidelineId: PG_ID }, createdAt: now() },
+  { id: "ae7", entityType: "GuidelineVersion",  entityId: PGV2_ID, action: "CREATED",              userId: "u-rde1", userName: "Anna Müller",    data: { versionNumber: 2, reason: "Updated pH tolerance, added Viscosity, removed Humidity" }, createdAt: now() },
 ];
 write("audit", { events: auditEvents });
 
@@ -401,5 +449,5 @@ console.log("✓ Seed complete:");
 console.log(`  Sites:    ${[SITE_EU, SITE_US].length}`);
 console.log(`  Users:    ${users.length}`);
 console.log(`  Templates: ${templates.length} (each with 1 ACTIVE version)`);
-console.log(`  Guidelines: ${guidelines.length}`);
+console.log(`  Guidelines: ${guidelines.length} (Parent has v1 ACTIVE + v2 DRAFT for diff demo)`);
 console.log(`  Audit events: ${auditEvents.length}`);
