@@ -1,13 +1,18 @@
 import fs from "fs";
 import path from "path";
+import os from "os";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, "..", "data");
 
+/** Atomic write: temp file in same dir + rename (avoids cross-device rename on Windows) */
 function write(name, data) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(path.join(DATA_DIR, `${name}.json`), JSON.stringify(data, null, 2));
+  const dest = path.join(DATA_DIR, `${name}.json`);
+  const tmp  = path.join(DATA_DIR, `.tmp-${name}-${Date.now()}.json`);
+  fs.writeFileSync(tmp, JSON.stringify(data, null, 2), "utf-8");
+  fs.renameSync(tmp, dest);
 }
 
 function uid(prefix) {
@@ -445,6 +450,24 @@ write("audit", { events: auditEvents });
 
 // ─── Compliance ───────────────────────────────────────────────────────────────
 write("compliance", { tasks: [] });
+
+// ─── Demo config ──────────────────────────────────────────────────────────────
+write("demo", {
+  diffDemo: {
+    guidelineId:   PG_ID,
+    fromVersionId: PGV_ID,
+    toVersionId:   PGV2_ID,
+    title: "Alpha Compound – v1 ACTIVE vs v2 DRAFT",
+    notes: [
+      "Changed 2 parameter values (pH min value + max bound)",
+      "Changed 2 parameter bounds (Temperature min/max; Mix Time value+bounds)",
+      "Added 1 parameter: Viscosity 400–600 mPa·s (isCritical)",
+      "Removed 1 parameter: Humidity (moved to env. monitoring)",
+      "Edited richText: Purpose & Scope — extended description",
+      "Edited fieldGrid: Mixer Speed 150 → 180 rpm",
+    ],
+  },
+});
 
 console.log("✓ Seed complete:");
 console.log(`  Sites:    ${[SITE_EU, SITE_US].length}`);

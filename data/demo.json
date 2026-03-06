@@ -1,0 +1,16 @@
+{
+  "diffDemo": {
+    "guidelineId": "gl-parent-eu-001",
+    "fromVersionId": "glv-parent-eu-001-v1",
+    "toVersionId": "glv-parent-eu-001-v2",
+    "title": "Alpha Compound – v1 ACTIVE vs v2 DRAFT",
+    "notes": [
+      "Changed 2 parameter values (pH min value + max bound)",
+      "Changed 2 parameter bounds (Temperature min/max; Mix Time value+bounds)",
+      "Added 1 parameter: Viscosity 400–600 mPa·s (isCritical)",
+      "Removed 1 parameter: Humidity (moved to env. monitoring)",
+      "Edited richText: Purpose & Scope — extended description",
+      "Edited fieldGrid: Mixer Speed 150 → 180 rpm"
+    ]
+  }
+}

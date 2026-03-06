@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getDiffDemo } from "@/lib/demo";
-import type { DiffDemoInfo } from "@/lib/demo";
+import { readDemoConfig } from "@/lib/demo";
+import type { DiffDemoConfig } from "@/lib/demo";
 
 const STEPS = [
   {
@@ -67,23 +67,25 @@ const STEPS = [
 ];
 
 export default function DemoPage() {
-  let diffDemo: DiffDemoInfo | null = null;
+  let diffDemo: DiffDemoConfig | null = null;
   let diffDemoError: string | null = null;
   try {
-    diffDemo = getDiffDemo();
+    diffDemo = readDemoConfig().diffDemo;
   } catch (e: unknown) {
-    diffDemoError = e instanceof Error ? e.message : "Demo data unavailable.";
+    diffDemoError = e instanceof Error ? e.message : "Demo config unavailable.";
   }
 
-  // Diff page route: /guidelines/[id]/diff — auto-selects second-to-last vs latest
-  const diffUrl = diffDemo ? `/guidelines/${diffDemo.guidelineId}/diff` : null;
+  // Route: /guidelines/[id]/diff  — supports ?vA=&vB= query params for pre-selection
+  const diffUrl = diffDemo
+    ? `/guidelines/${diffDemo.guidelineId}/diff?vA=${diffDemo.fromVersionId}&vB=${diffDemo.toVersionId}`
+    : null;
 
   return (
     <div className="max-w-4xl mx-auto">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-indigo-900 mb-2">Demo Script — 6-Step Walkthrough</h1>
         <p className="text-gray-600">
-          This prototype implements the full PASS 1 feature set. Follow these steps to explore all capabilities.
+          This prototype implements the full PASS 1 + PASS 2 feature set. Follow these steps to explore all capabilities.
           Use the <Link href="/login" className="text-indigo-600 hover:underline">Login page</Link> to switch roles.
         </p>
       </div>
@@ -96,6 +98,7 @@ export default function DemoPage() {
             { href: "/guidelines", label: "Guidelines" },
             { href: "/templates",  label: "Templates" },
             { href: "/inbox",      label: "Approval Inbox" },
+            { href: "/compliance", label: "Compliance Tasks" },
             { href: "/guidelines/gl-parent-eu-001", label: "Parent Guideline" },
             { href: "/guidelines/gl-local-eu-001",  label: "Local SOP" },
             { href: "/guidelines/gl-child-us-001",  label: "Child (US)" },
@@ -162,43 +165,45 @@ export default function DemoPage() {
         ))}
       </div>
 
-      {/* Diff Demo */}
+      {/* ── Diff Demo ─────────────────────────────────────────────────────────── */}
       <div className="mt-10 bg-white border-2 border-indigo-300 rounded-xl overflow-hidden shadow-sm">
         <div className="bg-indigo-600 px-5 py-3 flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-white text-indigo-600 flex items-center justify-center font-bold text-sm shrink-0">▲</div>
+          <div className="w-8 h-8 rounded-full bg-white text-indigo-600 flex items-center justify-center font-bold text-sm shrink-0">
+            ▲
+          </div>
           <div>
             <div className="font-semibold text-white">Diff Demo — Version Comparison</div>
-            <div className="text-xs text-indigo-200">PASS 2 feature · compare ACTIVE v1 vs DRAFT v2</div>
+            <div className="text-xs text-indigo-200">PASS 2 feature · ACTIVE v1 vs DRAFT v2 with intentional differences</div>
           </div>
         </div>
         <div className="px-5 py-4">
           {diffDemoError ? (
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-sm text-yellow-800">
-              <strong>Demo data not found.</strong> {diffDemoError}
-              <br />Run <code className="bg-yellow-100 px-1 rounded">npm run seed</code> then refresh this page.
-            </div>
+            <>
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-sm text-yellow-800 mb-3">
+                <strong>Demo data not found.</strong><br />
+                {diffDemoError}<br />
+                Run <code className="bg-yellow-100 px-1 rounded font-mono">npm run seed</code> then refresh this page.
+              </div>
+            </>
           ) : diffDemo && diffUrl ? (
             <>
-              <p className="text-sm text-gray-700 mb-3">
-                The seeded guideline <strong>&ldquo;{diffDemo.guidelineName}&rdquo;</strong> has two versions
-                (v{diffDemo.activeVersionNumber} ACTIVE → v{diffDemo.draftVersionNumber} {diffDemo.draftStatus})
-                with these intentional differences baked in:
+              <p className="text-sm text-gray-700 mb-1 font-medium">{diffDemo.title}</p>
+              <p className="text-sm text-gray-500 mb-3">
+                The seeded Parent guideline has two versions with intentional differences baked in for demo purposes.
+                Click the button to open the diff view comparing ACTIVE v1 vs DRAFT v2.
               </p>
-              <ul className="text-sm text-gray-600 mb-4 space-y-1 list-none">
-                {[
-                  { tag: "CHANGED", color: "bg-yellow-100 text-yellow-800", text: "pH min — value 6.8→6.9, max bound 7.0→7.1" },
-                  { tag: "CHANGED", color: "bg-yellow-100 text-yellow-800", text: "Temperature — min 18→20°C, max 25→28°C" },
-                  { tag: "CHANGED", color: "bg-yellow-100 text-yellow-800", text: "Mix Time — value 30→35 min, bounds widened" },
-                  { tag: "REMOVED", color: "bg-red-100 text-red-800",    text: "Humidity parameter (moved to env. monitoring)" },
-                  { tag: "ADDED",   color: "bg-green-100 text-green-800", text: "Viscosity 400–600 mPa·s (isCritical)" },
-                  { tag: "CHANGED", color: "bg-yellow-100 text-yellow-800", text: "Purpose & Scope richText — extended description" },
-                  { tag: "CHANGED", color: "bg-yellow-100 text-yellow-800", text: "Mixer Speed fieldGrid — 150→180 rpm" },
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <span className={`text-xs font-semibold px-1.5 py-0.5 rounded shrink-0 ${item.color}`}>{item.tag}</span>
-                    <span>{item.text}</span>
-                  </li>
-                ))}
+              <ul className="mb-4 space-y-1">
+                {diffDemo.notes.map((note, i) => {
+                  const tag = note.startsWith("Added") ? { label: "ADDED", cls: "bg-green-100 text-green-800" }
+                    : note.startsWith("Removed")       ? { label: "REMOVED", cls: "bg-red-100 text-red-800" }
+                    : { label: "CHANGED", cls: "bg-yellow-100 text-yellow-800" };
+                  return (
+                    <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
+                      <span className={`text-xs font-semibold px-1.5 py-0.5 rounded shrink-0 ${tag.cls}`}>{tag.label}</span>
+                      {note}
+                    </li>
+                  );
+                })}
               </ul>
               <Link
                 href={diffUrl}
@@ -206,13 +211,24 @@ export default function DemoPage() {
               >
                 Open Diff Demo →
               </Link>
+              {/* Debug details */}
+              <details className="mt-4">
+                <summary className="text-xs text-gray-400 cursor-pointer hover:text-gray-600">Debug IDs</summary>
+                <div className="mt-2 text-xs font-mono text-gray-500 bg-gray-50 rounded p-2 space-y-0.5">
+                  <div>guidelineId:   {diffDemo.guidelineId}</div>
+                  <div>fromVersionId: {diffDemo.fromVersionId}</div>
+                  <div>toVersionId:   {diffDemo.toVersionId}</div>
+                  <div>diffUrl:       {diffUrl}</div>
+                </div>
+              </details>
             </>
           ) : null}
         </div>
       </div>
 
       <div className="mt-6 p-5 bg-green-50 border border-green-200 rounded-xl text-sm text-green-800">
-        <strong>Data persistence:</strong> All data is stored as JSON under <code>/data/</code> with atomic writes (temp+rename). Run <code>npm run seed</code> to reset to demo data at any time.
+        <strong>Data persistence:</strong> All data is stored as JSON under <code>/data/</code> with atomic writes (temp+rename).
+        Run <code>npm run seed</code> to reset to demo data at any time.
       </div>
     </div>
   );

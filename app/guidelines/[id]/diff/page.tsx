@@ -1,16 +1,27 @@
 "use client";
-import { useEffect, useState, use } from "react";
+import { useEffect, useState, use, Suspense } from "react";
 import Link from "next/link";
 import { useAuth } from "@/lib/client-auth";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { GuidelineVersion, DiffResult, DiffEntry } from "@/lib/types";
 
 interface PageProps { params: Promise<{ id: string }> }
 
-export default function DiffPage({ params }: PageProps) {
+export default function DiffPageWrapper({ params }: PageProps) {
+  return (
+    <Suspense fallback={<div className="text-center py-20 text-gray-400">Loading…</div>}>
+      <DiffPage params={params} />
+    </Suspense>
+  );
+}
+
+function DiffPage({ params }: PageProps) {
   const { id } = use(params);
   const { user } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const initVA = searchParams.get("vA") ?? "";
+  const initVB = searchParams.get("vB") ?? "";
 
   const [versions, setVersions] = useState<GuidelineVersion[]>([]);
   const [vAId, setVAId] = useState("");
@@ -35,13 +46,12 @@ export default function DiffPage({ params }: PageProps) {
       (a: GuidelineVersion, b: GuidelineVersion) => a.versionNumber - b.versionNumber
     );
     setVersions(vList);
-    if (vList.length >= 2) {
-      setVAId(vList[vList.length - 2].id);
-      setVBId(vList[vList.length - 1].id);
-    } else if (vList.length === 1) {
-      setVAId(vList[0].id);
-      setVBId(vList[0].id);
-    }
+    // Prefer query params; fall back to second-to-last vs latest
+    const ids = vList.map(v => v.id);
+    const va = initVA && ids.includes(initVA) ? initVA : vList.length >= 2 ? vList[vList.length - 2].id : vList[0]?.id ?? "";
+    const vb = initVB && ids.includes(initVB) ? initVB : vList.length >= 1 ? vList[vList.length - 1].id : "";
+    setVAId(va);
+    setVBId(vb);
   }
 
   async function runDiff() {
