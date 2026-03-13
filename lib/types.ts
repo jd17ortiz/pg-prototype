@@ -105,6 +105,8 @@ export interface Template {
   description: string;
   createdAt: string;
   updatedAt: string;
+  /** Optional family identifier used by ensureTemplate() for idempotent preset creation */
+  family?: string;
 }
 
 // ─── Guideline Content ────────────────────────────────────────────────────────

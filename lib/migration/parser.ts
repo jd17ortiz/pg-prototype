@@ -13,7 +13,7 @@ import type {
   SourceRef,
   ReadStrategy,
 } from "./types";
-import { detectProfile, NOMI_PLP_PROFILE } from "./profiles";
+import { detectProfile, PROFILES, NOMI_PLP_PROFILE } from "./profiles";
 
 // ─── Cell helpers ─────────────────────────────────────────────────────────────
 
@@ -459,8 +459,8 @@ export function parseExcel(
   // Detect or select profile
   let profile = detectProfile(sheetNames);
   if (profileOverrideId) {
-    // Could import PROFILES and find by id — for now just use NOMI if override matches
-    if (profileOverrideId === NOMI_PLP_PROFILE.id) profile = NOMI_PLP_PROFILE;
+    const overrideProfile = PROFILES.find(p => p.id === profileOverrideId);
+    if (overrideProfile) profile = overrideProfile;
   }
   if (!profile) {
     // Fall back to NOMI profile as default

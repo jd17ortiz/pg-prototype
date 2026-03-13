@@ -10,6 +10,13 @@ interface Site { id: string; name: string }
 interface TemplateVersion { id: string; versionNumber: number; status: string; templateName: string }
 interface Profile { id: string; name: string; description: string }
 
+interface EnsuredTemplateInfo {
+  id: string;
+  name: string;
+  version: number;
+  createdNow: boolean;
+}
+
 type Step = "upload" | "preview" | "done";
 
 interface DoneResult {
@@ -37,40 +44,34 @@ function WarnIcon({ severity }: { severity: ImportWarning["severity"] }) {
   return <span className="text-blue-400 shrink-0">ℹ</span>;
 }
 
-function severityCls(s: ImportWarning["severity"]) {
-  if (s === "error")   return "bg-red-50 border-red-200 text-red-700";
-  if (s === "warning") return "bg-yellow-50 border-yellow-200 text-yellow-700";
-  return "bg-blue-50 border-blue-200 text-blue-700";
-}
-
 // ─── Main page ────────────────────────────────────────────────────────────────
 export default function MigrationPage() {
   const { user } = useAuth();
   const router = useRouter();
 
-  const [step, setStep]         = useState<Step>("upload");
-  const [sites, setSites]       = useState<Site[]>([]);
+  const [step, setStep]           = useState<Step>("upload");
+  const [sites, setSites]         = useState<Site[]>([]);
   const [templates, setTemplates] = useState<TemplateVersion[]>([]);
-  const [profiles, setProfiles] = useState<Profile[]>([]);
-  const [siteId, setSiteId]     = useState("site-niebull");
+  const [profiles, setProfiles]   = useState<Profile[]>([]);
+  const [siteId, setSiteId]       = useState("site-niebull");
   const [templateVersionId, setTemplateVersionId] = useState("");
   const [profileId, setProfileId] = useState("");
-  const [file, setFile]         = useState<File | null>(null);
+  const [file, setFile]           = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState("");
-  const [runId, setRunId]       = useState("");
-  const [preview, setPreview]   = useState<ImportPreview | null>(null);
+  const [runId, setRunId]         = useState("");
+  const [preview, setPreview]     = useState<ImportPreview | null>(null);
+  const [ensuredTemplate, setEnsuredTemplate] = useState<EnsuredTemplateInfo | null>(null);
   const [customName, setCustomName] = useState("");
-  const [creating, setCreating] = useState(false);
+  const [creating, setCreating]   = useState(false);
   const [createError, setCreateError] = useState("");
-  const [done, setDone]         = useState<DoneResult | null>(null);
+  const [done, setDone]           = useState<DoneResult | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (user === null) { router.push("/login"); return; }
     fetch("/api/sites").then(r => r.json()).then(d => setSites(d.sites ?? []));
     fetch("/api/templates").then(r => r.json()).then(d => {
-      // Flatten template versions
       const tvs: TemplateVersion[] = [];
       for (const t of d.templates ?? []) {
         for (const v of d.versions ?? []) {
@@ -80,7 +81,7 @@ export default function MigrationPage() {
         }
       }
       setTemplates(tvs);
-      if (tvs.length > 0) setTemplateVersionId(tvs[0].id);
+      if (tvs.length > 0 && !templateVersionId) setTemplateVersionId(tvs[0].id);
     });
     fetch("/api/migration/upload").then(r => r.json()).then(d => {
       setProfiles(d.profiles ?? []);
@@ -93,6 +94,7 @@ export default function MigrationPage() {
     if (!file) return;
     setUploading(true);
     setUploadError("");
+    setEnsuredTemplate(null);
     const fd = new FormData();
     fd.append("file", file);
     if (profileId) fd.append("profileId", profileId);
@@ -104,6 +106,16 @@ export default function MigrationPage() {
       setPreview(data.preview);
       if (data.preview.productName) {
         setCustomName(`PLP ${data.preview.identifier} – ${data.preview.productName}`);
+      }
+      // Auto-set template from server response (ensureTemplate was called server-side)
+      if (data.templateVersionId) {
+        setTemplateVersionId(data.templateVersionId);
+        setEnsuredTemplate({
+          id: data.templateVersionId,
+          name: data.templateName ?? "",
+          version: data.templateVersionNumber ?? 1,
+          createdNow: data.templateCreatedNow ?? false,
+        });
       }
       setStep("preview");
     } catch (err) {
@@ -134,11 +146,11 @@ export default function MigrationPage() {
     }
   }
 
-  const hasErrors = (preview?.warnings ?? []).some(w => w.severity === "error");
+  const hasErrors    = (preview?.warnings ?? []).some(w => w.severity === "error");
   const errorCount   = (preview?.warnings ?? []).filter(w => w.severity === "error").length;
   const warningCount = (preview?.warnings ?? []).filter(w => w.severity === "warning").length;
 
-  // ── Step: Upload ─────────────────────────────────────────────────────────────
+  // ── Step: Upload ──────────────────────────────────────────────────────────
   if (step === "upload") return (
     <div className="max-w-xl mx-auto">
       <div className="mb-6">
@@ -168,19 +180,11 @@ export default function MigrationPage() {
           </select>
         </div>
 
-        {/* Template */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Template Version</label>
-          <select className="w-full border rounded-lg px-3 py-2 text-sm" value={templateVersionId} onChange={e => setTemplateVersionId(e.target.value)}>
-            {templates.map(tv => (
-              <option key={tv.id} value={tv.id}>{tv.templateName} v{tv.versionNumber}</option>
-            ))}
-          </select>
-        </div>
-
         {/* Profile */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Mapping Profile <span className="text-gray-400 font-normal">(auto-detected, can override)</span></label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Mapping Profile <span className="text-gray-400 font-normal">(auto-detected, can override)</span>
+          </label>
           <select className="w-full border rounded-lg px-3 py-2 text-sm" value={profileId} onChange={e => setProfileId(e.target.value)}>
             <option value="">Auto-detect</option>
             {profiles.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
@@ -188,7 +192,25 @@ export default function MigrationPage() {
           {profiles.find(p => p.id === profileId) && (
             <p className="text-xs text-gray-400 mt-1">{profiles.find(p => p.id === profileId)?.description}</p>
           )}
+          <p className="text-xs text-blue-500 mt-1">
+            The correct template is auto-selected after upload based on the detected mapping profile.
+          </p>
         </div>
+
+        {/* Template (override) */}
+        <details className="text-sm">
+          <summary className="text-gray-500 cursor-pointer hover:text-gray-700 text-xs">
+            Advanced: manual template override
+          </summary>
+          <div className="mt-2">
+            <select className="w-full border rounded-lg px-3 py-2 text-sm" value={templateVersionId} onChange={e => setTemplateVersionId(e.target.value)}>
+              <option value="">(auto-selected after upload)</option>
+              {templates.map(tv => (
+                <option key={tv.id} value={tv.id}>{tv.templateName} v{tv.versionNumber}</option>
+              ))}
+            </select>
+          </div>
+        </details>
 
         {uploadError && (
           <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-700">{uploadError}</div>
@@ -204,19 +226,36 @@ export default function MigrationPage() {
       </form>
 
       <div className="mt-4 text-xs text-gray-400 text-center">
-        Demo: place <code className="bg-gray-100 px-1 rounded">F001_PLP_Fermentation.xlsm</code> from the Niebull folder and upload it.
+        Demo: upload <code className="bg-gray-100 px-1 rounded">F001_PLP_Fermentation.xlsm</code> to see the full preview.
       </div>
     </div>
   );
 
-  // ── Step: Preview ─────────────────────────────────────────────────────────────
+  // ── Step: Preview ─────────────────────────────────────────────────────────
   if (step === "preview" && preview) return (
     <div className="max-w-3xl mx-auto">
       <div className="mb-5 flex items-center gap-4">
         <button onClick={() => setStep("upload")} className="text-sm text-gray-500 hover:text-gray-700">← Back</button>
-        <div>
+        <div className="flex-1">
           <h1 className="text-2xl font-bold text-gray-900">Import Preview</h1>
-          <p className="text-sm text-gray-500">Profile: <strong>{preview.profileName}</strong> · Sheets: {preview.sheetNames.length}</p>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-0.5 text-sm text-gray-500">
+            <span>Profile: <strong>{preview.profileName}</strong></span>
+            <span>·</span>
+            <span>Sheets: {preview.sheetNames.length}</span>
+            {ensuredTemplate && (
+              <>
+                <span>·</span>
+                <span>
+                  Template: <strong>{ensuredTemplate.name} v{ensuredTemplate.version}</strong>
+                  {ensuredTemplate.createdNow && (
+                    <span className="ml-1.5 text-xs px-1.5 py-0.5 bg-green-100 text-green-700 rounded font-medium">
+                      Created now
+                    </span>
+                  )}
+                </span>
+              </>
+            )}
+          </div>
         </div>
       </div>
 
@@ -256,7 +295,7 @@ export default function MigrationPage() {
           {preview.fields.map(f => (
             <div key={f.fieldId} className="px-4 py-2 flex items-center justify-between text-sm">
               <div className="flex items-center gap-3 min-w-0">
-                <span className="text-gray-500 w-28 shrink-0">{f.label}</span>
+                <span className="text-gray-500 w-32 shrink-0">{f.label}</span>
                 <span className={`font-medium truncate ${f.value ? "text-gray-900" : "text-gray-300 italic"}`}>
                   {f.value || "(empty)"}
                 </span>
@@ -274,7 +313,8 @@ export default function MigrationPage() {
       {preview.tables.length > 0 && (
         <div className="bg-white border rounded-xl shadow-sm mb-4 overflow-hidden">
           <div className="bg-gray-50 border-b px-4 py-3 text-sm font-semibold text-gray-700">
-            Ingredient Tables ({preview.tables.length})
+            Ingredient / Materials Tables ({preview.tables.length} table{preview.tables.length !== 1 ? "s" : ""},{" "}
+            {preview.tables.reduce((a, t) => a + t.rows.length, 0)} total rows)
           </div>
           {preview.tables.map(t => (
             <div key={t.id} className="border-b last:border-b-0">
@@ -397,6 +437,7 @@ export default function MigrationPage() {
           onClick={handleCreateDraft}
           disabled={hasErrors || creating || !templateVersionId}
           className="flex-1 py-2 px-4 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
+          title={!templateVersionId ? "No template available — check server logs" : undefined}
         >
           {creating ? "Creating…" : "Create Draft Guideline →"}
         </button>
@@ -404,7 +445,7 @@ export default function MigrationPage() {
     </div>
   );
 
-  // ── Step: Done ────────────────────────────────────────────────────────────────
+  // ── Step: Done ────────────────────────────────────────────────────────────
   if (step === "done" && done) return (
     <div className="max-w-xl mx-auto text-center py-16">
       <div className="text-5xl mb-4">✓</div>
@@ -421,7 +462,11 @@ export default function MigrationPage() {
           Open Draft →
         </Link>
         <button
-          onClick={() => { setStep("upload"); setFile(null); setPreview(null); setDone(null); if (fileRef.current) fileRef.current.value = ""; }}
+          onClick={() => {
+            setStep("upload"); setFile(null); setPreview(null); setDone(null);
+            setEnsuredTemplate(null);
+            if (fileRef.current) fileRef.current.value = "";
+          }}
           className="px-4 py-2 border rounded-lg text-sm text-gray-600 hover:bg-gray-50"
         >
           Import Another

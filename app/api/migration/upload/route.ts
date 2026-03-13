@@ -8,6 +8,7 @@ import {
   readImports, writeImports, readSites, writeSites,
   UPLOADS_DIR, nowStamp,
 } from "@/lib/db";
+import { ensureTemplate } from "@/lib/templatePresets";
 import { getCurrentUser } from "@/lib/auth";
 
 const NIEBULL_SITE = { id: "site-niebull", name: "Niebull", code: "NIE-DE" };
@@ -60,13 +61,24 @@ export async function POST(req: NextRequest) {
   try {
     preview = parseExcel(buffer, profileId ?? undefined);
   } catch (err) {
-    // Remove saved file on parse failure
     fs.unlinkSync(destPath);
     const msg = err instanceof Error ? err.message : "Unknown parse error";
     return NextResponse.json({ error: `Failed to parse Excel: ${msg}` }, { status: 422 });
   }
 
-  // Store import run (no guidelineId yet — created later on "Create Draft")
+  // Auto-ensure template based on the detected profile's templateFamily
+  const detectedProfile = PROFILES.find(p => p.id === preview.profileId);
+  let ensuredTpl: ReturnType<typeof ensureTemplate> = null;
+  if (detectedProfile?.templateFamily) {
+    try {
+      ensuredTpl = ensureTemplate(detectedProfile.templateFamily);
+    } catch (err) {
+      // Non-fatal: log but continue; user can pick template manually
+      console.error("[migration/upload] ensureTemplate failed:", err);
+    }
+  }
+
+  // Store import run
   const runId = randomUUID();
   const importsStore = readImports();
   importsStore.runs.push({
@@ -75,7 +87,7 @@ export async function POST(req: NextRequest) {
     filename,
     siteId: "site-niebull",
     profileId: preview.profileId,
-    templateVersionId: "",      // filled in on create-draft
+    templateVersionId: ensuredTpl?.templateVersionId ?? "",
     createdBy: user.id,
     createdAt: nowStamp(),
     warnings: preview.warnings,
@@ -88,5 +100,10 @@ export async function POST(req: NextRequest) {
     fileId: savedName,
     filename,
     preview,
+    // Template auto-ensured from profile
+    templateVersionId:     ensuredTpl?.templateVersionId     ?? "",
+    templateName:          ensuredTpl?.templateName          ?? "",
+    templateVersionNumber: ensuredTpl?.versionNumber         ?? 0,
+    templateCreatedNow:    ensuredTpl?.createdNow            ?? false,
   });
 }

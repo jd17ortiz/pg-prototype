@@ -10,7 +10,7 @@
       "data": {
         "name": "Alpha Compound – Processleitplan"
       },
-      "createdAt": "2026-03-06T09:14:25.444Z"
+      "createdAt": "2026-03-06T16:26:44.381Z"
     },
     {
       "id": "ae2",
@@ -20,7 +20,7 @@
       "userId": "u-rde1",
       "userName": "Anna Müller",
       "data": {},
-      "createdAt": "2026-03-06T09:14:25.444Z"
+      "createdAt": "2026-03-06T16:26:44.381Z"
     },
     {
       "id": "ae3",
@@ -32,7 +32,7 @@
       "data": {
         "comment": "Reviewed and approved."
       },
-      "createdAt": "2026-03-06T09:14:25.444Z"
+      "createdAt": "2026-03-06T16:26:44.381Z"
     },
     {
       "id": "ae4",
@@ -44,7 +44,7 @@
       "data": {
         "name": "Cleaning SOP"
       },
-      "createdAt": "2026-03-06T09:14:25.444Z"
+      "createdAt": "2026-03-06T16:26:44.381Z"
     },
     {
       "id": "ae5",
@@ -56,7 +56,7 @@
       "data": {
         "comment": "Approved after audit."
       },
-      "createdAt": "2026-03-06T09:14:25.444Z"
+      "createdAt": "2026-03-06T16:26:44.381Z"
     },
     {
       "id": "ae6",
@@ -68,7 +68,7 @@
       "data": {
         "parentGuidelineId": "gl-parent-eu-001"
       },
-      "createdAt": "2026-03-06T09:14:25.444Z"
+      "createdAt": "2026-03-06T16:26:44.381Z"
     },
     {
       "id": "ae7",
@@ -81,7 +81,35 @@
         "versionNumber": 2,
         "reason": "Updated pH tolerance, added Viscosity, removed Humidity"
       },
-      "createdAt": "2026-03-06T09:14:25.444Z"
+      "createdAt": "2026-03-06T16:26:44.381Z"
+    },
+    {
+      "id": "8c01ecc5-c1f2-4644-8696-6879b65f5238",
+      "entityType": "Guideline",
+      "entityId": "13532d10-cc6f-4706-be95-b173c9a00526",
+      "action": "IMPORT_CREATED",
+      "userId": "u-rde2",
+      "userName": "James Carter",
+      "data": {
+        "source": "F001_PLP_Fermentation.xlsm",
+        "profileId": "nomi-plp-xlsm",
+        "identifier": "PLP-7282",
+        "versionNumber": 1
+      },
+      "createdAt": "2026-03-09T21:02:44.389Z"
+    },
+    {
+      "id": "ee39e5e0-e7c2-4586-975e-b0bb33cfebbe",
+      "entityType": "GuidelineVersion",
+      "entityId": "f6036ebb-b747-4968-a97e-85fdb5f5a272",
+      "action": "DRAFT_CREATED_FROM_IMPORT",
+      "userId": "u-rde2",
+      "userName": "James Carter",
+      "data": {
+        "importRunId": "0c48ca73-eb7b-4f5b-b9ab-ca5cfb3d3d53",
+        "filename": "F001_PLP_Fermentation.xlsm"
+      },
+      "createdAt": "2026-03-09T21:02:44.389Z"
     }
   ]
 }

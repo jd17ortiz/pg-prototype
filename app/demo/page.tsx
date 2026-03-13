@@ -241,20 +241,27 @@ export default function DemoPage() {
             ⇪
           </div>
           <div>
-            <div className="font-semibold text-white">Migration Studio — Excel Importer</div>
-            <div className="text-xs text-purple-200">Upload Niebull Excel to create Draft guidelines from structured data</div>
+            <div className="font-semibold text-white">Excel Migration Demo (Niebull)</div>
+            <div className="text-xs text-purple-200">Upload F001_PLP_Fermentation.xlsm → Draft guideline in 3 clicks</div>
           </div>
         </div>
         <div className="px-5 py-4">
           <p className="text-sm text-gray-600 mb-3">
-            Upload a <code className="bg-gray-100 px-1 rounded text-xs font-mono">.xlsm</code> or <code className="bg-gray-100 px-1 rounded text-xs font-mono">.xlsx</code> Processleitplan Excel.
-            The tool auto-detects the mapping profile, shows a preview with source cell references, then creates a <strong>DRAFT</strong> version.
+            Upload a <code className="bg-gray-100 px-1 rounded text-xs font-mono">.xlsm</code> or{" "}
+            <code className="bg-gray-100 px-1 rounded text-xs font-mono">.xlsx</code> Processleitplan Excel.
+            The tool auto-detects the mapping profile and auto-ensures the correct template, then creates a <strong>DRAFT</strong> version.
           </p>
-          <ul className="text-xs text-gray-500 space-y-1 mb-4">
-            <li>• Anchor-based extraction (no hardcoded cell addresses)</li>
-            <li>• Source refs shown per field and row (sheet + cell)</li>
-            <li>• Idempotent: new version if guideline already exists</li>
-            <li>• Original Excel attached as media file</li>
+          <ol className="text-xs text-gray-600 space-y-1.5 mb-4 list-decimal pl-4">
+            <li>Upload <code className="bg-gray-100 px-1 rounded font-mono">F001_PLP_Fermentation.xlsm</code> from the Niebull folder</li>
+            <li>Review extracted header fields (with source cell refs), ingredient tables, process parameters, and change history</li>
+            <li>Click <strong>Create Draft Guideline</strong> — the EU Fermentation PLP (NOMI) template is auto-created if needed</li>
+            <li>Click <strong>Open Draft</strong> to continue editing in the guideline editor, then submit for approval</li>
+          </ol>
+          <ul className="text-xs text-gray-400 space-y-0.5 mb-4">
+            <li>• Anchor-based extraction — no hardcoded cell addresses</li>
+            <li>• Source sheet + cell shown for every extracted value</li>
+            <li>• Idempotent: repeated import creates a new version, not a duplicate guideline</li>
+            <li>• Original Excel attached as a media file in the Quelldokument sheet</li>
           </ul>
           <Link href="/migration" className="inline-block px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 text-sm font-medium">
             Open Migration Studio →

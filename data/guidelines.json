@@ -6,8 +6,8 @@
       "type": "PARENT",
       "siteId": "site-eu",
       "templateVersionId": "tmplv-eu-plp-1",
-      "createdAt": "2026-03-06T09:14:25.441Z",
-      "updatedAt": "2026-03-06T09:14:25.441Z",
+      "createdAt": "2026-03-06T16:26:44.378Z",
+      "updatedAt": "2026-03-06T16:26:44.378Z",
       "identifier": "DEMO-DIFF"
     },
     {
@@ -16,8 +16,8 @@
       "type": "LOCAL",
       "siteId": "site-eu",
       "templateVersionId": "tmplv-sop-1",
-      "createdAt": "2026-03-06T09:14:25.441Z",
-      "updatedAt": "2026-03-06T09:14:25.441Z"
+      "createdAt": "2026-03-06T16:26:44.379Z",
+      "updatedAt": "2026-03-06T16:26:44.379Z"
     },
     {
       "id": "gl-child-us-001",
@@ -26,8 +26,8 @@
       "siteId": "site-us",
       "parentGuidelineId": "gl-parent-eu-001",
       "templateVersionId": "tmplv-eu-plp-1",
-      "createdAt": "2026-03-06T09:14:25.441Z",
-      "updatedAt": "2026-03-06T09:14:25.441Z"
+      "createdAt": "2026-03-06T16:26:44.379Z",
+      "updatedAt": "2026-03-06T16:26:44.379Z"
     },
     {
       "id": "gl-niebull-plp-7034",
@@ -35,8 +35,8 @@
       "type": "LOCAL",
       "siteId": "site-niebull",
       "templateVersionId": "tmplv-nomi-plp-1",
-      "createdAt": "2026-03-06T09:52:31.499Z",
-      "updatedAt": "2026-03-06T10:02:57.691Z",
+      "createdAt": "2026-03-06T16:26:46.251Z",
+      "updatedAt": "2026-03-06T16:26:46.251Z",
       "identifier": "PLP-7034"
     },
     {
@@ -45,8 +45,8 @@
       "type": "LOCAL",
       "siteId": "site-niebull",
       "templateVersionId": "tmplv-nomi-plp-1",
-      "createdAt": "2026-03-06T09:52:31.508Z",
-      "updatedAt": "2026-03-06T10:02:57.817Z",
+      "createdAt": "2026-03-06T16:26:46.364Z",
+      "updatedAt": "2026-03-06T16:26:46.364Z",
       "identifier": "PLP-7194"
     },
     {
@@ -55,8 +55,8 @@
       "type": "LOCAL",
       "siteId": "site-niebull",
       "templateVersionId": "tmplv-nomi-plp-1",
-      "createdAt": "2026-03-06T09:52:31.517Z",
-      "updatedAt": "2026-03-06T10:02:57.978Z",
+      "createdAt": "2026-03-06T16:26:46.500Z",
+      "updatedAt": "2026-03-06T16:26:46.500Z",
       "identifier": "PLP-7203"
     },
     {
@@ -65,9 +65,19 @@
       "type": "LOCAL",
       "siteId": "site-niebull",
       "templateVersionId": "tmplv-nomi-plp-1",
-      "createdAt": "2026-03-06T09:52:31.531Z",
-      "updatedAt": "2026-03-06T10:02:58.173Z",
+      "createdAt": "2026-03-06T16:26:46.681Z",
+      "updatedAt": "2026-03-06T16:26:46.681Z",
       "identifier": "PLP-7253"
+    },
+    {
+      "id": "13532d10-cc6f-4706-be95-b173c9a00526",
+      "name": "PLP 7282 – CHOOZIT M70 A",
+      "type": "LOCAL",
+      "siteId": "site-niebull",
+      "templateVersionId": "tmplv-eu-plp-1",
+      "createdAt": "2026-03-09T21:02:44.389Z",
+      "updatedAt": "2026-03-09T21:02:44.389Z",
+      "identifier": "PLP-7282"
     }
   ],
   "versions": [
@@ -337,9 +347,9 @@
         ]
       },
       "authorId": "u-rde1",
-      "createdAt": "2026-03-06T09:14:25.441Z",
-      "updatedAt": "2026-03-06T09:14:25.441Z",
-      "versionStamp": "1772788465441"
+      "createdAt": "2026-03-06T16:26:44.379Z",
+      "updatedAt": "2026-03-06T16:26:44.379Z",
+      "versionStamp": "1772814404379"
     },
     {
       "id": "glv-parent-eu-001-v2",
@@ -607,9 +617,9 @@
         ]
       },
       "authorId": "u-rde1",
-      "createdAt": "2026-03-06T09:14:25.442Z",
-      "updatedAt": "2026-03-06T09:14:25.442Z",
-      "versionStamp": "1772788465442",
+      "createdAt": "2026-03-06T16:26:44.379Z",
+      "updatedAt": "2026-03-06T16:26:44.379Z",
+      "versionStamp": "1772814404379",
       "reasonForChange": "Updated pH tolerance bands, raised agitator speed limit, removed Humidity param (moved to env. monitoring), added Viscosity specification per QC review."
     },
     {
@@ -724,9 +734,9 @@
         ]
       },
       "authorId": "u-mte1",
-      "createdAt": "2026-03-06T09:14:25.442Z",
-      "updatedAt": "2026-03-06T09:14:25.442Z",
-      "versionStamp": "1772788465442"
+      "createdAt": "2026-03-06T16:26:44.379Z",
+      "updatedAt": "2026-03-06T16:26:44.379Z",
+      "versionStamp": "1772814404379"
     },
     {
       "id": "glv-child-us-001-v1",
@@ -994,12 +1004,12 @@
         ]
       },
       "authorId": "u-rde2",
-      "createdAt": "2026-03-06T09:14:25.442Z",
-      "updatedAt": "2026-03-06T09:14:25.442Z",
-      "versionStamp": "1772788465442"
+      "createdAt": "2026-03-06T16:26:44.379Z",
+      "updatedAt": "2026-03-06T16:26:44.379Z",
+      "versionStamp": "1772814404379"
     },
     {
-      "id": "glv-niebull-plp-7034-v1-1772791377690",
+      "id": "glv-niebull-plp-7034-v1",
       "guidelineId": "gl-niebull-plp-7034",
       "versionNumber": 1,
       "status": "ACTIVE",
@@ -1026,13 +1036,13 @@
                 "type": "media",
                 "files": [
                   {
-                    "id": "8f3c5b3e-8330-4202-9d5f-bbbfb0f2d524",
+                    "id": "c2edf2d5-6428-4a17-b1f6-01f638d8781b",
                     "fileName": "7034 Rev.5 Na-Formiat 50% NOMI.pdf",
                     "fileType": "application/pdf",
                     "size": 759164,
-                    "uploadedAt": "2026-03-06T10:02:57.673Z",
+                    "uploadedAt": "2026-03-06T16:26:46.250Z",
                     "description": "PLP 7034 Rev.5 — Originaldokument",
-                    "fileId": "f2f4c5c4-0b21-49d6-aa76-94b37bb2d4ab.pdf"
+                    "fileId": "afb38da2-3d2a-4672-8af3-35df7ae90752.pdf"
                   }
                 ]
               }
@@ -1116,7 +1126,7 @@
                 "type": "changeHistory",
                 "entries": [
                   {
-                    "id": "f9da111d-c78e-4fff-9678-0006a41a7187",
+                    "id": "ea11c734-40f5-4be7-a1aa-94448413c77c",
                     "date": "2026-03-06",
                     "author": "Lars Petersen",
                     "description": "Importiert aus PDF: PLP 7034 Rev.5",
@@ -1133,12 +1143,12 @@
       },
       "reasonForChange": "Importiert aus PDF Rev.5",
       "authorId": "u-nie-mte1",
-      "createdAt": "2026-03-06T10:02:57.691Z",
-      "updatedAt": "2026-03-06T10:02:57.691Z",
-      "versionStamp": "1772791377691"
+      "createdAt": "2026-03-06T16:26:46.251Z",
+      "updatedAt": "2026-03-06T16:26:46.251Z",
+      "versionStamp": "1772814406251"
     },
     {
-      "id": "glv-niebull-plp-7194-v1-1772791377817",
+      "id": "glv-niebull-plp-7194-v1",
       "guidelineId": "gl-niebull-plp-7194",
       "versionNumber": 1,
       "status": "ACTIVE",
@@ -1165,13 +1175,13 @@
                 "type": "media",
                 "files": [
                   {
-                    "id": "3c5592b0-b06b-4424-9368-e48324889ad1",
+                    "id": "6d598885-3a1b-45f1-b3a3-60b253169a4e",
                     "fileName": "7194 Rev.26 Lb. acidophilus LA-11 NOMI.pdf",
                     "fileType": "application/pdf",
                     "size": 521733,
-                    "uploadedAt": "2026-03-06T10:02:57.817Z",
+                    "uploadedAt": "2026-03-06T16:26:46.364Z",
                     "description": "PLP 7194 Rev.26 — Originaldokument",
-                    "fileId": "88b87677-2ef4-4dbd-a413-b0c51f31723e.pdf"
+                    "fileId": "21f7cd88-aab6-43b4-b280-c5193f0da6c7.pdf"
                   }
                 ]
               }
@@ -1255,7 +1265,7 @@
                 "type": "changeHistory",
                 "entries": [
                   {
-                    "id": "a78350c6-9790-40c0-8051-fe95eb9713cf",
+                    "id": "5fa45eab-7a5c-44aa-bafc-5a06494cfa47",
                     "date": "2026-03-06",
                     "author": "Lars Petersen",
                     "description": "Importiert aus PDF: PLP 7194 Rev.26",
@@ -1272,12 +1282,12 @@
       },
       "reasonForChange": "Importiert aus PDF Rev.26",
       "authorId": "u-nie-mte1",
-      "createdAt": "2026-03-06T10:02:57.817Z",
-      "updatedAt": "2026-03-06T10:02:57.817Z",
-      "versionStamp": "1772791377817"
+      "createdAt": "2026-03-06T16:26:46.364Z",
+      "updatedAt": "2026-03-06T16:26:46.364Z",
+      "versionStamp": "1772814406364"
     },
     {
-      "id": "glv-niebull-plp-7203-v1-1772791377978",
+      "id": "glv-niebull-plp-7203-v1",
       "guidelineId": "gl-niebull-plp-7203",
       "versionNumber": 1,
       "status": "ACTIVE",
@@ -1304,13 +1314,13 @@
                 "type": "media",
                 "files": [
                   {
-                    "id": "40d4c7c8-8473-41b3-9723-7872cc7cb422",
+                    "id": "e3755f1e-b9bf-4b43-a853-51cab6728006",
                     "fileName": "7203 Rev.2 Kefir.pdf",
                     "fileType": "application/pdf",
                     "size": 663932,
-                    "uploadedAt": "2026-03-06T10:02:57.978Z",
+                    "uploadedAt": "2026-03-06T16:26:46.500Z",
                     "description": "PLP 7203 Rev.2 — Originaldokument",
-                    "fileId": "e8f00426-6109-491c-884b-6dc3aa3e4c77.pdf"
+                    "fileId": "c0bf6344-4495-476d-bf6d-7f8f21cd5bcc.pdf"
                   }
                 ]
               }
@@ -1394,7 +1404,7 @@
                 "type": "changeHistory",
                 "entries": [
                   {
-                    "id": "3781a8df-c5a5-44e4-9176-aa18ff87d75d",
+                    "id": "0b05e32e-ea16-4233-acf9-1eb58a400a6c",
                     "date": "2026-03-06",
                     "author": "Lars Petersen",
                     "description": "Importiert aus PDF: PLP 7203 Rev.2",
@@ -1411,12 +1421,12 @@
       },
       "reasonForChange": "Importiert aus PDF Rev.2",
       "authorId": "u-nie-mte1",
-      "createdAt": "2026-03-06T10:02:57.979Z",
-      "updatedAt": "2026-03-06T10:02:57.979Z",
-      "versionStamp": "1772791377979"
+      "createdAt": "2026-03-06T16:26:46.500Z",
+      "updatedAt": "2026-03-06T16:26:46.500Z",
+      "versionStamp": "1772814406500"
     },
     {
-      "id": "glv-niebull-plp-7253-v1-1772791378173",
+      "id": "glv-niebull-plp-7253-v1",
       "guidelineId": "gl-niebull-plp-7253",
       "versionNumber": 1,
       "status": "ACTIVE",
@@ -1443,13 +1453,13 @@
                 "type": "media",
                 "files": [
                   {
-                    "id": "62be2442-8560-4400-9281-33c8fde87fd6",
+                    "id": "3a2a04d3-d295-4703-8826-e63fbfc7f8e0",
                     "fileName": "7253 Rev.3 Holdbac Listeria NOMI.pdf",
                     "fileType": "application/pdf",
                     "size": 1049748,
-                    "uploadedAt": "2026-03-06T10:02:58.173Z",
+                    "uploadedAt": "2026-03-06T16:26:46.681Z",
                     "description": "PLP 7253 Rev.3 — Originaldokument",
-                    "fileId": "1b4f429d-2687-46cf-9975-7ad49f34e9fa.pdf"
+                    "fileId": "3020c571-b6da-41cf-89b6-7fef41fed5c1.pdf"
                   }
                 ]
               }
@@ -1533,7 +1543,7 @@
                 "type": "changeHistory",
                 "entries": [
                   {
-                    "id": "ed6569e7-02a3-4689-8a18-d18725e37f8d",
+                    "id": "2bb48c58-a528-4c11-9739-975b7a550916",
                     "date": "2026-03-06",
                     "author": "Lars Petersen",
                     "description": "Importiert aus PDF: PLP 7253 Rev.3",
@@ -1550,9 +1560,133 @@
       },
       "reasonForChange": "Importiert aus PDF Rev.3",
       "authorId": "u-nie-mte1",
-      "createdAt": "2026-03-06T10:02:58.173Z",
-      "updatedAt": "2026-03-06T10:02:58.173Z",
-      "versionStamp": "1772791378173"
+      "createdAt": "2026-03-06T16:26:46.681Z",
+      "updatedAt": "2026-03-06T16:26:46.681Z",
+      "versionStamp": "1772814406681"
+    },
+    {
+      "id": "f6036ebb-b747-4968-a97e-85fdb5f5a272",
+      "guidelineId": "13532d10-cc6f-4706-be95-b173c9a00526",
+      "versionNumber": 1,
+      "status": "DRAFT",
+      "contentJson": {
+        "headerValues": {
+          "h-docno": "",
+          "h-product": "",
+          "h-version": "1.0",
+          "h-date": "",
+          "h-site": "",
+          "h-dept": "Manufacturing"
+        },
+        "sheets": {
+          "sheet-op1": {
+            "sections": {
+              "s-op1-rte": {
+                "type": "richText",
+                "html": ""
+              },
+              "s-op1-fg": {
+                "type": "fieldGrid",
+                "values": {
+                  "fg-op1-eq": "",
+                  "fg-op1-mat": "",
+                  "fg-op1-op": ""
+                }
+              },
+              "s-op1-pt": {
+                "type": "parameterTable",
+                "rows": []
+              },
+              "s-op1-tbl": {
+                "type": "table",
+                "rows": []
+              }
+            }
+          },
+          "sheet-op2": {
+            "sections": {
+              "s-op2-fg": {
+                "type": "fieldGrid",
+                "values": {
+                  "fg-op2-spd": "",
+                  "fg-op2-dur": ""
+                }
+              },
+              "s-op2-pt": {
+                "type": "parameterTable",
+                "rows": []
+              },
+              "s-op2-fd": {
+                "type": "flowDiagram",
+                "description": ""
+              }
+            }
+          },
+          "sheet-op3": {
+            "sections": {
+              "s-op3-tbl": {
+                "type": "table",
+                "rows": []
+              },
+              "s-op3-media": {
+                "type": "media",
+                "files": [
+                  {
+                    "id": "6eb7388a-0dd7-42a1-920e-3749a04f98d9",
+                    "fileName": "F001_PLP_Fermentation.xlsm",
+                    "fileType": "application/vnd.ms-excel.sheet.macroEnabled.12",
+                    "size": 336981,
+                    "uploadedAt": "2026-03-09T21:02:44.391Z",
+                    "description": "Source Excel (import)",
+                    "fileId": "ff79aea9-6f8b-40f6-a962-bfd041b80372.xlsm"
+                  }
+                ]
+              },
+              "s-op3-ch": {
+                "type": "changeHistory",
+                "entries": [
+                  {
+                    "id": "8d89be98-4952-45a0-a98c-47185e8c8819",
+                    "date": "2024-07-18",
+                    "author": "GUN",
+                    "description": "Impfer 2 gestrichen, Impfer 1 größeres Volumen. Fermentationszeit Hauptfermentation und Pufferungszeiten angepasst. TM und OD FKE angepassst. Fermentationsplot und Mikrobild eingefügt.",
+                    "version": "1"
+                  },
+                  {
+                    "id": "9d8beeb9-8705-4ca0-b37a-b7c8e2108b3d",
+                    "date": "2024-09-24",
+                    "author": "GUN",
+                    "description": "Wassermenge im Medium SM8 von 947 auf 960 L / 1000 L erhöht.",
+                    "version": "2"
+                  },
+                  {
+                    "id": "5e6531cf-53b9-4952-901b-5ee74a5e0f85",
+                    "date": "2024-11-13",
+                    "author": "GUN",
+                    "description": "Zu verwendendes Equipment eingefügt. Änderung der Konzentrierungsparameter: Änderung Zuflussrate, Düsengröße und Permeatdruck. Konzentrierungsbeginn detailliert beschrieben.",
+                    "version": "3"
+                  },
+                  {
+                    "id": "d3cc7305-b3a7-4759-af57-1790fe1ce3c4",
+                    "date": "2025-01-08",
+                    "author": "GUN",
+                    "description": "Konzentrierung detailliert erläutert, Fermentationsplot ausgetauscht, pH-Werte Konzentrat geändert.",
+                    "version": "4"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "normalizedPayload": {
+        "parameters": []
+      },
+      "reasonForChange": "Imported from Excel: F001_PLP_Fermentation.xlsm (Rev. 4)",
+      "authorId": "u-rde2",
+      "createdAt": "2026-03-09T21:02:44.389Z",
+      "updatedAt": "2026-03-09T21:02:44.389Z",
+      "versionStamp": "1773090164391"
     }
   ],
   "approvals": [
@@ -1562,7 +1696,7 @@
       "approverId": "u-apr1",
       "decision": "APPROVE",
       "comment": "Reviewed and approved. pH parameters validated.",
-      "createdAt": "2026-03-06T09:14:25.442Z"
+      "createdAt": "2026-03-06T16:26:44.379Z"
     },
     {
       "id": "apr-002",
@@ -1570,71 +1704,39 @@
       "approverId": "u-apr1",
       "decision": "APPROVE",
       "comment": "Approved after audit review.",
-      "createdAt": "2026-03-06T09:14:25.442Z"
+      "createdAt": "2026-03-06T16:26:44.379Z"
     },
     {
-      "id": "da24751a-6bf6-42db-8898-edaf4677cf67",
+      "id": "a9863649-9663-4166-bd2c-a15f646f7257",
       "guidelineVersionId": "glv-niebull-plp-7034-v1",
       "approverId": "u-nie-apr1",
       "decision": "APPROVE",
       "comment": "PDF-Import genehmigt. PLP 7034 Rev.5.",
-      "createdAt": "2026-03-06T09:52:31.499Z"
+      "createdAt": "2026-03-06T16:26:46.251Z"
     },
     {
-      "id": "dc5801cc-3d2c-420b-9b0a-ab076b7a026a",
+      "id": "34f9b894-cbe9-4829-a600-20d3e49b69a3",
       "guidelineVersionId": "glv-niebull-plp-7194-v1",
       "approverId": "u-nie-apr1",
       "decision": "APPROVE",
       "comment": "PDF-Import genehmigt. PLP 7194 Rev.26.",
-      "createdAt": "2026-03-06T09:52:31.508Z"
+      "createdAt": "2026-03-06T16:26:46.364Z"
     },
     {
-      "id": "6ce07449-954d-495a-81dc-ab5c135f8b7c",
+      "id": "f1a960e2-45d2-4eeb-81d4-90c6f6f0b5d7",
       "guidelineVersionId": "glv-niebull-plp-7203-v1",
       "approverId": "u-nie-apr1",
       "decision": "APPROVE",
       "comment": "PDF-Import genehmigt. PLP 7203 Rev.2.",
-      "createdAt": "2026-03-06T09:52:31.523Z"
+      "createdAt": "2026-03-06T16:26:46.500Z"
     },
     {
-      "id": "2581b6d6-1836-4ce2-a5d0-ed44ce014b48",
+      "id": "cffd8ffd-ab43-4c12-a3ea-6687a3763f5d",
       "guidelineVersionId": "glv-niebull-plp-7253-v1",
       "approverId": "u-nie-apr1",
       "decision": "APPROVE",
       "comment": "PDF-Import genehmigt. PLP 7253 Rev.3.",
-      "createdAt": "2026-03-06T09:52:31.531Z"
-    },
-    {
-      "id": "6a5c5c34-031d-4b02-bbe1-e1517a1c2a97",
-      "guidelineVersionId": "glv-niebull-plp-7034-v1-1772791377690",
-      "approverId": "u-nie-apr1",
-      "decision": "APPROVE",
-      "comment": "PDF-Import genehmigt. PLP 7034 Rev.5.",
-      "createdAt": "2026-03-06T10:02:57.691Z"
-    },
-    {
-      "id": "df642b06-5dee-421c-966e-fd61a972d4a3",
-      "guidelineVersionId": "glv-niebull-plp-7194-v1-1772791377817",
-      "approverId": "u-nie-apr1",
-      "decision": "APPROVE",
-      "comment": "PDF-Import genehmigt. PLP 7194 Rev.26.",
-      "createdAt": "2026-03-06T10:02:57.817Z"
-    },
-    {
-      "id": "8a21595b-fa72-4005-8f0f-23f18ed066ea",
-      "guidelineVersionId": "glv-niebull-plp-7203-v1-1772791377978",
-      "approverId": "u-nie-apr1",
-      "decision": "APPROVE",
-      "comment": "PDF-Import genehmigt. PLP 7203 Rev.2.",
-      "createdAt": "2026-03-06T10:02:57.979Z"
-    },
-    {
-      "id": "07237600-2fdf-4274-a871-218bea21900a",
-      "guidelineVersionId": "glv-niebull-plp-7253-v1-1772791378173",
-      "approverId": "u-nie-apr1",
-      "decision": "APPROVE",
-      "comment": "PDF-Import genehmigt. PLP 7253 Rev.3.",
-      "createdAt": "2026-03-06T10:02:58.173Z"
+      "createdAt": "2026-03-06T16:26:46.681Z"
     }
   ]
 }

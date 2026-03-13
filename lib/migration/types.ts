@@ -154,6 +154,8 @@ export interface MappingProfile {
   name: string;
   description: string;
   supportedSheetNames: string[];             // signature for auto-detection
+  /** Template family this profile maps to — used by ensureTemplate() */
+  templateFamily?: string;
   headerRules: HeaderRule[];
   tableRules: TableRule[];
   kvTableRules: KVTableRule[];

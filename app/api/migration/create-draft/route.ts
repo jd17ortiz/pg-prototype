@@ -8,8 +8,21 @@ import {
 } from "@/lib/db";
 import { getCurrentUser, canEdit } from "@/lib/auth";
 import { emptyContent, normalizeContent } from "@/lib/normalize";
-import type { ContentJson, TemplateSchema, ChangeHistoryEntry, MediaFile } from "@/lib/types";
-import type { ImportPreview, ExtractedTable } from "@/lib/migration/types";
+import { ensureTemplate } from "@/lib/templatePresets";
+import { PROFILES } from "@/lib/migration/profiles";
+import type {
+  ContentJson, TemplateSchema, ChangeHistoryEntry, MediaFile, ParameterRow,
+} from "@/lib/types";
+import type { ImportPreview } from "@/lib/migration/types";
+
+// ─── Sheet keyword helper ─────────────────────────────────────────────────────
+// Returns the first "meaningful" word (≥4 chars) from a sheet name, lowercased.
+// Used to match template sheet names against extracted-data sheet names.
+
+function sheetKeyword(name: string): string {
+  const words = name.toLowerCase().split(/[\s\/\-_]+/);
+  return words.find(w => w.length >= 4) ?? words[0] ?? name.toLowerCase();
+}
 
 // ─── Build contentJson from a parsed ImportPreview + template schema ──────────
 
@@ -22,16 +35,16 @@ function buildContentJson(
 ): ContentJson {
   const content = emptyContent(schema);
 
-  // 1. Header values — match by fieldId
+  // 1. Header values
   for (const field of preview.fields) {
     if (field.fieldId in content.headerValues) {
       content.headerValues[field.fieldId] = field.value;
     }
   }
 
-  // 2. For each sheet in the template, find matching extracted data by name similarity
+  // 2. Per-sheet / per-section content
   for (const sheet of schema.sheets) {
-    const sheetNameLower = sheet.name.toLowerCase();
+    const sheetKey = sheetKeyword(sheet.name);
     const sheetContent = content.sheets[sheet.id];
     if (!sheetContent) continue;
 
@@ -40,27 +53,48 @@ function buildContentJson(
       if (!sectionContent) continue;
 
       switch (section.type) {
-        case "richText": {
-          // Find tables whose sheetName matches this template sheet
-          const matchingTables = preview.tables.filter(t =>
-            t.sheetName.toLowerCase().includes(sheetNameLower.split(" ")[0]) ||
-            sheetNameLower.includes(t.sheetName.split(" ")[0]?.toLowerCase() ?? "")
-          );
-          if (matchingTables.length > 0) {
-            (sectionContent as { type: "richText"; html: string }).html =
-              tablesToHtml(matchingTables);
+        // ── fieldGrid — populate from extracted header fields ──────────────
+        case "fieldGrid": {
+          const fg = sectionContent as { type: "fieldGrid"; values: Record<string, string> };
+          for (const field of preview.fields) {
+            if (field.fieldId in fg.values) {
+              fg.values[field.fieldId] = field.value;
+            }
           }
           break;
         }
 
+        // ── table — map ExtractedTable rows directly ───────────────────────
+        // Match by: extracted table ID prefix vs template sheet ID (most
+        // reliable for bilingual files), then fall back to sheet name keyword.
+        case "table": {
+          const matchingTable = preview.tables.find(t => {
+            const tablePrefix = t.id.split("-")[0]; // "impf" from "impf-ingredients"
+            return (
+              sheet.id.includes(tablePrefix) ||
+              t.sheetName.toLowerCase().includes(sheetKey) ||
+              sheetKey.includes(sheetKeyword(t.sheetName))
+            );
+          });
+          if (matchingTable) {
+            (sectionContent as { type: "table"; rows: Record<string, string>[] }).rows =
+              matchingTable.rows.map(r => r.values);
+          }
+          break;
+        }
+
+        // ── parameterTable — KV params from matching sheet ─────────────────
         case "parameterTable": {
-          // Find KV parameter tables whose sheetName matches
-          const matchingPT = preview.parameterTables.find(pt =>
-            pt.sheetName.toLowerCase().includes(sheetNameLower.split(" ")[0]) ||
-            sheetNameLower.includes(pt.sheetName.split(" ")[0]?.toLowerCase() ?? "")
-          );
+          const matchingPT = preview.parameterTables.find(pt => {
+            const ptPrefix = pt.id.split("-")[0]; // "konz" from "konz-params"
+            return (
+              sheet.id.includes(ptPrefix) ||
+              pt.sheetName.toLowerCase().includes(sheetKey) ||
+              sheetKey.includes(sheetKeyword(pt.sheetName))
+            );
+          });
           if (matchingPT) {
-            (sectionContent as { type: "parameterTable"; rows: unknown[] }).rows =
+            (sectionContent as { type: "parameterTable"; rows: ParameterRow[] }).rows =
               matchingPT.parameters.map(p => ({
                 id: randomUUID(),
                 name: p.name,
@@ -75,6 +109,7 @@ function buildContentJson(
           break;
         }
 
+        // ── changeHistory — all entries ────────────────────────────────────
         case "changeHistory": {
           const entries: ChangeHistoryEntry[] = preview.changeHistory.map(e => ({
             id: randomUUID(),
@@ -83,15 +118,16 @@ function buildContentJson(
             description: e.description,
             version: String(e.num),
           }));
-          (sectionContent as { type: "changeHistory"; entries: ChangeHistoryEntry[] }).entries = entries;
+          (sectionContent as { type: "changeHistory"; entries: ChangeHistoryEntry[] }).entries =
+            entries;
           break;
         }
 
+        // ── media — attach source Excel in first empty media section ───────
         case "media": {
-          // Attach the source Excel file in the first media section encountered
-          const mediaSection = sectionContent as { type: "media"; files: MediaFile[] };
-          if (mediaSection.files.length === 0) {
-            const mf: MediaFile = {
+          const ms = sectionContent as { type: "media"; files: MediaFile[] };
+          if (ms.files.length === 0) {
+            ms.files.push({
               id: randomUUID(),
               fileName: excelFilename,
               fileType: "application/vnd.ms-excel.sheet.macroEnabled.12",
@@ -99,8 +135,25 @@ function buildContentJson(
               uploadedAt: nowStamp(),
               description: "Source Excel (import)",
               fileId: excelFileId,
-            };
-            mediaSection.files.push(mf);
+            });
+          }
+          break;
+        }
+
+        // ── richText — migration note for import-notes sections ────────────
+        case "richText": {
+          const sc = sectionContent as { type: "richText"; html: string };
+          if (!sc.html) {
+            const isImportNotes =
+              section.title.toLowerCase().includes("importnotiz") ||
+              section.title.toLowerCase().includes("import note") ||
+              section.id.includes("quel-notes");
+            if (isImportNotes) {
+              sc.html =
+                `<p><em>Draft imported from <strong>${excelFilename}</strong> ` +
+                `via Migration Studio. Review and correct all sections before ` +
+                `submitting for approval.</em></p>`;
+            }
           }
           break;
         }
@@ -109,17 +162,6 @@ function buildContentJson(
   }
 
   return content;
-}
-
-function tablesToHtml(tables: ExtractedTable[]): string {
-  return tables.map(t => {
-    const header = t.columns.map(c => `<th>${c.label}</th>`).join("");
-    const rows = t.rows.map(r => {
-      const cells = t.columns.map(c => `<td>${r.values[c.id] ?? ""}</td>`).join("");
-      return `<tr>${cells}</tr>`;
-    }).join("");
-    return `<p><strong>${t.title}</strong></p><table><thead><tr>${header}</tr></thead><tbody>${rows}</tbody></table>`;
-  }).join("\n");
 }
 
 // ─── Route handler ────────────────────────────────────────────────────────────
@@ -133,13 +175,15 @@ export async function POST(req: NextRequest) {
   const body = await req.json() as {
     runId: string;
     siteId: string;
-    templateVersionId: string;
+    templateVersionId?: string;
     customName?: string;
   };
 
-  const { runId, siteId, templateVersionId, customName } = body;
-  if (!runId || !siteId || !templateVersionId) {
-    return NextResponse.json({ error: "runId, siteId, templateVersionId required" }, { status: 400 });
+  const { runId, siteId, customName } = body;
+  let { templateVersionId } = body;
+
+  if (!runId || !siteId) {
+    return NextResponse.json({ error: "runId and siteId required" }, { status: 400 });
   }
 
   // Load import run
@@ -164,6 +208,21 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Identifier missing from preview" }, { status: 422 });
   }
 
+  // Auto-resolve template if not provided
+  if (!templateVersionId) {
+    templateVersionId = run.templateVersionId || undefined;
+  }
+  if (!templateVersionId) {
+    const prof = PROFILES.find(p => p.id === preview.profileId);
+    if (prof?.templateFamily) {
+      const ensured = ensureTemplate(prof.templateFamily);
+      if (ensured) templateVersionId = ensured.templateVersionId;
+    }
+  }
+  if (!templateVersionId) {
+    return NextResponse.json({ error: "templateVersionId required (or profileId must map to a known template family)" }, { status: 400 });
+  }
+
   // Load template version
   const tplStore = readTemplates();
   const tv = tplStore.versions.find(v => v.id === templateVersionId);
@@ -183,7 +242,6 @@ export async function POST(req: NextRequest) {
   const now = nowStamp();
   const guidelineId = existingGl?.id ?? randomUUID();
 
-  // Determine next version number
   const existingVersions = glStore.versions.filter(v => v.guidelineId === guidelineId);
   const nextVersionNumber = existingVersions.length > 0
     ? Math.max(...existingVersions.map(v => v.versionNumber)) + 1
@@ -241,7 +299,6 @@ export async function POST(req: NextRequest) {
       identifier,
     });
   } else {
-    // Update updatedAt
     const idx = glStore.guidelines.findIndex(g => g.id === guidelineId);
     if (idx !== -1) glStore.guidelines[idx].updatedAt = now;
   }
